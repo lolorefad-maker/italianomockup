@@ -1,0 +1,60 @@
+name: traduttore
+
+x-db-env: &db-env
+  WORDPRESS_DB_HOST: db
+  WORDPRESS_DB_USER: wordpress
+  WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+  WORDPRESS_DB_NAME: wordpress
+
+x-wp-volumes: &wp-volumes
+  - wp:/var/www/html
+  - ./theme:/var/www/html/wp-content/themes/traduttore
+  - ./mu-plugins:/var/www/html/wp-content/mu-plugins
+  - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+
+services:
+  db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes:
+      - db:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:php8.3-apache
+    restart: unless-stopped
+    depends_on: [db]
+    ports: ["8088:80"]
+    environment: *db-env
+    volumes: *wp-volumes
+
+  # Local mail catcher: every email the contact form sends shows up at http://localhost:8025
+  mailpit:
+    image: axllent/mailpit
+    restart: unless-stopped
+    ports: ["8025:8025"]
+
+  # WP-CLI, run on demand:  docker compose run --rm cli <command>
+  cli:
+    image: wordpress:cli-php8.3
+    user: "33:33"
+    profiles: ["cli"]
+    depends_on: [db, wordpress]
+    environment:
+      <<: *db-env
+      HOME: /tmp
+    volumes:
+      - wp:/var/www/html
+      - ./theme:/var/www/html/wp-content/themes/traduttore
+      - ./mu-plugins:/var/www/html/wp-content/mu-plugins
+      - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+      - ./seed:/seed:ro
+    entrypoint: ["wp"]
+
+volumes:
+  wp:
+  db:

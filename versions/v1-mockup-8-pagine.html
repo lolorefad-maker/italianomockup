@@ -1,0 +1,1173 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>
+<title>Traduttore Arabo–Italiano</title>
+<meta name="description" content="Mockup bilingue italiano / arabo per il sito di un traduttore e interprete arabo–italiano.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#F3F5F1;--bg-alt:#E8ECE5;--surface:#FFFFFF;
+  --ink:#13201B;--ink-2:#3F4D46;--ink-3:#64716A;
+  --line:#D3D9D1;--line-2:#BCC6BD;
+  --brand:#1E4636;--brand-hover:#153427;--on-brand:#FFFFFF;--brand-soft:#DCE7E0;
+  --accent:#A87B2F;--danger:#B3261E;
+  --band:#17362B;--band-ink:#E8EFEA;--band-ink-2:#A9BDB2;--band-line:rgba(232,239,234,.16);
+  --ribbon:#13201B;--ribbon-ink:#D5DFD8;
+  --wa:#1DA851;--wa-bg:#167F40;--wa-light:#5BD68A;
+  --art-1:#2B5B48;--art-2:#122E24;--art-line:rgba(233,241,236,.13);--art-ink:#EEF3EF;--art-ink-2:#B7CBBF;
+  --paper:#FDFCF8;--paper-2:#EFEDE6;--paper-line:#D8D4C8;--paper-text:#B3B8AF;--paper-ink:#4A534E;
+  --sig:#23355F;--stamp:#44489A;--bollo:#EBDDB3;--bollo-ink:#7B5B1E;
+  --g-title:#1A0DAB;--g-url:#4D5156;--g-desc:#474747;
+  --shadow:0 1px 2px rgba(19,32,27,.06),0 14px 34px -14px rgba(19,32,27,.22);
+  --header-h:76px;
+  --f-display:"Bodoni Moda","Amiri","Bodoni 72",Didot,Georgia,serif;
+  --f-body:"IBM Plex Sans","IBM Plex Sans Arabic","Segoe UI",system-ui,sans-serif;
+  --track:.14em;--fs-body:17px;--lh-body:1.65;
+  --fs-h1:clamp(2.5rem,1.5rem + 4vw,4.6rem);--lh-h1:1.04;--ls-h1:-.02em;--fw-h:500;
+  --fs-h1p:clamp(2.3rem,1.5rem + 3vw,3.9rem);
+  --fs-h2:clamp(1.9rem,1.35rem + 2vw,2.9rem);--lh-h2:1.1;
+  --fs-h3:1.5rem;--lh-h3:1.2;
+  --dir:1;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#0D1512;--bg-alt:#121C18;--surface:#16211C;
+  --ink:#E4EBE6;--ink-2:#B2BFB8;--ink-3:#8A978F;
+  --line:#26332D;--line-2:#34443C;
+  --brand:#8FC6A9;--brand-hover:#A9D6BD;--on-brand:#0D1512;--brand-soft:#1B2D25;
+  --accent:#D3A95E;--danger:#F2877E;
+  --band:#183329;--ribbon:#1A2621;--ribbon-ink:#C9D4CD;
+  --wa:#3BC874;
+  --g-title:#8AB4F8;--g-url:#BDC1C6;--g-desc:#BDC1C6;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 16px 36px -14px rgba(0,0,0,.65);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0D1512;--bg-alt:#121C18;--surface:#16211C;
+  --ink:#E4EBE6;--ink-2:#B2BFB8;--ink-3:#8A978F;
+  --line:#26332D;--line-2:#34443C;
+  --brand:#8FC6A9;--brand-hover:#A9D6BD;--on-brand:#0D1512;--brand-soft:#1B2D25;
+  --accent:#D3A95E;--danger:#F2877E;
+  --band:#183329;--ribbon:#1A2621;--ribbon-ink:#C9D4CD;
+  --wa:#3BC874;
+  --g-title:#8AB4F8;--g-url:#BDC1C6;--g-desc:#BDC1C6;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 16px 36px -14px rgba(0,0,0,.65);
+}
+html[lang="ar"]{
+  --track:0;--fs-body:18px;--lh-body:1.9;
+  --fs-h1:clamp(2.2rem,1.4rem + 3.4vw,4rem);--lh-h1:1.45;--ls-h1:0;--fw-h:700;
+  --fs-h1p:clamp(2.1rem,1.4rem + 2.6vw,3.4rem);
+  --fs-h2:clamp(1.75rem,1.3rem + 1.8vw,2.6rem);--lh-h2:1.5;
+  --fs-h3:1.45rem;--lh-h3:1.5;
+  --dir:-1;
+}
+[hidden]{display:none!important}
+html,body{overflow-x:clip}
+html.lock{overflow:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--fs-body);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit}
+button{font:inherit;color:inherit}
+p{margin:0}
+h1,h2,h3{font-family:var(--f-display);font-weight:var(--fw-h);text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:var(--fs-h1);line-height:var(--lh-h1);letter-spacing:var(--ls-h1)}
+h2{font-size:var(--fs-h2);line-height:var(--lh-h2);letter-spacing:calc(var(--ls-h1) * .6)}
+h3{font-size:var(--fs-h3);line-height:var(--lh-h3)}
+em.hl{font-style:italic;color:var(--brand)}
+html[lang="ar"] em.hl{font-style:normal}
+.ic{width:20px;height:20px;flex:none;display:block}
+[dir="rtl"] .flip{transform:scaleX(-1)}
+.ic.flip{transition:translate .2s ease}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:-1px}
+.skip{position:absolute;inset-inline-start:16px;top:-60px;z-index:100;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:6px;text-decoration:none}
+.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+.sec{--sec-bg:var(--bg);background:var(--sec-bg);padding-block:clamp(64px,8vw,120px)}
+.sec.alt{--sec-bg:var(--bg-alt)}
+.lead{font-size:calc(var(--fs-body) * 1.1);color:var(--ink-2);max-width:60ch}
+.eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:10px 12px;font-size:12.5px;font-weight:600;letter-spacing:var(--track);text-transform:uppercase;color:var(--brand);line-height:1.4}
+html[lang="ar"] .eyebrow{font-size:14.5px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.eyebrow .pair{font-family:var(--f-display);text-transform:none;letter-spacing:0;font-weight:400;font-size:1.2em;color:var(--ink-3)}
+.eyebrow .pair[lang="it"]{font-style:italic}
+.eyebrow .pair[lang="ar"]{font-size:1.5em;line-height:1}
+.eyebrow .tag{display:inline-flex;font-size:12px;padding:2px 10px;border-radius:999px;border:1px dashed var(--line-2);color:var(--ink-3);letter-spacing:0;text-transform:none;font-weight:500}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 64px;align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2{margin-top:18px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:600 15.5px/1.2 var(--f-body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s;white-space:nowrap;text-align:center}
+html[lang="ar"] .btn{font-size:16px}
+.btn-sm{min-height:44px;padding:0 18px;font-size:14.5px}
+.btn-primary{background:var(--brand);color:var(--on-brand)}
+.btn-primary:hover{background:var(--brand-hover)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-ghost .wa{color:var(--wa)}
+.btn-wa{background:var(--wa-bg);color:#fff}
+.btn-wa:hover{background:#12703A}
+.btn-light{background:var(--art-ink);color:var(--art-2)}
+.btn-light:hover{background:#fff}
+.btn-line{color:var(--art-ink);border-color:rgba(238,243,239,.35)}
+.btn-line:hover{border-color:var(--art-ink)}
+.btn-line .wa{color:var(--wa-light)}
+.btn:hover .flip,.tile:hover .flip,.link-arrow:hover .flip,.other:hover .flip{translate:calc(4px * var(--dir)) 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.micro{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:14px;color:var(--ink-3)}
+.micro .ic{width:18px;height:18px;color:var(--brand)}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--brand);text-decoration:none;margin-top:28px}
+.link-arrow:hover{text-decoration:underline;text-underline-offset:5px}
+
+/* ribbon + header */
+.ribbon{background:var(--ribbon);color:var(--ribbon-ink);font-size:13px}
+.ribbon .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:38px}
+.rb-l{display:flex;align-items:center;gap:10px;min-width:0}
+.rb-l strong{font-weight:600;letter-spacing:.04em}
+.rb-l .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.rb-l .rb-note{opacity:.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rb-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid rgba(213,223,216,.3);color:inherit;border-radius:999px;padding:4px 12px;font:500 12.5px var(--f-body);cursor:pointer;flex:none}
+.rb-btn:hover{border-color:var(--ribbon-ink)}
+.rb-btn .ic{width:14px;height:14px}
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:20px;height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);margin-inline-end:auto;min-width:0}
+.brand .mark{width:30px;height:34px;color:var(--brand);flex:none}
+.brand-name{display:block;font-family:var(--f-display);font-size:21px;line-height:1.1;font-weight:500;white-space:nowrap}
+html[lang="ar"] .brand-name{font-size:23px;font-weight:700;line-height:1.3}
+.brand-tag{display:block;font-size:11px;letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3);margin-top:3px;white-space:nowrap}
+html[lang="ar"] .brand-tag{font-size:12.5px;margin-top:0}
+.nav{display:flex;align-items:center;gap:2px}
+.nav>a,.dd-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 12px;font:500 15px var(--f-body);color:var(--ink-2);text-decoration:none;background:none;border:0;cursor:pointer;border-radius:6px;white-space:nowrap}
+html[lang="ar"] .nav>a,html[lang="ar"] .dd-btn{font-size:15.5px}
+.nav>a:hover,.dd-btn:hover{color:var(--ink)}
+.nav>a[aria-current="page"],.dd-btn.is-active{color:var(--brand);background-image:linear-gradient(currentColor,currentColor);background-size:calc(100% - 24px) 1.5px;background-position:center calc(100% - 3px);background-repeat:no-repeat}
+.dd-btn .ic{width:16px;height:16px;transition:transform .2s}
+.dd.open .dd-btn .ic{transform:rotate(180deg)}
+.dd{position:relative}
+.dd-panel{position:absolute;top:calc(100% + 12px);inset-inline-start:-12px;width:min(470px,80vw);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:8px;border-radius:12px;visibility:hidden;opacity:0;transform:translateY(-4px);transition:opacity .16s,transform .16s,visibility .16s}
+.dd-panel::before{content:"";position:absolute;inset-inline:0;top:-14px;height:14px}
+.dd.open .dd-panel{visibility:visible;opacity:1;transform:none}
+@media (hover:hover){.dd:hover .dd-panel{visibility:visible;opacity:1;transform:none}}
+.dd-panel a{display:grid;grid-template-columns:40px 1fr;gap:2px 14px;padding:12px;border-radius:8px;text-decoration:none;align-items:center}
+.dd-panel a:hover,.dd-panel a[aria-current="page"]{background:var(--bg)}
+.dd-ic,.mini-arch{width:40px;height:46px;display:grid;place-items:center;color:var(--brand);background:var(--brand-soft);border-radius:20px 20px 4px 4px}
+.dd-ic{grid-row:span 2}
+.dd-t{font-weight:600;color:var(--ink);font-size:15px;line-height:1.3}
+.dd-d{font-size:13.5px;color:var(--ink-3);line-height:1.4}
+.lang{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;padding:3px;gap:2px;flex:none}
+.lang a{min-width:44px;height:32px;display:grid;place-items:center;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--ink-3);text-decoration:none;padding:0 11px}
+.lang a[lang="ar"]{font-family:"IBM Plex Sans Arabic",sans-serif;font-size:14.5px}
+.lang a:hover{color:var(--ink)}
+.lang a[aria-current="true"]{background:var(--ink);color:var(--bg)}
+.menu-btn{display:none;width:44px;height:44px;place-items:center;border:1px solid var(--line-2);border-radius:50%;background:none;cursor:pointer;flex:none}
+.mnav{position:fixed;inset-inline:0;bottom:0;top:var(--mnav-top,114px);z-index:49;background:var(--bg);overflow-y:auto;padding-block:8px 120px}
+.mnav-links>a{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);font-family:var(--f-display);font-size:1.75rem;line-height:1.3;text-decoration:none;color:var(--ink);font-weight:var(--fw-h)}
+.mnav-links>a[aria-current="page"]{color:var(--brand)}
+.mnav-h{font-size:12.5px;font-weight:600;letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3);margin-top:22px;padding-bottom:10px}
+.mnav-svc{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.mnav-svc a{display:flex;gap:12px;align-items:center;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-weight:500;font-size:15px;line-height:1.3}
+.mnav-svc .mini-arch{width:32px;height:38px}
+.mnav-svc .mini-arch .ic{width:17px;height:17px}
+.mnav-cta{display:grid;gap:10px;margin-top:28px}
+.mnav-meta{margin-top:22px;color:var(--ink-3);font-size:14.5px}
+</style>
+<style>
+/* hero */
+.hero{padding-block:clamp(40px,6vw,88px) clamp(48px,6vw,88px)}
+.hero-grid,.phero-grid{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,.9fr);gap:clamp(32px,6vw,96px);align-items:center}
+.hero h1{margin-block:22px 26px}
+.hero-art{position:relative;justify-self:center;width:100%;max-width:440px}
+.arch{position:relative;isolation:isolate;overflow:hidden;width:100%;aspect-ratio:4/5;border-radius:999px 999px 6px 6px;background:radial-gradient(120% 80% at 50% 0%,var(--art-1),var(--art-2) 72%);color:var(--art-ink)}
+.arch::after{content:"";position:absolute;inset:14px;border:1px solid rgba(238,243,239,.2);border-radius:999px 999px 2px 2px;pointer-events:none}
+.lat{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lat-g{fill:none;stroke:var(--art-line);stroke-width:1}
+.sil{position:absolute;inset:0;width:100%;height:100%;fill:rgba(238,243,239,.075)}
+.arch-cap{position:absolute;inset-inline:0;bottom:24px;margin-inline:auto;width:max-content;max-width:calc(100% - 40px);display:flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(8,22,17,.38);color:var(--art-ink);font-size:12.5px;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.arch-cap .ic{width:16px;height:16px}
+.float-doc{position:absolute;inset-inline-start:-40px;bottom:70px;display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);max-width:300px}
+.fd-ic{width:40px;height:40px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;flex:none}
+.float-doc strong{display:block;font-size:14.5px;line-height:1.3}
+.float-doc .s{display:block;font-size:13px;color:var(--ink-3);line-height:1.35}
+.float-doc .ok{color:var(--brand)}
+.float-pair{position:absolute;top:30px;inset-inline-end:-20px;background:var(--band);color:var(--band-ink);font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;box-shadow:var(--shadow)}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;margin-top:clamp(48px,6vw,80px);padding-top:22px;border-top:1px solid var(--line)}
+.trust-l{font-size:12.5px;font-weight:600;letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3)}
+.trust ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0;color:var(--ink-2);font-weight:500}
+.trust li+li::before{content:"·";margin-inline:12px;color:var(--line-2)}
+
+/* services tiles */
+.tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.tile{grid-column:span 2;display:flex;flex-direction:column;gap:14px;padding:clamp(24px,3vw,40px);background:var(--sec-bg);text-decoration:none;color:var(--ink);transition:background-color .2s;min-height:320px}
+.tile:nth-child(n+4){grid-column:span 3}
+.tile:hover{background:var(--surface)}
+.tile-ic{width:48px;height:56px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:24px 24px 3px 3px;color:var(--brand);margin-bottom:8px}
+.tile-ic .ic{width:22px;height:22px}
+.tile h3{font-size:1.65rem}
+.tile p{color:var(--ink-2);font-size:16px;max-width:46ch}
+.tile .ex{font-size:13.5px;color:var(--ink-3)}
+.more{margin-top:auto;display:inline-flex;gap:8px;align-items:center;font-weight:600;font-size:15px;color:var(--brand)}
+
+/* band + stats */
+.band{position:relative;overflow:hidden;background:var(--band);color:var(--band-ink);padding-block:clamp(64px,8vw,112px)}
+.band h2{color:var(--band-ink)}
+.band .eyebrow{color:var(--band-ink-2)}
+.band .eyebrow .pair{color:var(--band-ink-2);opacity:.8}
+.band .lead{color:var(--band-ink-2)}
+.band-lat{position:absolute;inset-block:0;inset-inline-end:0;width:48%;height:100%;-webkit-mask-image:linear-gradient(to left,#000,transparent);mask-image:linear-gradient(to left,#000,transparent)}
+[dir="rtl"] .band-lat{-webkit-mask-image:linear-gradient(to right,#000,transparent);mask-image:linear-gradient(to right,#000,transparent)}
+.band .wrap{position:relative}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--band-line)}
+.stat{padding:28px 24px 0;border-inline-start:1px solid var(--band-line)}
+.stat:first-child{border-inline-start:0;padding-inline-start:0}
+.num{display:block;font-family:"Bodoni Moda",Georgia,serif;font-size:clamp(2.6rem,4.4vw,3.9rem);line-height:1;font-weight:500;font-variant-numeric:lining-nums tabular-nums}
+.lbl{display:block;margin-top:14px;color:var(--band-ink-2);font-size:15px;max-width:24ch;line-height:1.5}
+
+/* split + docs */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:center}
+.split h2{margin-block:18px 20px}
+.checks{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-weight:500;line-height:1.45}
+.checks .ic{width:18px;height:18px;color:var(--brand);margin-top:3px}
+.doc-panel{background:var(--bg-alt);border-radius:999px 999px 10px 10px;padding:22% 7% 7%;overflow:hidden}
+.sec.alt .doc-panel{background:var(--surface)}
+.docsvg{width:100%;height:auto;display:block;overflow:visible}
+.d-p2{fill:var(--paper-2);stroke:var(--paper-line)}
+.d-p1{fill:var(--paper);stroke:var(--paper-line);filter:drop-shadow(0 18px 22px rgba(19,32,27,.16))}
+.d-ln{fill:var(--paper-text)}
+.d-emb{fill:none;stroke:var(--paper-text);stroke-width:1.2}
+.d-h{font:600 8.5px "IBM Plex Sans",sans-serif;letter-spacing:1.8px;fill:var(--paper-ink)}
+.d-rule{fill:var(--paper-line)}
+.d-sig{fill:none;stroke:var(--sig);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.d-small{font:400 8px "IBM Plex Sans",sans-serif;fill:var(--paper-text)}
+.d-bollo{fill:var(--bollo);stroke:var(--bollo-ink);stroke-width:1.2;stroke-dasharray:2.2 2.2}
+.d-bollo-in{fill:none;stroke:var(--bollo-ink);stroke-opacity:.45}
+.d-bt{font:600 6px "IBM Plex Sans",sans-serif;letter-spacing:.8px;fill:var(--bollo-ink)}
+.d-bv{font:600 12px "Bodoni Moda",serif;fill:var(--bollo-ink)}
+.d-stamp{opacity:.9}
+.s-o{fill:none;stroke:var(--stamp);stroke-width:2.2}
+.s-i{fill:none;stroke:var(--stamp);stroke-width:1}
+.s-t{font:600 7px "IBM Plex Sans",sans-serif;letter-spacing:1.3px;fill:var(--stamp)}
+.s-c{font:700 13px "Bodoni Moda",serif;letter-spacing:1px;fill:var(--stamp)}
+.s-c2{font:600 6.5px "IBM Plex Sans",sans-serif;letter-spacing:1px;fill:var(--stamp)}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:32px}
+.step{position:relative}
+.step-n{width:48px;height:48px;border-radius:50%;border:1px solid var(--brand);color:var(--brand);display:grid;place-items:center;font-family:"Bodoni Moda",Georgia,serif;font-size:20px;background:var(--sec-bg);position:relative;z-index:1}
+.step:not(:last-child)::after{content:"";position:absolute;top:24px;inset-inline-start:64px;inset-inline-end:-16px;border-top:1px dashed var(--line-2)}
+.step h3{font-family:var(--f-body);font-size:18px;font-weight:600;margin-top:22px;line-height:1.4}
+.step p{color:var(--ink-2);margin-top:8px;font-size:16px}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px)}
+.quote{margin:0;display:flex;flex-direction:column;gap:20px;padding-top:28px;border-top:1px solid var(--line-2)}
+.quote .q{width:28px;height:21px;color:var(--accent)}
+.quote blockquote{margin:0;font-family:var(--f-display);font-style:italic;font-size:1.3rem;line-height:1.5;color:var(--ink)}
+html[lang="ar"] .quote blockquote{font-style:normal;line-height:1.9}
+.quote figcaption{margin-top:auto;font-size:14.5px;color:var(--ink-3)}
+.quote figcaption strong{display:block;color:var(--ink);font-weight:600}
+
+/* faq */
+.faq{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px clamp(40px,6vw,96px);align-items:start}
+.faq-side{position:sticky;top:calc(var(--header-h) + 32px)}
+.faq-side h2{margin-top:18px}
+.faq-side .lead{margin-top:16px}
+.faq-side .btn{margin-top:28px}
+.acc details{border-bottom:1px solid var(--line-2)}
+.acc details:first-child{border-top:1px solid var(--line-2)}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;font-weight:600;font-size:17.5px;line-height:1.45}
+.acc summary::-webkit-details-marker{display:none}
+.acc .pl{width:32px;height:32px;flex:none;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:50%;transition:transform .2s,background-color .2s}
+.acc .pl .ic{width:16px;height:16px}
+.acc details[open] .pl{transform:rotate(45deg);background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.acc .ans{padding:0 0 24px;color:var(--ink-2);max-width:62ch}
+
+/* cta band */
+.cta-band{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--art-1),var(--art-2));color:var(--art-ink);padding-block:clamp(64px,8vw,104px)}
+.cta-band .lat{-webkit-mask-image:radial-gradient(70% 120% at 100% 50%,#000,transparent);mask-image:radial-gradient(70% 120% at 100% 50%,#000,transparent)}
+[dir="rtl"] .cta-band .lat{-webkit-mask-image:radial-gradient(70% 120% at 0% 50%,#000,transparent);mask-image:radial-gradient(70% 120% at 0% 50%,#000,transparent)}
+.cta-in{position:relative;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px}
+.cta-band h2{color:var(--art-ink);max-width:16ch}
+.cta-band p{color:var(--art-ink-2);margin-top:14px;font-size:18px}
+.cta-band .cta-row{margin-top:0}
+
+/* footer */
+.foot{background:var(--bg-alt);padding-block:72px 28px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:40px}
+.foot-brand p{color:var(--ink-2);margin-block:18px 22px;max-width:36ch;font-size:15.5px}
+.foot-h{font-size:12.5px;letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:16px}
+html[lang="ar"] .foot-h{font-size:14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15.5px}
+.foot a,.foot .fl{color:var(--ink-2);text-decoration:none}
+.foot a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.foot-c li{display:flex;gap:10px;align-items:flex-start;color:var(--ink-2)}
+.foot-c .ic{width:18px;height:18px;margin-top:4px;color:var(--brand)}
+.foot-bottom{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13.5px;color:var(--ink-3)}
+
+/* floating whatsapp + mobile bar */
+.fab{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom,0px));inset-inline-end:24px;z-index:45;display:inline-flex;align-items:center;gap:10px;height:54px;padding-inline:16px 20px;border-radius:999px;background:var(--wa-bg);color:#fff;text-decoration:none;font-weight:600;box-shadow:0 10px 28px -8px rgba(10,60,30,.5)}
+.fab:hover{background:#12703A}
+.fab .ic{width:24px;height:24px}
+.mbar{display:none;position:fixed;inset-inline:0;bottom:0;z-index:45;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 92%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.mbar .btn{min-height:48px;padding:0 12px}
+
+/* inner pages */
+.phero{padding-block:clamp(24px,3.5vw,44px) clamp(56px,7vw,96px)}
+.crumbs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:13.5px;color:var(--ink-3);margin-bottom:clamp(28px,4vw,48px);list-style:none;padding:0}
+.crumbs a{color:var(--ink-2);text-decoration:none}
+.crumbs a:hover{text-decoration:underline;text-underline-offset:4px}
+.crumbs .ic{width:14px;height:14px}
+.phero h1{font-size:var(--fs-h1p);margin-block:20px 24px}
+.phero-art{justify-self:center;width:100%;max-width:430px}
+.arch-type{aspect-ratio:4/4.7;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:16% 10% 10%;text-align:center}
+.tw-ar{position:relative;font-family:"Amiri",serif;font-weight:700;font-size:clamp(3.4rem,7vw,6rem);line-height:1.3;color:var(--art-ink)}
+.tw-mid{position:relative;display:flex;align-items:center;gap:12px;color:var(--art-ink-2);font:500 12px var(--f-body);letter-spacing:.22em}
+.tw-mid i{width:40px;height:1px;background:currentColor;opacity:.55}
+.tw-it{position:relative;font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(2rem,3.6vw,3rem);color:var(--art-ink-2);line-height:1.2}
+.brief{margin-top:clamp(48px,6vw,80px)}
+.brief-l{font-size:12.5px;font-weight:600;letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+html[lang="ar"] .brief-l{font-size:14px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:0}
+.fact{background:var(--surface);padding:20px 22px;display:flex;flex-direction:column;gap:6px}
+.fact dt{font-size:12px;letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3);font-weight:600}
+html[lang="ar"] .fact dt{font-size:13.5px}
+.fact dd{margin:0;font-size:16px;font-weight:500;color:var(--ink);line-height:1.45}
+.items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:44px clamp(24px,3vw,48px)}
+.item{border-top:1px solid var(--line-2);padding-top:22px}
+.arch-dot{display:block;width:14px;height:18px;border:1.5px solid var(--brand);border-radius:7px 7px 1px 1px;margin-bottom:18px}
+.item h3{font-size:1.4rem}
+.item p{margin-top:10px;color:var(--ink-2);font-size:16px}
+.note{margin-top:clamp(56px,7vw,88px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px clamp(32px,5vw,80px);padding:clamp(24px,4vw,48px);background:var(--surface);border:1px solid var(--line);border-radius:12px;align-items:start}
+.note h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem);margin-top:14px}
+.note p{color:var(--ink-2)}
+.note .link-arrow{margin-top:18px}
+.vocab{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.vocab-row{display:grid;grid-template-columns:1fr 1fr}
+.vocab-row+.vocab-row{border-top:1px solid var(--line)}
+.vocab-row span{padding:12px 18px;line-height:1.5}
+.vocab-row span+span{border-inline-start:1px solid var(--line)}
+.vocab-head span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600;background:var(--bg)}
+.v-it{font-family:"Bodoni Moda",serif;font-style:italic;font-size:18px}
+.v-ar{font-family:"Amiri",serif;font-size:21px}
+.others{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.other{background:var(--sec-bg);padding:26px 24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:var(--ink);transition:background-color .2s}
+.other:hover{background:var(--surface)}
+.other .mini-arch{width:34px;height:40px;margin-bottom:6px}
+.other .mini-arch .ic{width:18px;height:18px}
+.other strong{font-family:var(--f-display);font-size:1.3rem;font-weight:var(--fw-h);line-height:1.3}
+.other .d{font-size:14.5px;color:var(--ink-3);line-height:1.5}
+.other .more{margin-top:auto;padding-top:6px;font-size:14.5px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,96px);align-items:center}
+.about-grid .arch{max-width:420px;justify-self:center}
+.about-grid h1{font-size:var(--fs-h1p);margin-top:20px}
+.bio{display:grid;gap:16px;color:var(--ink-2);font-size:17.5px;max-width:60ch;margin-top:26px}
+.sign{font-family:var(--f-display);font-style:italic;font-size:2rem;color:var(--brand);margin-top:26px;line-height:1.3}
+html[lang="ar"] .sign{font-style:normal}
+.tl-wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px clamp(40px,6vw,96px);align-items:start}
+.tl-wrap h2{margin-block:18px 16px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:110px 1fr;gap:24px;padding-block:22px;border-top:1px solid var(--line-2)}
+.timeline li:last-child{border-bottom:1px solid var(--line-2)}
+.tl-y{font-family:"Bodoni Moda",Georgia,serif;font-size:1.8rem;line-height:1.1;color:var(--brand);font-variant-numeric:lining-nums}
+.tl-t{font-weight:600;font-size:17.5px;line-height:1.4}
+.tl-d{color:var(--ink-3);font-size:15.5px;margin-top:4px}
+.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,48px)}
+.value{border-top:1px solid var(--line-2);padding-top:24px}
+.value h3{margin-top:18px}
+.value p{margin-top:10px;color:var(--ink-2)}
+.langs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.lang-card{background:var(--sec-bg);padding:28px}
+.lang-native{font-family:var(--f-display);font-size:2.3rem;line-height:1.35;display:block}
+.lang-native[lang="ar"]{font-family:"Amiri",serif;font-weight:700}
+.lang-native[lang="it"],.lang-native[lang="en"]{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:500}
+.lang-name{display:block;margin-top:10px;font-size:12.5px;font-weight:600;letter-spacing:var(--track);text-transform:uppercase;color:var(--brand)}
+html[lang="ar"] .lang-name{font-size:14.5px}
+.lang-level{margin-top:8px;color:var(--ink-2);font-size:15.5px}
+</style>
+<style>
+/* contact */
+.contact-head{max-width:760px;margin-bottom:clamp(36px,5vw,56px)}
+.contact-head h1{font-size:var(--fs-h1p);margin-block:20px 20px}
+.contact-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:start}
+.form-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3.2vw,40px);box-shadow:var(--shadow)}
+.tabs{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:28px}
+.tabs button{border:0;background:none;padding:9px 20px;border-radius:999px;font-weight:600;font-size:14.5px;color:var(--ink-3);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(19,32,27,.14)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:flex;flex-direction:column;gap:8px;min-width:0;margin:0;padding:0;border:0}
+.field.full{grid-column:1/-1}
+.field label,.field legend,.field .lbl{font-size:14px;font-weight:600;color:var(--ink);padding:0}
+.field legend{margin-bottom:8px}
+.opt{font-weight:400;color:var(--ink-3)}
+.req{color:var(--accent)}
+.field input:not([type="radio"]):not([type="checkbox"]):not([type="file"]),.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line-2);border-radius:6px;padding:12px 14px;min-height:50px;width:100%;transition:border-color .15s,box-shadow .15s}
+.field textarea{min-height:130px;resize:vertical;line-height:1.55}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 22%,transparent)}
+.field [aria-invalid="true"]{border-color:var(--danger)!important}
+.field select{appearance:none;-webkit-appearance:none;padding-inline-end:42px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364716A' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='m6.5 9.5 5.5 5.5 5.5-5.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:18px;background-position:calc(100% - 14px) center}
+[dir="rtl"] .field select{background-position:14px center}
+[dir="rtl"] .field input[dir="ltr"]{text-align:right}
+.err{font-size:13px;color:var(--danger);min-height:0}
+.err:empty{display:none}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:center;min-height:50px;padding:8px 12px;border:1px solid var(--line-2);border-radius:6px;font-weight:500;font-size:15px;color:var(--ink-2);text-align:center;line-height:1.3}
+.seg input:checked+span{border-color:var(--brand);background:var(--brand-soft);color:var(--ink);box-shadow:inset 0 0 0 1px var(--brand)}
+.seg input:focus-visible+span{outline:2px solid var(--brand);outline-offset:2px}
+.drop{position:relative;display:flex;align-items:center;gap:16px;padding:22px;border:1.5px dashed var(--line-2);border-radius:10px;background:var(--bg);cursor:pointer;transition:border-color .15s,background-color .15s}
+.drop:hover,.drop.drag{border-color:var(--brand);background:var(--brand-soft)}
+.drop:focus-within{outline:2px solid var(--brand);outline-offset:2px}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.drop .up{width:46px;height:46px;border-radius:50%;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--brand);flex:none}
+.drop strong{display:block;font-weight:600;font-size:15px}
+.drop strong u{color:var(--brand);text-underline-offset:3px}
+.drop small{display:block;color:var(--ink-3);font-size:13px;margin-top:2px}
+.files{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.files:empty{display:none}
+.files li{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);font-size:14.5px}
+.files .fn{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.files .fs{color:var(--ink-3);font-size:13px}
+.files button{border:0;background:none;cursor:pointer;color:var(--ink-3);display:grid;place-items:center;padding:4px}
+.files button .ic{width:16px;height:16px}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--ink-2);line-height:1.5;cursor:pointer}
+.consent input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--brand);flex:none}
+.consent u{text-underline-offset:3px}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:28px}
+.secure{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-3)}
+.secure .ic{width:16px;height:16px}
+.success{text-align:center;padding:40px 12px}
+.success .okc{width:64px;height:64px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;margin:0 auto 22px}
+.success .okc .ic{width:30px;height:30px}
+.success p{color:var(--ink-2);max-width:46ch;margin:14px auto 26px}
+.cinfo{display:flex;flex-direction:column;gap:12px}
+.ccard{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:4px 16px;align-items:center;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.ccard .ci{width:44px;height:44px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center}
+.ccard .k{display:block;font-size:13px;color:var(--ink-3)}
+.ccard .v{display:block;font-weight:600;font-size:16.5px;overflow-wrap:anywhere}
+.ccard .sub{display:block;font-size:13.5px;color:var(--ink-3)}
+.copy{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);background:none;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;cursor:pointer;color:var(--ink-2)}
+.copy:hover{border-color:var(--ink)}
+.copy .ic{width:14px;height:14px}
+.ccard-wa{background:var(--band);border-color:transparent;color:var(--band-ink)}
+.ccard-wa .ci{background:rgba(91,214,138,.14);color:var(--wa-light)}
+.ccard-wa .k{color:var(--band-ink-2)}
+.ccard-wa .btn{grid-column:1/-1;margin-top:12px}
+.privacy-note{font-size:13px;color:var(--ink-3);padding:4px 4px 0}
+
+/* seo dialog */
+dialog#seo{border:0;padding:0;border-radius:16px;background:var(--surface);color:var(--ink);width:min(660px,calc(100% - 32px));max-height:calc(100% - 48px);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog#seo::backdrop{background:rgba(10,20,16,.5);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.seo-in{padding:clamp(20px,4vw,32px);font-family:var(--f-body)}
+.seo-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.seo-head h2{font-size:1.9rem;margin-top:10px}
+.seo-sub{color:var(--ink-3);margin-top:6px;font-size:15px}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);background:none;display:grid;place-items:center;cursor:pointer;flex:none}
+.serp{margin-top:22px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-family:Arial,"IBM Plex Sans Arabic",sans-serif}
+.serp-site{display:flex;align-items:center;gap:10px}
+.serp-fav{width:28px;height:28px;border-radius:50%;background:var(--brand);color:var(--on-brand);display:grid;place-items:center;flex:none}
+.serp-fav svg{width:14px;height:16px}
+.serp-name{display:block;font-size:14px;color:var(--ink);line-height:1.3}
+.serp-url{display:block;font-size:12.5px;color:var(--g-url);line-height:1.3}
+.serp-t{margin-top:10px;font-size:20px;line-height:1.3;color:var(--g-title)}
+.serp-d{margin-top:4px;font-size:14px;line-height:1.58;color:var(--g-desc)}
+.seo-checks{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line)}
+.seo-checks li{display:grid;grid-template-columns:minmax(0,1fr) auto 26px;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.seo-checks .val{color:var(--ink-3);font-size:13.5px;text-align:end;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.st{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand);font-weight:700;font-size:13px}
+.st .ic{width:14px;height:14px}
+.st.warn{background:color-mix(in srgb,var(--accent) 22%,transparent);color:var(--accent)}
+.kw-l{margin-top:20px;font-size:12.5px;font-weight:600;letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{font-size:13.5px;padding:5px 12px;border-radius:999px;background:var(--brand-soft);color:var(--ink)}
+.seo-note{margin-top:20px;font-size:13.5px;color:var(--ink-3)}
+
+/* entrance */
+@media (prefers-reduced-motion:no-preference){
+  main.enter{animation:enter .45s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* responsive */
+@media (max-width:1179px){
+  .nav,.hdr-cta{display:none}
+  .menu-btn{display:grid}
+  :root{--header-h:66px}
+}
+@media (max-width:979px){
+  .hero-grid,.phero-grid,.about-grid,.split,.faq,.tl-wrap,.contact-grid,.note{grid-template-columns:minmax(0,1fr)}
+  .sec-head{grid-template-columns:minmax(0,1fr)}
+  .hero-art,.phero-art{max-width:400px}
+  .float-doc{inset-inline-start:10px;bottom:30px}
+  .float-pair{inset-inline-end:10px}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tile,.tile:nth-child(n+4){grid-column:span 1}
+  .tile:first-child{grid-column:span 2}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){border-inline-start:0;padding-inline-start:0}
+  .stat:nth-child(n+3){margin-top:28px;border-top:1px solid var(--band-line)}
+  .items{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .quotes,.values{grid-template-columns:minmax(0,1fr)}
+  .faq-side{position:static}
+  .facts,.others{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .langs{grid-template-columns:minmax(0,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .about-grid .arch{max-width:360px}
+}
+@media (max-width:759px){
+  .fab{display:none}
+  .mbar{display:grid}
+  .foot{padding-bottom:110px}
+  .steps{grid-template-columns:minmax(0,1fr);gap:24px}
+  .step{display:grid;grid-template-columns:48px 1fr;gap:0 18px}
+  .step h3{margin-top:10px}
+  .step p{grid-column:2}
+  .step:not(:last-child)::after{display:none}
+  .rb-l .rb-note{display:none}
+}
+@media (max-width:639px){
+  .tiles{grid-template-columns:minmax(0,1fr)}
+  .tile:first-child{grid-column:auto}
+  .tile{min-height:0}
+  .items,.others,.foot-grid,.fgrid{grid-template-columns:minmax(0,1fr)}
+  .checks{grid-template-columns:minmax(0,1fr)}
+  .brand-tag{display:none}
+  .hero-art{max-width:340px}
+  .float-doc{max-width:250px;padding:12px}
+  .timeline li{grid-template-columns:76px 1fr;gap:14px}
+  .tl-y{font-size:1.45rem}
+  .mnav-svc{grid-template-columns:minmax(0,1fr)}
+  .form-foot .btn{width:100%}
+  .ccard{grid-template-columns:44px minmax(0,1fr)}
+  .ccard .copy{grid-column:2;justify-self:start}
+}
+@media (max-width:400px){
+  .btn{white-space:normal}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:minmax(0,1fr)}
+  .stat,.stat:nth-child(3){border-inline-start:0;padding-inline-start:0;margin-top:0;border-top:1px solid var(--band-line)}
+  .stat:first-child{border-top:0}
+  .stat{padding-block:20px}
+}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<pattern id="lat" width="56" height="56" patternUnits="userSpaceOnUse"><g class="lat-g">
+<rect x="16.5" y="16.5" width="23" height="23"/><rect x="16.5" y="16.5" width="23" height="23" transform="rotate(45 28 28)"/>
+<path d="M28 0v11.74M28 44.26V56M0 28h11.74M44.26 28H56M0 0l16.5 16.5M56 0 39.5 16.5M0 56l16.5-16.5M56 56 39.5 39.5"/>
+</g></pattern></defs></svg>
+<div id="top"></div>
+<main id="main" tabindex="-1"></main>
+<div id="bottom"></div>
+<dialog id="seo" aria-labelledby="seo-title"></dialog>
+<script>
+const S={};
+S.it={
+dir:"ltr",other:"ar",
+ui:{
+ mock:"Mockup",mockNote:"Anteprima di design · testi e immagini provvisori",seoBtn:"Anteprima Google",
+ brand:"Nome Cognome",brandTag:"Traduttore · Interprete",
+ cta:"Richiedi preventivo",ctaLong:"Richiedi un preventivo gratuito",wa:"WhatsApp",waLong:"Scrivimi su WhatsApp",
+ waText:"Buongiorno, vorrei un preventivo per una traduzione.",
+ micro:"Risposta entro 24 ore · Preventivo senza impegno",
+ discover:"Scopri il servizio",menu:"Apri il menu",close:"Chiudi",home:"Home",services:"Servizi",
+ faq:"Domande frequenti",faqLead:"Non trovi la risposta? Scrivimi: rispondo di persona.",other:"Altri servizi",brief:"In breve",
+ how:"Come funziona",portrait:"La tua foto professionale",pairWord:"Arabo ⇄ Italiano",
+ floatT:"Traduzione asseverata",floatS:"Pronta per Tribunale e Prefettura",sample:"Testi di esempio",
+ ctaT:"Hai un documento da tradurre?",ctaS:"Mandamelo in foto: ricevi il preventivo entro 24 ore.",
+ footTag:"Traduzioni, interpretariato e mediazione linguistico-culturale tra arabo e italiano. Lezioni di italiano per arabofoni.",
+ footSvc:"Servizi",footStudio:"Lo studio",footContact:"Contatti",hours:"Lun–Ven · 9:00–18:00",area:"Studio a [Città] · online in tutta Italia",
+ legal:"© 2026 Nome Cognome · P.IVA 00000000000",privacy:"Privacy policy",cookie:"Cookie policy",mockFoot:"Mockup di design v1 · non ancora pubblicato",
+ copy:"Copia",copied:"Copiato",lang:"Lingua"
+},
+nav:{home:"Home","chi-sono":"Chi sono",services:"Servizi",lezioni:"Lezioni di italiano",contatti:"Contatti"},
+eb:{svc:["Servizi","خدمات"],why:["Perché scegliermi","لماذا أنا"],docs:["Documenti","وثائق"],how:["Come funziona","كيف نعمل"],quotes:["Dicono di me","آراء"],faq:["Domande","أسئلة"],detail:["Nel dettaglio","بالتفصيل"],other:["Servizi","خدمات"]},
+steps:[["Invia il documento","Una foto leggibile o un PDF, dal modulo o su WhatsApp."],["Ricevi il preventivo","Prezzo e tempi chiari entro 24 ore, senza impegno."],["Ritira la traduzione","Via email o di persona. Asseverata, se ti serve per uso legale."]],
+home:{
+ eyebrow:"Traduttore e interprete · arabo ⇄ italiano",
+ h1:'La parola giusta tra <em class="hl">arabo</em> e <em class="hl">italiano</em>.',
+ lead:"Sono Nome Cognome, traduttore e interprete di madrelingua araba, iscritto all'albo dei periti del Tribunale. Traduco e assevero documenti, affianco persone ed enti come mediatore culturale e insegno l'italiano a chi parla arabo.",
+ trustL:"Lavoro con",trust:["Tribunali","Prefetture e Questure","Ospedali","Scuole","Studi legali","Aziende"],
+ svcT:"Cosa posso fare per te",svcL:"Cinque servizi, una sola persona di riferimento. Ogni pagina spiega tempi, documenti richiesti e costi.",
+ whyT:"Precisione, riservatezza e due culture che conosco dall'interno",whyL:"Traduco personalmente ogni documento e seguo ogni pratica dall'inizio alla fine. Nessuna agenzia, nessuna traduzione automatica.",
+ stats:[["12+","anni di esperienza come traduttore e interprete"],["3.500","documenti tradotti e asseverati"],["24 h","per ricevere un preventivo dettagliato"],["0","traduzioni automatiche: ogni testo è tradotto a mano"]],
+ docsT:"Documenti per permesso di soggiorno, cittadinanza e titoli di studio",docsL:"Sono le traduzioni che mi chiedono più spesso. Se non sai quale tipo di traduzione ti serve, te lo dico prima di iniziare.",
+ docs:["Certificato di nascita","Certificato di matrimonio","Stato di famiglia","Diplomi e lauree","Pagelle e piani di studio","Patente di guida","Casellario giudiziale","Sentenze e atti notarili","Referti medici","Contratti"],
+ docsLink:"Come funziona l'asseverazione",
+ howT:"Tre passaggi, senza complicazioni",howL:"Puoi iniziare anche da una foto fatta con il telefono.",
+ quotesT:"La fiducia si costruisce un documento alla volta",
+ quotes:[["Traduzione precisa e consegnata prima del previsto. Ha seguito anche l'asseverazione in Tribunale: io non ho dovuto fare nulla.","Cliente privato","Traduzione per la cittadinanza"],["Un mediatore attento e discreto. Con le famiglie arabofone della nostra scuola la comunicazione è cambiata completamente.","Dirigente scolastico","Mediazione culturale"],["Lezioni chiare, con spiegazioni in arabo quando servono. Ho superato l'esame B1 al primo tentativo.","Studente","Lezioni di italiano"]],
+ faq:[["Quanto costa una traduzione?","Dipende dalla lunghezza, dal tipo di documento e dall'urgenza. Inviami una foto o un PDF: ricevi un preventivo gratuito e preciso entro 24 ore."],["Che differenza c'è tra traduzione certificata e asseverata?","La traduzione certificata è accompagnata da una mia dichiarazione di conformità. Quella asseverata viene giurata in Tribunale e ha valore legale in Italia: è quella richiesta per cittadinanza, permesso di soggiorno e riconoscimento dei titoli."],["Posso inviare i documenti su WhatsApp?","Sì. Basta una foto ben leggibile di ogni pagina. Per l'asseverazione servirà poi l'originale."],["Lavori anche a distanza?","Sì. Traduzioni e lezioni si possono fare interamente online; l'interpretariato anche in videochiamata."]]
+},
+svc:{
+ traduzioni:{name:"Traduzioni",pair:"ترجمة",short:"Documenti personali, legali, medici",
+  tile:"Documenti personali, legali, medici e commerciali, dall'arabo all'italiano e viceversa.",ex:"Certificati · Contratti · Referti",
+  h1:"Traduzioni arabo–italiano e italiano–arabo",
+  lead:"Documenti personali, legali, medici e commerciali tradotti da un madrelingua arabo, con la terminologia corretta e il formato richiesto dagli uffici italiani.",
+  facts:[["Tempi","2–5 giorni lavorativi, urgenze in 24 h"],["Formati","PDF, Word, foto o cartaceo"],["Combinazioni","Arabo → italiano, italiano → arabo"],["Preventivo","Gratuito, entro 24 ore"]],
+  whatT:"Cosa traduco",
+  items:[["Documenti personali","Certificati di nascita e matrimonio, stato di famiglia, patenti, passaporti."],["Legali e giudiziari","Sentenze, procure, atti notarili, contratti, documenti per il Tribunale."],["Titoli di studio","Diplomi, lauree, pagelle e piani di studio per il riconoscimento in Italia."],["Medici","Referti, cartelle cliniche, certificati per invalidità e ricongiungimento."],["Commerciali","Contratti, visure, cataloghi, corrispondenza con clienti e fornitori."],["Siti web e marketing","Testi adattati al pubblico arabofono, non solo tradotti."]],
+  note:["Semplice, certificata o asseverata?","Dipende da dove devi presentare il documento. Se non lo sai, chiedimelo: te lo dico prima di preparare il preventivo.","asseverazioni","Scopri l'asseverazione"],
+  stepsT:"Come funziona",steps:null,
+  faq:[["Le traduzioni sono fatte da te personalmente?","Sì. Non uso agenzie né traduzione automatica: ogni documento è tradotto e controllato da me."],["Traduci anche i timbri e le note a mano?","Sì. Timbri, firme e annotazioni vengono riportati e descritti tra parentesi quadre, come richiesto dagli uffici."]]},
+ asseverazioni:{name:"Asseverazioni",pair:"ترجمة محلَّفة",short:"Traduzioni giurate con valore legale",
+  tile:"Traduzioni giurate in Tribunale per cittadinanza, permesso di soggiorno e titoli di studio.",ex:"Cittadinanza · Permesso · Patente",
+  h1:"Traduzioni asseverate (giurate) dall'arabo",
+  lead:"La traduzione asseverata è giurata davanti al Tribunale e ha valore legale in Italia. Serve per cittadinanza, permesso di soggiorno, riconoscimento dei titoli di studio e conversione della patente.",
+  facts:[["Tempi","3–7 giorni lavorativi"],["Valore","Legale in Italia"],["Dove","Tribunale o Giudice di Pace"],["Preventivo","Gratuito, marche da bollo già calcolate"]],
+  whatT:"Quando serve",
+  items:[["Cittadinanza italiana","Atto di nascita e certificato penale del Paese d'origine."],["Permesso di soggiorno","Documenti per ricongiungimento familiare e rinnovi."],["Riconoscimento titoli","Diplomi e lauree per università, concorsi e ordini professionali."],["Conversione patente","Patente di guida e relativa certificazione."],["Matrimonio in Italia","Nulla osta e certificati di stato civile."],["Procedimenti legali","Sentenze, atti e documenti da depositare in giudizio."]],
+  note:["Legalizzazione e Apostille","Molti documenti rilasciati nei Paesi arabi vanno legalizzati prima della traduzione. Controllo il tuo documento gratuitamente e ti dico cosa fare.",null,null],
+  stepsT:"Come funziona l'asseverazione",
+  steps:[["Documento originale","Se necessario, legalizzato dal consolato o con Apostille. Ti dico io se serve."],["Traduzione","Traduco il documento e preparo il fascicolo con originale e traduzione."],["Giuramento","Giuro la traduzione davanti al funzionario del Tribunale."],["Consegna","Ritiri il fascicolo asseverato, pronto da presentare."]],
+  faq:[["Devo venire di persona?","No. Puoi inviarmi l'originale per posta o consegnarlo in studio. Il giuramento lo faccio io."],["Quanto costano le marche da bollo?","Il Tribunale richiede marche da bollo in base al numero di pagine. Le trovi già calcolate nel preventivo."],["La traduzione asseverata vale anche all'estero?","Per l'uso all'estero può servire anche la legalizzazione della firma in Procura. Ti spiego i passaggi nel preventivo."]]},
+ interpretariato:{name:"Interpretariato",pair:"ترجمة فورية",short:"In presenza e da remoto",
+  tile:"Consecutiva e di trattativa in tribunale, in ospedale, in azienda o in videochiamata.",ex:"Tribunale · Ospedale · Aziende",
+  h1:"Interprete arabo–italiano",
+  lead:"In tribunale, in ospedale, in Questura o a un tavolo d'affari: traduco la conversazione in tempo reale, con precisione e discrezione. Anche da remoto.",
+  facts:[["Modalità","Consecutiva, di trattativa, chuchotage"],["Dove","In presenza o in videochiamata"],["Prenotazione","Meglio con 48 ore di anticipo"],["Tariffa","A ora o a giornata"]],
+  whatT:"Dove lavoro",
+  items:[["Tribunali e Procure","Udienze, interrogatori, incontri con l'avvocato."],["Questure e Prefetture","Pratiche di permesso di soggiorno, audizioni, colloqui."],["Ospedali e ASL","Visite, consenso informato, colloqui con i familiari."],["Aziende","Trattative, fiere, visite di delegazioni, formazione."],["Notai","Rogiti e atti con parti che non parlano italiano."],["Da remoto","Videochiamate e riunioni online con la stessa qualità."]],
+  note:["Arabo standard e dialetti","Una conversazione reale non è un testo scritto. Capisco e parlo i principali dialetti arabi, così non si perde nulla.",null,null],
+  stepsT:"Come si organizza un incontro",
+  steps:[["Prenota","Indica data, luogo, durata e tipo di incontro."],["Preparazione","Se possibile, inviami documenti e nomi in anticipo: arrivo preparato sul tema."],["L'incontro","Interpreto in presenza o online, con la massima riservatezza."]],
+  faq:[["Che differenza c'è tra consecutiva e chuchotage?","Nella consecutiva parlo dopo di te, a brevi blocchi. Nello chuchotage traduco sottovoce mentre l'altra persona parla: è ideale per una o due persone."],["Posso prenotare con poco preavviso?","Sì, se sono disponibile. Per le urgenze scrivimi su WhatsApp."]]},
+ mediazione:{name:"Mediazione linguistico-culturale",pair:"وساطة ثقافية",short:"Scuole, sanità, servizi sociali",
+  tile:"Supporto a scuole, sanità e servizi sociali nel dialogo con persone e famiglie arabofone.",ex:"Scuola · Sanità · Accoglienza",
+  h1:"Mediazione linguistico-culturale",
+  lead:"Quando una famiglia arabofona incontra una scuola, un ospedale o i servizi sociali, le parole non bastano. Aiuto le due parti a capirsi davvero, tenendo conto di cultura, religione e abitudini.",
+  facts:[["Per chi","Enti pubblici, scuole, sanità, cooperative"],["Formato","Interventi singoli o progetti continuativi"],["Lingue","Arabo standard e dialetti"],["Anche","Formazione interculturale per operatori"]],
+  whatT:"Ambiti di intervento",
+  items:[["Scuola","Colloqui con le famiglie, inserimento degli alunni, comunicazioni scuola-casa."],["Sanità","Accompagnamento a visite, parto e percorsi di cura."],["Servizi sociali","Colloqui, progetti di sostegno, tutela dei minori."],["Accoglienza","Centri di accoglienza e progetti per richiedenti asilo."],["Giustizia","Carceri, uffici di esecuzione penale esterna, tutela legale."],["Formazione","Corsi per insegnanti e operatori sulla cultura araba e islamica."]],
+  note:["Non solo traduzione","Il mediatore spiega anche ciò che non viene detto: gesti, silenzi, ruoli in famiglia. Spesso è questo a sbloccare una situazione.",null,null],
+  stepsT:null,steps:null,
+  faq:[["Lavori con enti pubblici tramite convenzione?","Sì. Posso lavorare con incarico diretto, convenzione o tramite cooperative."],["Fai anche formazione per il personale?","Sì. Organizzo incontri su misura per scuole, ospedali e servizi sociali."]]},
+ lezioni:{name:"Lezioni di italiano",pair:"دروس الإيطالية",short:"Per arabofoni, dalla A1 alla C1",
+  tile:"Corsi per arabofoni dalla A1 alla C1, con preparazione agli esami A2 e B1.",ex:"A2 · B1 · Online",
+  h1:"Lezioni di italiano per arabofoni",
+  lead:"Imparare l'italiano partendo dall'arabo è più semplice: spiego grammatica e pronuncia confrontando le due lingue. Lezioni individuali o in piccoli gruppi, in presenza o online.",
+  facts:[["Livelli","Da A1 a C1"],["Formato","Individuali o piccoli gruppi"],["Dove","In presenza o online"],["Prima lezione","Gratuita, 30 minuti"]],
+  whatT:"Percorsi",
+  items:[["Italiano per la vita quotidiana","Parlare con medici, uffici, la scuola dei figli e i colleghi di lavoro."],["Esame A2","Per il permesso di soggiorno UE per soggiornanti di lungo periodo."],["Esame B1","Per la domanda di cittadinanza. Preparazione a CILS, CELI e PLIDA."],["Italiano per il lavoro","Lessico professionale, colloqui, email e telefonate."],["Bambini e ragazzi","Supporto scolastico per studenti arrivati da poco in Italia."],["Scrittura e grammatica","Per chi parla bene ma vuole scrivere senza errori."]],
+  note:["Lezione di prova gratuita","30 minuti per conoscerci, capire il tuo livello e scegliere il percorso giusto.",null,null],
+  vocabT:["Italiano","Arabo"],
+  vocab:[["Buongiorno","صباح الخير"],["Grazie mille","شكرًا جزيلًا"],["Il permesso di soggiorno","تصريح الإقامة"],["Dove si trova la Questura?","أين تقع الكويستورا؟"]],
+  stepsT:"Come iniziamo",
+  steps:[["Lezione di prova","30 minuti gratuiti per capire il tuo livello e i tuoi obiettivi."],["Piano su misura","Scegliamo insieme frequenza, orari e materiali."],["Lezioni e verifiche","Esercizi tra una lezione e l'altra e simulazioni d'esame."]],
+  faq:[["Serve sapere già un po' di italiano?","No. Si può partire da zero: all'inizio spiego in arabo, poi sempre più in italiano."],["Rilasci un attestato?","Sì, a fine corso ricevi un attestato di frequenza. Per l'esame ufficiale ti preparo e ti aiuto con l'iscrizione."]]}
+},
+about:{
+ eb:["Chi sono","من أنا"],
+ h1:"Vivo tra due lingue da sempre. Oggi sono il mio lavoro.",
+ bio:["Sono nato in [Paese] e vivo in Italia dal 2010. Ho studiato Lingue e Letterature Straniere all'Università di [Città] e mi sono specializzato in traduzione giuridica.","Dal 2016 sono iscritto all'albo dei Consulenti Tecnici d'Ufficio del Tribunale di [Città] per la lingua araba. Lavoro con tribunali, prefetture, ospedali e scuole, e con le persone che devono affrontare la burocrazia italiana in una lingua che non è la loro.","Conosco l'arabo standard e i principali dialetti. Fa la differenza quando si interpreta una conversazione reale, non un testo scritto."],
+ tlEb:["Percorso","المسيرة"],tlT:"Formazione ed esperienza",tlL:"Formazione universitaria, specializzazione giuridica e anni di lavoro con enti pubblici e privati.",
+ tl:[["2012","Laurea in Lingue e Letterature Straniere","Università di [Città]"],["2014","Master in traduzione giuridica","Arabo ⇄ italiano"],["2016","Iscrizione all'albo CTU","Tribunale di [Città]"],["2018","Qualifica di mediatore linguistico-culturale","Regione [Nome]"],["2020","Certificazione DITALS","Insegnamento dell'italiano a stranieri"]],
+ valEb:["Come lavoro","أسلوبي"],valT:"Tre cose su cui non faccio compromessi",
+ values:[["Precisione","Nomi, date e timbri trascritti esattamente come nell'originale. Un errore su un documento ufficiale costa settimane."],["Riservatezza","I tuoi documenti restano tra me e te. Trattamento dei dati conforme al GDPR."],["Rispetto culturale","Tradurre significa anche spiegare il contesto: religione, famiglia, modi di comunicare."]],
+ langEb:["Lingue","اللغات"],langT:"Le lingue con cui lavoro",
+ langs:[["العربية","ar","Arabo","Madrelingua · arabo standard e dialetti levantino, egiziano, del Golfo"],["Italiano","it","Italiano","Livello C2 · vivo e lavoro in Italia dal 2010"],["English","en","Inglese","Livello B2 · per corrispondenza e documenti"]]
+},
+contact:{
+ eb:["Contatti","تواصل"],h1:"Richiedi un preventivo o scrivimi",lead:"Rispondo entro 24 ore nei giorni lavorativi. Per le urgenze, WhatsApp è il modo più veloce.",
+ tabs:["Preventivo","Informazioni"],name:"Nome e cognome",namePh:"Es. Mario Rossi",email:"Email",emailPh:"nome@email.it",phone:"Telefono / WhatsApp",optional:"facoltativo",
+ service:"Servizio",services:["Traduzione","Traduzione asseverata","Interpretariato","Mediazione culturale","Lezioni di italiano","Altro"],
+ dirL:"Combinazione linguistica",dirO:["Arabo → italiano","Italiano → arabo"],date:"Entro quando ti serve?",
+ fileL:"Documento da tradurre",fileMain:"Trascina qui il documento o <u>sfoglia</u>",fileHint:"PDF, JPG, PNG o Word · max 10 MB",remove:"Rimuovi",
+ msg:"Messaggio",msgPh:"Descrivi brevemente di cosa hai bisogno…",
+ consent:"Ho letto l'<u>informativa privacy</u> e acconsento al trattamento dei miei dati per ricevere una risposta.",
+ submit:"Invia la richiesta",secure:"Dati protetti · GDPR",errReq:"Campo obbligatorio",errEmail:"Inserisci un indirizzo email valido",errConsent:"Serve il consenso per poterti rispondere",
+ okT:"Grazie!",okS:"Questa è un'anteprima: nel sito finale la richiesta arriverà via email con gli allegati e riceverai una conferma automatica.",again:"Compila di nuovo",
+ waK:"Il modo più veloce",waBtn:"Apri la chat",phoneK:"Telefono",emailK:"Email",studioK:"Studio",studioV:"[Indirizzo], [Città]",studioS:"Solo su appuntamento",hoursK:"Orari",hoursV:"Lun–Ven · 9:00–18:00",hoursS:"Sabato su richiesta",
+ privacy:"I dati inviati con il modulo sono usati solo per risponderti."
+},
+seoUi:{eyebrow:"SEO di base",title:"Anteprima su Google",sub:"Così apparirà questa pagina nei risultati di ricerca.",t:"Title",d:"Meta description",h1:"Titolo H1",url:"URL",hreflang:"Versione in arabo (hreflang)",schema:"Dati strutturati",chars:"caratteri",kw:"Parole chiave principali",note:"In WordPress title e description si modificano con Rank Math, pagina per pagina e per ciascuna lingua."},
+seo:{
+ home:["Traduttore e interprete arabo italiano | Nome Cognome","Traduzioni e asseverazioni arabo–italiano, interpretariato, mediazione culturale e lezioni di italiano per arabofoni. Preventivo gratuito in 24 ore.",["traduttore arabo italiano","traduzioni asseverate arabo","interprete arabo"]],
+ "chi-sono":["Chi sono – Traduttore arabo madrelingua | Nome Cognome","Traduttore e interprete di madrelingua araba, iscritto all'albo CTU del Tribunale. Formazione, esperienza e metodo di lavoro.",["traduttore arabo madrelingua","CTU arabo Tribunale"]],
+ traduzioni:["Traduzioni arabo italiano | Nome Cognome","Traduzioni arabo–italiano di documenti personali, legali, medici e commerciali. Traduttore madrelingua, preventivo gratuito in 24 ore.",["traduzioni arabo italiano","traduttore arabo","traduzione documenti arabo"]],
+ asseverazioni:["Traduzione asseverata arabo italiano | Nome Cognome","Traduzioni giurate dall'arabo per cittadinanza, permesso di soggiorno, titoli di studio e patente. Asseverazione in Tribunale, preventivo in 24 ore.",["traduzione asseverata arabo","traduzione giurata arabo italiano","traduzione documenti cittadinanza"]],
+ interpretariato:["Interprete arabo italiano | Nome Cognome","Interprete arabo–italiano per tribunali, questure, ospedali e aziende. Consecutiva, trattativa e chuchotage, in presenza o da remoto.",["interprete arabo italiano","interprete arabo tribunale","interprete arabo online"]],
+ mediazione:["Mediatore culturale arabo italiano | Nome Cognome","Mediazione linguistico-culturale arabo–italiano per scuole, ospedali, servizi sociali e accoglienza. Interventi e formazione per operatori.",["mediatore culturale arabo","mediazione linguistico culturale","mediatore arabo scuola"]],
+ lezioni:["Lezioni di italiano per arabofoni | Nome Cognome","Corsi di italiano per chi parla arabo: livelli A1–C1 e preparazione agli esami A2 e B1 per permesso di soggiorno e cittadinanza. In presenza o online.",["corso italiano per arabi","lezioni italiano arabofoni","esame B1 cittadinanza"]],
+ contatti:["Contatti e preventivo gratuito | Nome Cognome","Richiedi un preventivo gratuito per traduzioni, asseverazioni o interpretariato arabo–italiano. Risposta entro 24 ore, anche su WhatsApp.",["preventivo traduzione arabo","contatti traduttore arabo"]]
+}
+};
+S.ar={
+dir:"rtl",other:"it",
+ui:{
+ mock:"نموذج أولي",mockNote:"معاينة تصميم · النصوص والصور مؤقتة",seoBtn:"معاينة جوجل",
+ brand:"الاسم واللقب",brandTag:"مترجم · مترجم فوري",
+ cta:"اطلب عرض سعر",ctaLong:"اطلب عرض سعر مجاني",wa:"واتساب",waLong:"راسلني على واتساب",
+ waText:"مرحبًا، أريد عرض سعر لترجمة وثيقة.",
+ micro:"رد خلال 24 ساعة · عرض سعر مجاني دون أي التزام",
+ discover:"تفاصيل الخدمة",menu:"افتح القائمة",close:"إغلاق",home:"الرئيسية",services:"الخدمات",
+ faq:"أسئلة شائعة",faqLead:"لم تجد الإجابة؟ راسلني وسأرد عليك بنفسي.",other:"خدمات أخرى",brief:"باختصار",
+ how:"كيف نعمل",portrait:"صورتك الشخصية الاحترافية",pairWord:"العربية ⇄ الإيطالية",
+ floatT:"ترجمة محلَّفة",floatS:"جاهزة للمحكمة والبريفتورا",sample:"نصوص تجريبية",
+ ctaT:"لديك وثيقة تحتاج إلى ترجمة؟",ctaS:"أرسل لي صورتها واحصل على عرض السعر خلال 24 ساعة.",
+ footTag:"ترجمة وترجمة فورية ووساطة لغوية وثقافية بين العربية والإيطالية، ودروس في اللغة الإيطالية للناطقين بالعربية.",
+ footSvc:"الخدمات",footStudio:"عنّي",footContact:"التواصل",hours:"الاثنين–الجمعة · 9:00–18:00",area:"المكتب في [المدينة] · خدمات عن بُعد في كل إيطاليا",
+ legal:"© 2026 الاسم واللقب · الرقم الضريبي P.IVA 00000000000",privacy:"سياسة الخصوصية",cookie:"سياسة ملفات الارتباط",mockFoot:"نموذج تصميم أولي v1 · غير منشور بعد",
+ copy:"نسخ",copied:"تم النسخ",lang:"اللغة"
+},
+nav:{home:"الرئيسية","chi-sono":"من أنا",services:"الخدمات",lezioni:"دروس اللغة الإيطالية",contatti:"تواصل معي"},
+eb:{svc:["الخدمات","Servizi"],why:["لماذا أنا","Perché scegliermi"],docs:["الوثائق","Documenti"],how:["كيف نعمل","Come funziona"],quotes:["آراء العملاء","Dicono di me"],faq:["أسئلة","Domande"],detail:["بالتفصيل","Nel dettaglio"],other:["الخدمات","Servizi"]},
+steps:[["أرسل الوثيقة","صورة واضحة أو ملف PDF، عبر النموذج أو على واتساب."],["استلم عرض السعر","السعر والمدة بوضوح خلال 24 ساعة، دون أي التزام."],["استلم الترجمة","بالبريد الإلكتروني أو شخصيًا، ومحلَّفة إذا كنت تحتاجها لاستخدام رسمي."]],
+home:{
+ eyebrow:"مترجم ومترجم فوري · عربي ⇄ إيطالي",
+ h1:'الكلمة الصحيحة بين <em class="hl">العربية</em> و<em class="hl">الإيطالية</em>.',
+ lead:"أنا الاسم واللقب، مترجم ومترجم فوري لغتي الأم العربية، ومسجَّل في سجلّ الخبراء لدى المحكمة. أترجم الوثائق وأصادق عليها رسميًا، وأرافق الأفراد والمؤسسات وسيطًا ثقافيًا، وأعلّم اللغة الإيطالية للناطقين بالعربية.",
+ trustL:"أعمل مع",trust:["المحاكم","البريفتورا والكويستورا","المستشفيات","المدارس","مكاتب المحاماة","الشركات"],
+ svcT:"كيف يمكنني مساعدتك",svcL:"خمس خدمات وشخص واحد تتعامل معه. في كل صفحة تجد المدة المطلوبة والوثائق اللازمة والتكلفة.",
+ whyT:"دقة، وسرية تامة، وثقافتان أعرفهما من الداخل",whyL:"أترجم كل وثيقة بنفسي وأتابع كل معاملة من البداية حتى النهاية. لا وكالات ولا ترجمة آلية.",
+ stats:[["12+","سنة من الخبرة في الترجمة والترجمة الفورية"],["3500","وثيقة مترجمة ومحلَّفة"],["24","ساعة للحصول على عرض سعر مفصّل"],["0","ترجمة آلية: كل نص أترجمه بنفسي"]],
+ docsT:"وثائق الإقامة والجنسية ومعادلة الشهادات",docsL:"هذه أكثر الترجمات التي تُطلب مني. وإذا لم تكن متأكدًا من نوع الترجمة المطلوبة، أوضّح لك ذلك قبل أن نبدأ.",
+ docs:["شهادة الميلاد","عقد الزواج","البيان العائلي","الشهادات الثانوية والجامعية","كشوف العلامات والمناهج","رخصة القيادة","شهادة عدم المحكومية","الأحكام والعقود الموثّقة","التقارير الطبية","العقود"],
+ docsLink:"كيف تتم الترجمة المحلَّفة",
+ howT:"ثلاث خطوات بسيطة",howL:"يمكنك البدء حتى بصورة التقطتها بهاتفك.",
+ quotesT:"الثقة تُبنى وثيقةً بعد وثيقة",
+ quotes:[["ترجمة دقيقة وصلت قبل الموعد. وتابع أيضًا إجراءات التحليف في المحكمة دون أن أضطر للقيام بأي شيء.","عميل","ترجمة لملف الجنسية"],["وسيط دقيق ومتفهّم. تغيّر التواصل مع العائلات الناطقة بالعربية في مدرستنا بشكل كامل.","مدير مدرسة","وساطة ثقافية"],["دروس واضحة، مع شرح بالعربية عند الحاجة. نجحت في امتحان B1 من المحاولة الأولى.","طالب","دروس اللغة الإيطالية"]],
+ faq:[["كم تكلّف الترجمة؟","يعتمد ذلك على طول الوثيقة ونوعها ومدى الاستعجال. أرسل لي صورة أو ملف PDF وستحصل على عرض سعر مجاني ودقيق خلال 24 ساعة."],["ما الفرق بين الترجمة المصدَّقة والترجمة المحلَّفة؟","الترجمة المصدَّقة يُرفق بها إقرار مني بمطابقتها للأصل. أما الترجمة المحلَّفة (Asseverata) فيُحلف عليها أمام المحكمة ولها قيمة قانونية في إيطاليا، وهي المطلوبة للجنسية والإقامة ومعادلة الشهادات."],["هل يمكنني إرسال الوثائق عبر واتساب؟","نعم، تكفي صورة واضحة لكل صفحة. أما للترجمة المحلَّفة فسنحتاج لاحقًا إلى الأصل."],["هل تعمل عن بُعد؟","نعم. يمكن إنجاز الترجمة والدروس بالكامل عبر الإنترنت، والترجمة الفورية أيضًا عبر مكالمة فيديو."]]
+},
+svc:{
+ traduzioni:{name:"الترجمة",pair:"Traduzioni",short:"وثائق شخصية وقانونية وطبية",
+  tile:"وثائق شخصية وقانونية وطبية وتجارية، من العربية إلى الإيطالية وبالعكس.",ex:"شهادات · عقود · تقارير طبية",
+  h1:"ترجمة من العربية إلى الإيطالية ومن الإيطالية إلى العربية",
+  lead:"وثائق شخصية وقانونية وطبية وتجارية يترجمها مترجم لغته الأم العربية، بالمصطلحات الصحيحة وبالصيغة التي تطلبها الدوائر الإيطالية.",
+  facts:[["المدة","2–5 أيام عمل، والحالات المستعجلة خلال 24 ساعة"],["الصيغ","PDF أو Word أو صور أو ورق"],["اتجاه الترجمة","عربي ← إيطالي، إيطالي ← عربي"],["عرض السعر","مجاني، خلال 24 ساعة"]],
+  whatT:"ما الذي أترجمه",
+  items:[["الوثائق الشخصية","شهادات الميلاد والزواج، البيان العائلي، رخص القيادة، جوازات السفر."],["الوثائق القانونية والقضائية","الأحكام، والوكالات، والعقود الموثّقة، ووثائق المحكمة."],["الشهادات الدراسية","الشهادات الثانوية والجامعية وكشوف العلامات لمعادلتها في إيطاليا."],["الوثائق الطبية","التقارير الطبية والملفات السريرية وشهادات العجز ولمّ الشمل."],["الوثائق التجارية","العقود، وسجلات الشركات، والكتالوجات، والمراسلات مع العملاء والموردين."],["المواقع الإلكترونية والتسويق","نصوص مكيّفة للجمهور العربي، لا مجرد ترجمة حرفية."]],
+  note:["ترجمة عادية أم مصدَّقة أم محلَّفة؟","يعتمد ذلك على الجهة التي ستقدّم لها الوثيقة. إذا لم تكن متأكدًا، اسألني وسأوضح لك قبل إعداد عرض السعر.","asseverazioni","تعرّف على الترجمة المحلَّفة"],
+  stepsT:"كيف نعمل",steps:null,
+  faq:[["هل تترجم الوثائق بنفسك؟","نعم. لا أستعين بوكالات ولا بالترجمة الآلية؛ كل وثيقة أترجمها وأراجعها بنفسي."],["هل تترجم الأختام والملاحظات المكتوبة بخط اليد؟","نعم. تُنقل الأختام والتواقيع والملاحظات وتوصف بين قوسين معقوفين كما تطلب الدوائر الرسمية."]]},
+ asseverazioni:{name:"الترجمة المحلَّفة",pair:"Asseverazioni",short:"ترجمات محلَّفة لها قيمة قانونية",
+  tile:"ترجمات محلَّفة أمام المحكمة للجنسية وتصريح الإقامة والشهادات الدراسية.",ex:"الجنسية · الإقامة · رخصة القيادة",
+  h1:"ترجمة محلَّفة (Asseverata) من العربية",
+  lead:"الترجمة المحلَّفة يُحلف عليها أمام المحكمة، ولها قيمة قانونية في إيطاليا. وهي مطلوبة للجنسية وتصريح الإقامة ومعادلة الشهادات وتبديل رخصة القيادة.",
+  facts:[["المدة","3–7 أيام عمل"],["القيمة","قانونية في إيطاليا"],["المكان","المحكمة أو قاضي الصلح"],["عرض السعر","مجاني، والطوابع محسوبة مسبقًا"]],
+  whatT:"متى تحتاجها",
+  items:[["الجنسية الإيطالية","شهادة الميلاد وشهادة عدم المحكومية من بلدك الأصلي."],["تصريح الإقامة","وثائق لمّ الشمل العائلي والتجديد."],["معادلة الشهادات","الشهادات الثانوية والجامعية للجامعات والمسابقات والنقابات المهنية."],["تبديل رخصة القيادة","رخصة القيادة والشهادة المرفقة بها."],["الزواج في إيطاليا","وثيقة عدم الممانعة (Nulla osta) وشهادات الأحوال المدنية."],["القضايا القانونية","الأحكام والوثائق المطلوب تقديمها إلى المحكمة."]],
+  note:["التصديق القنصلي والأبوستيل","كثير من الوثائق الصادرة في الدول العربية تحتاج إلى تصديق قبل ترجمتها. أراجع وثيقتك مجانًا وأخبرك بما يجب فعله.",null,null],
+  stepsT:"كيف تتم الترجمة المحلَّفة",
+  steps:[["الوثيقة الأصلية","مصدَّقة من القنصلية أو بختم الأبوستيل إذا لزم الأمر، وسأخبرك إن كان ذلك ضروريًا."],["الترجمة","أترجم الوثيقة وأجهّز الملف مع الأصل والترجمة."],["الحلف","أؤدي اليمين على الترجمة أمام موظف المحكمة."],["الاستلام","تستلم الملف المحلَّف جاهزًا للتقديم."]],
+  faq:[["هل يجب أن أحضر شخصيًا؟","لا. يمكنك إرسال الأصل بالبريد أو تسليمه في المكتب، وأنا أتولى الحلف أمام المحكمة."],["كم تكلّف الطوابع؟","تطلب المحكمة طوابع (Marca da bollo) حسب عدد الصفحات، وستجدها محسوبة مسبقًا في عرض السعر."],["هل تصلح الترجمة المحلَّفة خارج إيطاليا؟","لاستخدامها في الخارج قد يلزم أيضًا تصديق التوقيع لدى النيابة العامة (Procura). أشرح لك الخطوات في عرض السعر."]]},
+ interpretariato:{name:"الترجمة الفورية",pair:"Interpretariato",short:"حضوريًا وعن بُعد",
+  tile:"ترجمة تتابعية وترجمة مفاوضات في المحكمة والمستشفى والشركات أو عبر الفيديو.",ex:"المحكمة · المستشفى · الشركات",
+  h1:"مترجم فوري عربي–إيطالي",
+  lead:"في المحكمة أو المستشفى أو الكويستورا أو في اجتماع عمل: أترجم الحديث مباشرة بدقة وتكتّم. وعن بُعد أيضًا.",
+  facts:[["الأسلوب","تتابعية، ترجمة مفاوضات، ترجمة همسية"],["المكان","حضوريًا أو عبر مكالمة فيديو"],["الحجز","يفضَّل قبل 48 ساعة"],["الأجر","بالساعة أو باليوم"]],
+  whatT:"أين أعمل",
+  items:[["المحاكم والنيابات","الجلسات، والاستجوابات، واللقاءات مع المحامي."],["الكويستورا والبريفتورا","معاملات تصريح الإقامة، والمقابلات، وجلسات الاستماع."],["المستشفيات والمراكز الصحية","الزيارات، والموافقة المستنيرة، واللقاءات مع أفراد العائلة."],["الشركات","المفاوضات، والمعارض، واستقبال الوفود، والتدريب."],["كتّاب العدل","عقود البيع والوثائق مع أطراف لا يتحدثون الإيطالية."],["عن بُعد","مكالمات فيديو واجتماعات عبر الإنترنت بالجودة نفسها."]],
+  note:["الفصحى واللهجات","الحديث الحقيقي ليس نصًا مكتوبًا. أفهم وأتحدث أهم اللهجات العربية، فلا يضيع أي معنى.",null,null],
+  stepsT:"كيف ننظّم اللقاء",
+  steps:[["احجز","حدّد التاريخ والمكان والمدة ونوع اللقاء."],["التحضير","إن أمكن، أرسل لي الوثائق والأسماء مسبقًا لأحضر وأنا ملمّ بالموضوع."],["اللقاء","أترجم حضوريًا أو عبر الإنترنت، بسرية تامة."]],
+  faq:[["ما الفرق بين الترجمة التتابعية والهمسية؟","في التتابعية أتحدث بعدك على مقاطع قصيرة. وفي الهمسية أترجم بصوت منخفض أثناء حديث الطرف الآخر، وهي مناسبة لشخص أو شخصين."],["هل يمكنني الحجز في وقت قصير؟","نعم إذا كنت متاحًا. راسلني على واتساب في الحالات المستعجلة."]]},
+ mediazione:{name:"الوساطة اللغوية والثقافية",pair:"Mediazione",short:"المدارس والصحة والخدمات الاجتماعية",
+  tile:"دعم المدارس والقطاع الصحي والخدمات الاجتماعية في التواصل مع العائلات الناطقة بالعربية.",ex:"المدرسة · الصحة · الاستقبال",
+  h1:"الوساطة اللغوية والثقافية",
+  lead:"عندما تتعامل عائلة ناطقة بالعربية مع مدرسة أو مستشفى أو الخدمات الاجتماعية، لا تكفي الكلمات وحدها. أساعد الطرفين على التفاهم الحقيقي، مع مراعاة الثقافة والدين والعادات.",
+  facts:[["لمن","المؤسسات العامة والمدارس والقطاع الصحي والتعاونيات"],["الشكل","تدخلات فردية أو مشاريع مستمرة"],["اللغات","الفصحى واللهجات"],["وأيضًا","تدريب ثقافي للعاملين"]],
+  whatT:"مجالات العمل",
+  items:[["المدرسة","لقاءات مع العائلات، ودمج التلاميذ، والتواصل بين المدرسة والبيت."],["الصحة","مرافقة في الزيارات الطبية والولادة ومسارات العلاج."],["الخدمات الاجتماعية","المقابلات، ومشاريع الدعم، وحماية القاصرين."],["الاستقبال","مراكز الاستقبال ومشاريع طالبي اللجوء."],["العدالة","السجون ومكاتب تنفيذ العقوبات والحماية القانونية."],["التدريب","دورات للمعلمين والعاملين حول الثقافة العربية والإسلامية."]],
+  note:["أكثر من مجرد ترجمة","يشرح الوسيط أيضًا ما لا يُقال: الإيماءات، والصمت، والأدوار داخل العائلة. وغالبًا ما يكون ذلك مفتاح الحل.",null,null],
+  stepsT:null,steps:null,
+  faq:[["هل تعمل مع المؤسسات العامة بموجب اتفاقيات؟","نعم. يمكنني العمل بتكليف مباشر أو باتفاقية أو عبر التعاونيات."],["هل تقدّم تدريبًا للموظفين؟","نعم. أنظّم لقاءات مصمَّمة خصيصًا للمدارس والمستشفيات والخدمات الاجتماعية."]]},
+ lezioni:{name:"دروس اللغة الإيطالية",pair:"Lezioni di italiano",short:"للناطقين بالعربية، من A1 إلى C1",
+  tile:"دورات للناطقين بالعربية من A1 إلى C1، مع التحضير لامتحانَي A2 وB1.",ex:"A2 · B1 · عبر الإنترنت",
+  h1:"دروس اللغة الإيطالية للناطقين بالعربية",
+  lead:"تعلّم الإيطالية انطلاقًا من العربية أسهل: أشرح القواعد والنطق بالمقارنة بين اللغتين. دروس فردية أو في مجموعات صغيرة، حضوريًا أو عبر الإنترنت.",
+  facts:[["المستويات","من A1 إلى C1"],["الشكل","فردي أو مجموعات صغيرة"],["المكان","حضوريًا أو عبر الإنترنت"],["الدرس الأول","مجاني، 30 دقيقة"]],
+  whatT:"المسارات",
+  items:[["الإيطالية للحياة اليومية","التحدث مع الأطباء والدوائر الرسمية ومدرسة الأبناء وزملاء العمل."],["امتحان A2","لتصريح الإقامة الأوروبي طويل الأمد."],["امتحان B1","لطلب الجنسية الإيطالية، مع التحضير لامتحانات CILS وCELI وPLIDA."],["الإيطالية للعمل","مفردات مهنية، ومقابلات عمل، ورسائل بريد إلكتروني ومكالمات."],["الأطفال والشباب","دعم مدرسي للطلاب الذين وصلوا حديثًا إلى إيطاليا."],["الكتابة والقواعد","لمن يتحدث جيدًا ويريد أن يكتب دون أخطاء."]],
+  note:["درس تجريبي مجاني","30 دقيقة لنتعارف، ونحدد مستواك، ونختار المسار المناسب لك.",null,null],
+  vocabT:["الإيطالية","العربية"],
+  vocab:[["Buongiorno","صباح الخير"],["Grazie mille","شكرًا جزيلًا"],["Il permesso di soggiorno","تصريح الإقامة"],["Dove si trova la Questura?","أين تقع الكويستورا؟"]],
+  stepsT:"كيف نبدأ",
+  steps:[["درس تجريبي","30 دقيقة مجانية لتحديد مستواك وأهدافك."],["خطة مناسبة لك","نختار معًا عدد الدروس والمواعيد والمواد."],["دروس وتقييم","تمارين بين الدروس ومحاكاة للامتحان."]],
+  faq:[["هل يجب أن أعرف بعض الإيطالية مسبقًا؟","لا. يمكن البدء من الصفر: في البداية أشرح بالعربية، ثم بالإيطالية أكثر فأكثر."],["هل أحصل على شهادة؟","نعم، تحصل في نهاية الدورة على شهادة حضور. أما الامتحان الرسمي فأحضّرك له وأساعدك في التسجيل."]]}
+},
+about:{
+ eb:["من أنا","Chi sono"],
+ h1:"عشتُ بين لغتين طوال حياتي، واليوم أصبحتا مهنتي.",
+ bio:["وُلدت في [البلد] وأعيش في إيطاليا منذ عام 2010. درست اللغات والآداب الأجنبية في جامعة [المدينة]، وتخصّصت في الترجمة القانونية.","منذ عام 2016 أنا مسجَّل في سجلّ الخبراء الفنيين (CTU) لدى محكمة [المدينة] للغة العربية. أعمل مع المحاكم والبريفتورا والمستشفيات والمدارس، ومع الأشخاص الذين يواجهون البيروقراطية الإيطالية بلغة ليست لغتهم.","أتقن العربية الفصحى وأهم اللهجات، وهذا يصنع الفرق عند الترجمة الفورية لحديث حقيقي، لا لنص مكتوب."],
+ tlEb:["المسيرة","Percorso"],tlT:"التكوين والخبرة",tlL:"تكوين جامعي، وتخصص قانوني، وسنوات من العمل مع المؤسسات العامة والخاصة.",
+ tl:[["2012","إجازة في اللغات والآداب الأجنبية","جامعة [المدينة]"],["2014","ماجستير في الترجمة القانونية","عربي ⇄ إيطالي"],["2016","التسجيل في سجلّ خبراء المحكمة (CTU)","محكمة [المدينة]"],["2018","مؤهل وسيط لغوي وثقافي","إقليم [الاسم]"],["2020","شهادة DITALS","تدريس الإيطالية لغير الناطقين بها"]],
+ valEb:["أسلوبي في العمل","Come lavoro"],valT:"ثلاثة أمور لا أتنازل عنها",
+ values:[["الدقة","الأسماء والتواريخ والأختام تُنقل تمامًا كما في الأصل. خطأ واحد في وثيقة رسمية قد يكلّف أسابيع."],["السرية","وثائقك تبقى بيني وبينك، مع معالجة البيانات وفق اللائحة الأوروبية لحماية البيانات (GDPR)."],["احترام الثقافة","الترجمة تعني أيضًا شرح السياق: الدين، والعائلة، وأساليب التواصل."]],
+ langEb:["اللغات","Lingue"],langT:"اللغات التي أعمل بها",
+ langs:[["العربية","ar","العربية","اللغة الأم · الفصحى واللهجات الشامية والمصرية والخليجية"],["Italiano","it","الإيطالية","مستوى C2 · أعيش وأعمل في إيطاليا منذ 2010"],["English","en","الإنجليزية","مستوى B2 · للمراسلات والوثائق"]]
+},
+contact:{
+ eb:["تواصل معي","Contatti"],h1:"اطلب عرض سعر أو راسلني",lead:"أرد خلال 24 ساعة في أيام العمل. وفي الحالات المستعجلة، واتساب هو الطريقة الأسرع.",
+ tabs:["عرض سعر","استفسار"],name:"الاسم الكامل",namePh:"مثال: أحمد خليل",email:"البريد الإلكتروني",emailPh:"name@email.com",phone:"الهاتف / واتساب",optional:"اختياري",
+ service:"الخدمة",services:["ترجمة","ترجمة محلَّفة","ترجمة فورية","وساطة ثقافية","دروس اللغة الإيطالية","غير ذلك"],
+ dirL:"اتجاه الترجمة",dirO:["عربي ← إيطالي","إيطالي ← عربي"],date:"متى تحتاجها؟",
+ fileL:"الوثيقة المطلوب ترجمتها",fileMain:"اسحب الوثيقة إلى هنا أو <u>تصفّح</u>",fileHint:"PDF أو JPG أو PNG أو Word · حتى 10 ميغابايت",remove:"إزالة",
+ msg:"الرسالة",msgPh:"صف باختصار ما تحتاجه…",
+ consent:"قرأت <u>سياسة الخصوصية</u> وأوافق على معالجة بياناتي للحصول على رد.",
+ submit:"أرسل الطلب",secure:"بياناتك محمية · GDPR",errReq:"هذا الحقل مطلوب",errEmail:"أدخل بريدًا إلكترونيًا صحيحًا",errConsent:"نحتاج موافقتك حتى نتمكن من الرد عليك",
+ okT:"شكرًا لك!",okS:"هذه معاينة فقط: في الموقع النهائي سيصل الطلب مع المرفقات إلى البريد الإلكتروني، وستصلك رسالة تأكيد تلقائية.",again:"املأ النموذج من جديد",
+ waK:"الطريقة الأسرع",waBtn:"افتح المحادثة",phoneK:"الهاتف",emailK:"البريد الإلكتروني",studioK:"المكتب",studioV:"[العنوان]، [المدينة]",studioS:"بموعد مسبق فقط",hoursK:"ساعات العمل",hoursV:"الاثنين–الجمعة · 9:00–18:00",hoursS:"السبت عند الطلب",
+ privacy:"تُستخدم البيانات المرسلة عبر النموذج للرد عليك فقط."
+},
+seoUi:{eyebrow:"أساسيات SEO",title:"المعاينة على جوجل",sub:"هكذا ستظهر هذه الصفحة في نتائج البحث.",t:"العنوان (Title)",d:"الوصف (Meta description)",h1:"عنوان H1",url:"الرابط",hreflang:"النسخة الإيطالية (hreflang)",schema:"البيانات المنظّمة",chars:"حرفًا",kw:"الكلمات المفتاحية الرئيسية",note:"في ووردبريس يُعدَّل العنوان والوصف عبر Rank Math، لكل صفحة ولكل لغة."},
+seo:{
+ home:["مترجم عربي إيطالي في إيطاليا | الاسم واللقب","ترجمة عادية ومحلَّفة من العربية إلى الإيطالية، وترجمة فورية، ووساطة ثقافية، ودروس إيطالية للناطقين بالعربية. عرض سعر مجاني خلال 24 ساعة.",["مترجم عربي إيطالي","ترجمة محلفة في إيطاليا","مترجم عربي في إيطاليا"]],
+ "chi-sono":["من أنا – مترجم لغته الأم العربية | الاسم واللقب","مترجم ومترجم فوري لغته الأم العربية، مسجَّل خبيرًا لدى المحكمة في إيطاليا. التكوين والخبرة وأسلوب العمل.",["مترجم معتمد في إيطاليا","خبير لغة عربية لدى المحكمة"]],
+ traduzioni:["ترجمة عربي إيطالي وبالعكس | الاسم واللقب","ترجمة وثائق شخصية وقانونية وطبية وتجارية من العربية إلى الإيطالية وبالعكس. مترجم لغته الأم العربية، وعرض سعر مجاني خلال 24 ساعة.",["ترجمة عربي إيطالي","مترجم عربي في إيطاليا","ترجمة وثائق إلى الإيطالية"]],
+ asseverazioni:["ترجمة محلَّفة للجنسية والإقامة | الاسم واللقب","ترجمة محلَّفة من العربية للجنسية وتصريح الإقامة ومعادلة الشهادات ورخصة القيادة. الحلف أمام المحكمة، وعرض سعر خلال 24 ساعة.",["ترجمة محلفة إيطاليا","ترجمة وثائق الجنسية الإيطالية","Asseverazione عربي"]],
+ interpretariato:["مترجم فوري عربي إيطالي | الاسم واللقب","مترجم فوري عربي–إيطالي للمحاكم والكويستورا والمستشفيات والشركات، حضوريًا أو عن بُعد عبر مكالمة فيديو.",["مترجم فوري عربي إيطالي","مترجم في المحكمة إيطاليا","مترجم عربي أونلاين"]],
+ mediazione:["وسيط لغوي وثقافي عربي في إيطاليا | الاسم واللقب","وساطة لغوية وثقافية عربي–إيطالي للمدارس والمستشفيات والخدمات الاجتماعية ومراكز الاستقبال، مع تدريب للعاملين.",["وسيط ثقافي عربي إيطاليا","وساطة لغوية وثقافية","Mediatore culturale arabo"]],
+ lezioni:["دروس اللغة الإيطالية للعرب | الاسم واللقب","دورات إيطالية للناطقين بالعربية من A1 إلى C1، مع التحضير لامتحان A2 للإقامة وB1 للجنسية. حضوريًا أو عبر الإنترنت.",["دروس لغة إيطالية للعرب","امتحان B1 الجنسية الإيطالية","تعلم الإيطالية أونلاين"]],
+ contatti:["تواصل واطلب عرض سعر مجاني | الاسم واللقب","اطلب عرض سعر مجاني للترجمة العادية أو المحلَّفة أو الفورية بين العربية والإيطالية. رد خلال 24 ساعة، وعبر واتساب أيضًا.",["عرض سعر ترجمة","مترجم عربي واتساب"]]
+}
+};
+const SERVICES=["traduzioni","asseverazioni","interpretariato","mediazione"];
+const ALLSVC=[...SERVICES,"lezioni"];
+const PAGES=["home","chi-sono",...ALLSVC,"contatti"];
+const SVC_ICON={traduzioni:"doc",asseverazioni:"seal",interpretariato:"headset",mediazione:"bubbles",lezioni:"book"};
+const ART={traduzioni:{ar:"ترجمة",it:"traduzione"},interpretariato:{ar:"حوار",it:"dialogo"},mediazione:{ar:"تفاهم",it:"intesa"},lezioni:{ar:"تعلُّم",it:"imparare"}};
+const PHONE="+39 333 000 0000",WA_NUM="393330000000",EMAIL="info@nomecognome.it",DOMAIN="www.nomecognome.it";
+
+const sv=(p,cls="")=>`<svg class="ic ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+const I={
+ doc:sv('<path d="M6.5 3h7.5l4.5 4.5V21h-12z"/><path d="M14 3v4.5h4.5"/><path d="M9.5 12.5h6M9.5 16h4"/>'),
+ seal:sv('<circle cx="12" cy="9.5" r="5.5"/><circle cx="12" cy="9.5" r="2.4"/><path d="M8.6 13.8 7.5 21l4.5-2.2 4.5 2.2-1.1-7.2"/>'),
+ headset:sv('<path d="M4.5 14v-2a7.5 7.5 0 0 1 15 0v2"/><rect x="3.5" y="13.5" width="4" height="6" rx="1.6"/><rect x="16.5" y="13.5" width="4" height="6" rx="1.6"/><path d="M18.5 19.5c0 1.4-1.6 2-3.5 2h-1.5"/>'),
+ bubbles:sv('<path d="M3.5 4.5h11v8h-6l-3.5 3v-3h-1.5z"/><path d="M17.5 8.5h3v8h-1.5v3l-3.5-3h-6v-1.5"/>'),
+ book:sv('<path d="M12 6.5C9.5 5 6.5 4.6 3.5 5.3v13.2c3-.7 6-.3 8.5 1.2 2.5-1.5 5.5-1.9 8.5-1.2V5.3c-3-.7-6-.3-8.5 1.2z"/><path d="M12 6.5v13.2"/>'),
+ arrow:sv('<path d="M4.5 12h15M13.5 6l6 6-6 6"/>',"flip"),
+ chev:sv('<path d="m6.5 9.5 5.5 5.5 5.5-5.5"/>'),
+ chevR:sv('<path d="m9.5 6.5 5.5 5.5-5.5 5.5"/>',"flip"),
+ phone:sv('<path d="M5 3.5h3.5l1.5 4.5-2.2 1.4a11 11 0 0 0 6.8 6.8l1.4-2.2 4.5 1.5V19a1.5 1.5 0 0 1-1.5 1.5A16.5 16.5 0 0 1 3.5 5 1.5 1.5 0 0 1 5 3.5z"/>'),
+ mail:sv('<rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6 8.5 7 8.5-7"/>'),
+ pin:sv('<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>'),
+ clock:sv('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>'),
+ copy:sv('<rect x="8.5" y="8.5" width="11" height="11" rx="1.5"/><path d="M15.5 8.5v-3A1.5 1.5 0 0 0 14 4H6a1.5 1.5 0 0 0-1.5 1.5V14A1.5 1.5 0 0 0 6 15.5h2.5"/>'),
+ check:sv('<path d="m5 12.5 4.5 4.5L19 7.5"/>'),
+ checkC:sv('<circle cx="12" cy="12" r="9"/><path d="m8 12.3 2.8 2.8L16.2 9.5"/>'),
+ menu:sv('<path d="M4 7.5h16M4 12h16M4 16.5h16"/>'),
+ close:sv('<path d="M6 6l12 12M18 6 6 18"/>'),
+ camera:sv('<path d="M4 8h3l1.5-2.5h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>'),
+ upload:sv('<path d="M12 15.5V4.5M7.5 9 12 4.5 16.5 9"/><path d="M4.5 15v4.5h15V15"/>'),
+ search:sv('<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.4-4.4"/>'),
+ plus:sv('<path d="M12 5v14M5 12h14"/>'),
+ lock:sv('<rect x="5" y="10.5" width="14" height="10" rx="1.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/>'),
+ file:sv('<path d="M7 3h6.5L18 7.5V21H7z"/><path d="M13.5 3v4.5H18"/>'),
+ quote:'<svg class="ic q flip" viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M0 24V14C0 6.3 4.3 1.6 12 0l1.4 3C8.9 4.6 6.8 7.4 6.6 11H12v13zm18 0V14c0-7.7 4.3-12.4 12-14l1.4 3c-4.5 1.6-6.6 4.4-6.8 8H30v13z"/></svg>',
+ wa:'<svg class="ic wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41z"/></svg>'
+};
+const LOGO='<svg class="mark" viewBox="0 0 32 36" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 35V16a13 13 0 0 1 26 0v19"/><path d="M9 35V19c0-5 3-8.5 7-11.5 4 3 7 6.5 7 11.5v16"/><path d="M1 35h30"/></svg>';
+const LAT='<svg class="lat" aria-hidden="true"><rect width="100%" height="100%" fill="url(#lat)"/></svg>';
+
+function lines(x0,y0,ws,align){return ws.map((w,i)=>`<rect class="d-ln" x="${align==="end"?x0-w:x0}" y="${y0+i*15}" width="${w}" height="4.5" rx="2.25"/>`).join("")}
+const DOC_SVG=`<svg class="docsvg" viewBox="0 0 420 360" role="img" aria-label="Traduzione asseverata con timbro del Tribunale e marca da bollo" style="direction:ltr">
+<defs><path id="stampPath" d="M-38,0a38,38 0 1,1 76,0a38,38 0 1,1 -76,0"/></defs>
+<g transform="rotate(-6 150 190)"><rect class="d-p2" x="46" y="46" width="206" height="272" rx="3"/><circle class="d-emb" cx="149" cy="78" r="11"/><circle class="d-emb" cx="149" cy="78" r="5"/>${lines(232,104,[150,172,128,166,142,170,112,158,136,96,150,120],"end")}</g>
+<g transform="rotate(2.5 270 200)"><rect class="d-p1" x="150" y="58" width="214" height="276" rx="3"/><text class="d-h" x="172" y="92">TRADUZIONE GIURATA</text><rect class="d-rule" x="172" y="101" width="74" height="1.2"/>${lines(172,116,[168,150,172,124,160,142,170,110,158,132],"start")}<path class="d-sig" d="M176 292c8-14 14-18 16-8s-4 14 4 6 10-16 14-8-2 12 6 6 12-8 16-4 8 4 22-2"/><text class="d-small" x="172" y="318">Il traduttore</text></g>
+<g transform="translate(292 72) rotate(5)"><rect class="d-bollo" width="54" height="64" rx="1"/><rect class="d-bollo-in" x="5" y="5" width="44" height="54"/><text class="d-bt" x="27" y="22" text-anchor="middle">MARCA DA</text><text class="d-bt" x="27" y="30" text-anchor="middle">BOLLO</text><text class="d-bv" x="27" y="50" text-anchor="middle">€16,00</text></g>
+<g class="d-stamp" transform="translate(306 262) rotate(-16)"><circle r="48" class="s-o"/><circle r="29" class="s-i"/><text class="s-t"><textPath href="#stampPath">TRIBUNALE ORDINARIO · ASSEVERAZIONE ·</textPath></text><text class="s-c" y="-1" text-anchor="middle">CTU</text><text class="s-c2" y="12" text-anchor="middle">AR · IT</text></g>
+</svg>`;
+
+let state={lang:"it",page:"home"};
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const href=(p,l=state.lang)=>`#${l}-${p}`;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const waLink=t=>`https://wa.me/${WA_NUM}?text=${encodeURIComponent(t.ui.waText)}`;
+const bdi=s=>`<bdi dir="ltr">${s}</bdi>`;
+function eyebrow(pair,t,extra=""){const o=t.other;return `<p class="eyebrow"><span>${pair[0]}</span>${pair[1]?`<span class="pair" lang="${o}" dir="${o==="ar"?"rtl":"ltr"}">${pair[1]}</span>`:""}${extra}</p>`}
+function ctaRow(t,light){return `<div class="cta-row"><a class="btn ${light?"btn-light":"btn-primary"}" href="${href("contatti")}">${t.ui.ctaLong}${I.arrow}</a><a class="btn ${light?"btn-line":"btn-ghost"}" href="${waLink(t)}" target="_blank" rel="noopener">${I.wa}${t.ui.waLong}</a></div>`}
+function micro(t){return `<p class="micro">${I.checkC}${t.ui.micro}</p>`}
+function portrait(t){return `<div class="arch">${LAT}<svg class="sil" viewBox="0 0 400 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><circle cx="200" cy="232" r="64"/><path d="M62 500c8-112 70-172 138-172s130 60 138 172z"/></svg><span class="arch-cap">${I.camera}${t.ui.portrait}</span></div>`}
+function typeArch(w){return `<div class="arch arch-type" aria-hidden="true">${LAT}<span class="tw-ar" lang="ar" dir="rtl">${w.ar}</span><span class="tw-mid"><i></i>AR · IT<i></i></span><span class="tw-it" lang="it">${w.it}</span></div>`}
+function crumbs(t,items){return `<nav aria-label="Breadcrumb"><ol class="crumbs">${items.map((c,i)=>`<li>${c[1]?`<a href="${href(c[1])}">${c[0]}</a>`:`<span aria-current="page">${c[0]}</span>`}</li>${i<items.length-1?`<li aria-hidden="true">${I.chevR}</li>`:""}`).join("")}</ol></nav>`}
+function langSwitch(t){const p=state.page;return `<div class="lang" role="group" aria-label="${t.ui.lang}"><a href="#it-${p}" lang="it" ${state.lang==="it"?'aria-current="true"':""}>IT</a><a href="#ar-${p}" lang="ar" ${state.lang==="ar"?'aria-current="true"':""}>عربي</a></div>`}
+
+function header(t){
+ const p=state.page,cur=x=>p===x?' aria-current="page"':"";
+ return `<a class="skip" href="#main">${state.lang==="ar"?"تخطَّ إلى المحتوى":"Salta al contenuto"}</a>
+ <div class="ribbon"><div class="wrap"><span class="rb-l"><span class="dot"></span><strong>${t.ui.mock}</strong><span class="rb-note">${t.ui.mockNote}</span></span><button type="button" class="rb-btn" data-seo>${I.search}${t.ui.seoBtn}</button></div></div>
+ <header class="hdr" id="hdr"><div class="wrap">
+  <a class="brand" href="${href("home")}">${LOGO}<span><span class="brand-name">${t.ui.brand}</span><span class="brand-tag">${t.ui.brandTag}</span></span></a>
+  <nav class="nav" aria-label="${t.ui.menu}">
+   <a href="${href("home")}"${cur("home")}>${t.nav.home}</a>
+   <a href="${href("chi-sono")}"${cur("chi-sono")}>${t.nav["chi-sono"]}</a>
+   <div class="dd"><button type="button" class="dd-btn${SERVICES.includes(p)?" is-active":""}" aria-expanded="false" data-dd>${t.nav.services}${I.chev}</button>
+    <div class="dd-panel">${SERVICES.map(s=>`<a href="${href(s)}"${cur(s)}><span class="dd-ic">${I[SVC_ICON[s]]}</span><span class="dd-t">${t.svc[s].name}</span><span class="dd-d">${t.svc[s].short}</span></a>`).join("")}</div></div>
+   <a href="${href("lezioni")}"${cur("lezioni")}>${t.nav.lezioni}</a>
+   <a href="${href("contatti")}"${cur("contatti")}>${t.nav.contatti}</a>
+  </nav>
+  ${langSwitch(t)}
+  <a class="btn btn-primary btn-sm hdr-cta" href="${href("contatti")}">${t.ui.cta}</a>
+  <button type="button" class="menu-btn" aria-expanded="false" aria-controls="mnav" data-menu>${I.menu}<span class="sr">${t.ui.menu}</span></button>
+ </div></header>
+ <div class="mnav" id="mnav" hidden><div class="wrap">
+  <nav class="mnav-links" aria-label="${t.ui.menu}">
+   <a href="${href("home")}"${cur("home")}>${t.nav.home}${I.arrow}</a>
+   <a href="${href("chi-sono")}"${cur("chi-sono")}>${t.nav["chi-sono"]}${I.arrow}</a>
+   <p class="mnav-h">${t.nav.services}</p>
+   <div class="mnav-svc">${SERVICES.map(s=>`<a href="${href(s)}"${cur(s)}><span class="mini-arch">${I[SVC_ICON[s]]}</span>${t.svc[s].name}</a>`).join("")}</div>
+   <a href="${href("lezioni")}"${cur("lezioni")}>${t.nav.lezioni}${I.arrow}</a>
+   <a href="${href("contatti")}"${cur("contatti")}>${t.nav.contatti}${I.arrow}</a>
+  </nav>
+  <div class="mnav-cta"><a class="btn btn-primary" href="${href("contatti")}">${t.ui.ctaLong}</a><a class="btn btn-ghost" href="${waLink(t)}" target="_blank" rel="noopener">${I.wa}${t.ui.waLong}</a></div>
+  <p class="mnav-meta">${bdi(PHONE)} · ${bdi(EMAIL)}</p>
+ </div></div>`;
+}
+
+function footer(t){
+ return `<footer class="foot"><div class="wrap">
+  <div class="foot-grid">
+   <div class="foot-brand"><a class="brand" href="${href("home")}">${LOGO}<span><span class="brand-name">${t.ui.brand}</span><span class="brand-tag">${t.ui.brandTag}</span></span></a><p>${t.ui.footTag}</p>${langSwitch(t)}</div>
+   <div><p class="foot-h">${t.ui.footSvc}</p><ul>${ALLSVC.map(s=>`<li><a href="${href(s)}">${t.svc[s].name}</a></li>`).join("")}</ul></div>
+   <div><p class="foot-h">${t.ui.footStudio}</p><ul><li><a href="${href("home")}">${t.nav.home}</a></li><li><a href="${href("chi-sono")}">${t.nav["chi-sono"]}</a></li><li><a href="${href("contatti")}">${t.nav.contatti}</a></li><li><span class="fl">${t.ui.privacy}</span></li><li><span class="fl">${t.ui.cookie}</span></li></ul></div>
+   <div><p class="foot-h">${t.ui.footContact}</p><ul class="foot-c"><li>${I.wa}${bdi(PHONE)}</li><li>${I.mail}${bdi(EMAIL)}</li><li>${I.pin}<span>${t.ui.area}</span></li><li>${I.clock}<span>${t.ui.hours}</span></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>${t.ui.legal}</span><span>${t.ui.mockFoot}</span></div>
+ </div></footer>
+ <a class="fab" href="${waLink(t)}" target="_blank" rel="noopener" aria-label="${t.ui.waLong}">${I.wa}<span>${t.ui.wa}</span></a>
+ <div class="mbar"><a class="btn btn-wa" href="${waLink(t)}" target="_blank" rel="noopener">${I.wa}${t.ui.wa}</a><a class="btn btn-primary" href="${href("contatti")}">${t.ui.cta}</a></div>`;
+}
+
+function faqSec(t,items){
+ return `<div class="wrap faq"><div class="faq-side">${eyebrow(t.eb.faq,t)}<h2>${t.ui.faq}</h2><p class="lead">${t.ui.faqLead}</p><a class="btn btn-ghost" href="${waLink(t)}" target="_blank" rel="noopener">${I.wa}${t.ui.waLong}</a></div>
+ <div class="acc">${items.map(([q,a],i)=>`<details${i===0?" open":""}><summary>${q}<span class="pl">${I.plus}</span></summary><p class="ans">${a}</p></details>`).join("")}</div></div>`;
+}
+function stepsSec(t,title,lead,steps){
+ return `<div class="wrap"><div class="sec-head"><div>${eyebrow(t.eb.how,t)}<h2>${title}</h2></div>${lead?`<p class="lead">${lead}</p>`:""}</div>
+ <ol class="steps" style="--n:${steps.length}">${steps.map(([a,b],i)=>`<li class="step"><span class="step-n">${i+1}</span><h3>${a}</h3><p>${b}</p></li>`).join("")}</ol></div>`;
+}
+function ctaBand(t){
+ return `<section class="cta-band">${LAT}<div class="wrap cta-in"><div><h2>${t.ui.ctaT}</h2><p>${t.ui.ctaS}</p></div>${ctaRow(t,true)}</div></section>`;
+}
+function sections(list){return list.filter(Boolean).map((html,i)=>`<section class="sec${i%2===0?" alt":""}">${html}</section>`).join("")}
+function vHome(t){
+ const h=t.home;
+ const hero=`<section class="hero"><div class="wrap">
+  <div class="hero-grid">
+   <div><p class="eyebrow"><span>${h.eyebrow}</span></p><h1>${h.h1}</h1><p class="lead">${h.lead}</p>${ctaRow(t)}${micro(t)}</div>
+   <div class="hero-art">${portrait(t)}
+    <div class="float-doc"><span class="fd-ic">${I.seal}</span><span><strong>${t.ui.floatT}</strong><span class="s">${t.ui.floatS}</span></span><span class="ok">${I.checkC}</span></div>
+    <span class="float-pair">${t.ui.pairWord}</span>
+   </div>
+  </div>
+  <div class="trust"><span class="trust-l">${h.trustL}</span><ul>${h.trust.map(x=>`<li>${x}</li>`).join("")}</ul></div>
+ </div></section>`;
+ const svc=`<section class="sec alt" id="servizi"><div class="wrap">
+  <div class="sec-head"><div>${eyebrow(t.eb.svc,t)}<h2>${h.svcT}</h2></div><p class="lead">${h.svcL}</p></div>
+  <div class="tiles">${ALLSVC.map(s=>{const x=t.svc[s];return `<a class="tile" href="${href(s)}"><span class="tile-ic">${I[SVC_ICON[s]]}</span><h3>${x.name}</h3><p>${x.tile}</p><p class="ex">${x.ex}</p><span class="more">${t.ui.discover}${I.arrow}</span></a>`}).join("")}</div>
+ </div></section>`;
+ const band=`<section class="band"><svg class="band-lat" aria-hidden="true"><rect width="100%" height="100%" fill="url(#lat)"/></svg><div class="wrap">
+  <div class="sec-head"><div>${eyebrow(t.eb.why,t)}<h2>${h.whyT}</h2></div><p class="lead">${h.whyL}</p></div>
+  <div class="stats">${h.stats.map(([n,l])=>`<div class="stat"><span class="num">${bdi(n)}</span><span class="lbl">${l}</span></div>`).join("")}</div>
+ </div></section>`;
+ const docs=`<section class="sec"><div class="wrap split">
+  <div>${eyebrow(t.eb.docs,t)}<h2>${h.docsT}</h2><p class="lead">${h.docsL}</p>
+   <ul class="checks">${h.docs.map(d=>`<li>${I.check}<span>${d}</span></li>`).join("")}</ul>
+   <a class="link-arrow" href="${href("asseverazioni")}">${h.docsLink}${I.arrow}</a></div>
+  <div class="doc-panel">${DOC_SVG}</div>
+ </div></section>`;
+ const rest=sections([
+  stepsSec(t,h.howT,h.howL,t.steps),
+  `<div class="wrap"><div class="sec-head"><div>${eyebrow(t.eb.quotes,t,`<span class="tag">${t.ui.sample}</span>`)}<h2>${h.quotesT}</h2></div></div>
+   <div class="quotes">${h.quotes.map(([q,a,r])=>`<figure class="quote">${I.quote}<blockquote>${q}</blockquote><figcaption><strong>${a}</strong>${r}</figcaption></figure>`).join("")}</div></div>`,
+  faqSec(t,h.faq)
+ ]);
+ return hero+svc+band+docs+rest+ctaBand(t);
+}
+
+function vService(t,s){
+ const x=t.svc[s],isLez=s==="lezioni";
+ const cr=isLez?[[t.ui.home,"home"],[x.name]]:[[t.ui.home,"home"],[t.ui.services],[x.name]];
+ const art=s==="asseverazioni"?`<div class="doc-panel">${DOC_SVG}</div>`:typeArch(ART[s]);
+ const hero=`<section class="phero"><div class="wrap">${crumbs(t,cr)}
+  <div class="phero-grid"><div>${eyebrow([x.name,x.pair],t)}<h1>${x.h1}</h1><p class="lead">${x.lead}</p>${ctaRow(t)}${micro(t)}</div><div class="phero-art">${art}</div></div>
+  <div class="brief"><p class="brief-l">${t.ui.brief}</p><dl class="facts">${x.facts.map(([k,v])=>`<div class="fact"><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl></div>
+ </div></section>`;
+ const [nt,nd,nl,nlt]=x.note;
+ let aside="";
+ if(x.vocab){
+  const ar=state.lang==="ar",row=(a,b,cls)=>`<div class="vocab-row ${cls||""}">${ar?`<span class="v-ar" lang="ar">${b}</span><span class="v-it" lang="it" dir="ltr">${a}</span>`:`<span class="v-it" lang="it">${a}</span><span class="v-ar" lang="ar" dir="rtl">${b}</span>`}</div>`;
+  aside=`<div class="vocab"><div class="vocab-row vocab-head">${ar?`<span>${x.vocabT[1]}</span><span>${x.vocabT[0]}</span>`:`<span>${x.vocabT[0]}</span><span>${x.vocabT[1]}</span>`}</div>${x.vocab.map(([a,b])=>row(a,b)).join("")}</div>`;
+ }
+ const note=`<div class="note"><div>${eyebrow([state.lang==="ar"?"من المهم أن تعرف":"Da sapere"],t)}<h3>${nt}</h3></div><div><p>${nd}</p>${nl?`<a class="link-arrow" href="${href(nl)}">${nlt}${I.arrow}</a>`:""}${aside?`<div style="margin-top:22px">${aside}</div>`:""}</div></div>`;
+ const what=`<div class="wrap"><div class="sec-head"><div>${eyebrow(t.eb.detail,t)}<h2>${x.whatT}</h2></div></div>
+  <div class="items">${x.items.map(([a,b])=>`<div class="item"><span class="arch-dot"></span><h3>${a}</h3><p>${b}</p></div>`).join("")}</div>${note}</div>`;
+ const steps=x.stepsT?stepsSec(t,x.stepsT,"",x.steps||t.steps):null;
+ const others=`<div class="wrap"><div class="sec-head"><div>${eyebrow(t.eb.other,t)}<h2>${t.ui.other}</h2></div></div>
+  <div class="others">${ALLSVC.filter(o=>o!==s).map(o=>`<a class="other" href="${href(o)}"><span class="mini-arch">${I[SVC_ICON[o]]}</span><strong>${t.svc[o].name}</strong><span class="d">${t.svc[o].short}</span><span class="more">${t.ui.discover}${I.arrow}</span></a>`).join("")}</div></div>`;
+ return hero+sections([what,steps,faqSec(t,x.faq),others])+ctaBand(t);
+}
+
+function vAbout(t){
+ const a=t.about;
+ const hero=`<section class="phero"><div class="wrap">${crumbs(t,[[t.ui.home,"home"],[t.nav["chi-sono"]]])}
+  <div class="about-grid">${portrait(t)}
+   <div>${eyebrow(a.eb,t)}<h1>${a.h1}</h1><div class="bio">${a.bio.map(p=>`<p>${p}</p>`).join("")}</div><p class="sign">${t.ui.brand}</p>${ctaRow(t)}</div>
+  </div></div></section>`;
+ return hero+sections([
+  `<div class="wrap tl-wrap"><div>${eyebrow(a.tlEb,t)}<h2>${a.tlT}</h2><p class="lead">${a.tlL}</p></div>
+   <ol class="timeline">${a.tl.map(([y,ti,d])=>`<li><span class="tl-y">${y}</span><div><p class="tl-t">${ti}</p><p class="tl-d">${d}</p></div></li>`).join("")}</ol></div>`,
+  `<div class="wrap"><div class="sec-head"><div>${eyebrow(a.valEb,t)}<h2>${a.valT}</h2></div></div>
+   <div class="values">${a.values.map(([ti,d])=>`<div class="value"><span class="arch-dot"></span><h3>${ti}</h3><p>${d}</p></div>`).join("")}</div></div>`,
+  `<div class="wrap"><div class="sec-head"><div>${eyebrow(a.langEb,t)}<h2>${a.langT}</h2></div></div>
+   <div class="langs">${a.langs.map(([n,l,name,lv])=>`<div class="lang-card"><span class="lang-native" lang="${l}" dir="${l==="ar"?"rtl":"ltr"}">${n}</span><span class="lang-name">${name}</span><p class="lang-level">${lv}</p></div>`).join("")}</div></div>`
+ ])+ctaBand(t);
+}
+
+function vContact(t){
+ const c=t.contact;
+ const f=(id,label,input,opt,cls="")=>`<div class="field ${cls}"><label for="${id}">${label}${opt?` <span class="opt">(${c.optional})</span>`:` <span class="req" aria-hidden="true">*</span>`}</label>${input}<span class="err" id="e-${id}"></span></div>`;
+ return `<section class="phero"><div class="wrap">${crumbs(t,[[t.ui.home,"home"],[t.nav.contatti]])}
+  <div class="contact-head">${eyebrow(c.eb,t)}<h1>${c.h1}</h1><p class="lead">${c.lead}</p></div>
+  <div class="contact-grid">
+   <div class="form-card">
+    <div class="tabs" role="tablist"><button type="button" role="tab" id="tab-quote" aria-selected="true" data-tab="quote">${c.tabs[0]}</button><button type="button" role="tab" id="tab-info" aria-selected="false" data-tab="info">${c.tabs[1]}</button></div>
+    <form id="cform" novalidate>
+     <div class="fgrid">
+      ${f("f-name",c.name,`<input id="f-name" name="name" autocomplete="name" placeholder="${c.namePh}">`)}
+      ${f("f-email",c.email,`<input id="f-email" name="email" type="email" dir="ltr" autocomplete="email" placeholder="${c.emailPh}">`)}
+      ${f("f-phone",c.phone,`<input id="f-phone" name="phone" type="tel" dir="ltr" autocomplete="tel" placeholder="+39 …">`,true)}
+      ${f("f-service",c.service,`<select id="f-service" name="service">${c.services.map(o=>`<option>${o}</option>`).join("")}</select>`)}
+      <fieldset class="field" data-quote><legend>${c.dirL}</legend><div class="seg"><label><input type="radio" name="dir" id="f-dir-1" value="ar-it" checked><span>${c.dirO[0]}</span></label><label><input type="radio" name="dir" id="f-dir-2" value="it-ar"><span>${c.dirO[1]}</span></label></div></fieldset>
+      <div class="field" data-quote><label for="f-date">${c.date} <span class="opt">(${c.optional})</span></label><input id="f-date" name="date" type="date"></div>
+      <div class="field full" data-quote><span class="lbl">${c.fileL} <span class="opt">(${c.optional})</span></span>
+       <label class="drop" id="drop"><span class="up">${I.upload}</span><span><strong>${c.fileMain}</strong><small>${c.fileHint}</small></span><input type="file" id="f-file" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" aria-label="${c.fileL}"></label>
+       <ul class="files" id="flist"></ul></div>
+      ${f("f-msg",c.msg,`<textarea id="f-msg" name="message" placeholder="${c.msgPh}"></textarea>`,false,"full")}
+      <div class="field full"><label class="consent" for="f-consent"><input type="checkbox" id="f-consent" name="consent"><span>${c.consent}</span></label><span class="err" id="e-f-consent"></span></div>
+     </div>
+     <div class="form-foot"><button class="btn btn-primary" type="submit">${c.submit}${I.arrow}</button><span class="secure">${I.lock}${c.secure}</span></div>
+    </form>
+    <div class="success" id="csuccess" hidden><span class="okc">${I.check}</span><h2>${c.okT}</h2><p>${c.okS}</p><button type="button" class="btn btn-ghost" data-again>${c.again}</button></div>
+   </div>
+   <aside class="cinfo">
+    <div class="ccard ccard-wa"><span class="ci">${I.wa}</span><span><span class="k">${c.waK}</span><span class="v">WhatsApp · ${bdi(PHONE)}</span></span><a class="btn btn-wa" href="${waLink(t)}" target="_blank" rel="noopener">${I.wa}${c.waBtn}</a></div>
+    <div class="ccard"><span class="ci">${I.phone}</span><span><span class="k">${c.phoneK}</span><span class="v">${bdi(PHONE)}</span></span><button type="button" class="copy" data-copy="${PHONE}">${I.copy}<span>${t.ui.copy}</span></button></div>
+    <div class="ccard"><span class="ci">${I.mail}</span><span><span class="k">${c.emailK}</span><span class="v">${bdi(EMAIL)}</span></span><button type="button" class="copy" data-copy="${EMAIL}">${I.copy}<span>${t.ui.copy}</span></button></div>
+    <div class="ccard"><span class="ci">${I.pin}</span><span><span class="k">${c.studioK}</span><span class="v">${c.studioV}</span><span class="sub">${c.studioS}</span></span></div>
+    <div class="ccard"><span class="ci">${I.clock}</span><span><span class="k">${c.hoursK}</span><span class="v">${c.hoursV}</span><span class="sub">${c.hoursS}</span></span></div>
+    <p class="privacy-note">${c.privacy}</p>
+   </aside>
+  </div>
+ </div></section>`;
+}
+const VIEWS={home:vHome,"chi-sono":vAbout,contatti:vContact};
+function openSeo(){
+ const t=S[state.lang],u=t.seoUi,[st,sd,kw]=t.seo[state.page],dlg=$("#seo");
+ const path=(state.lang==="ar"?" › ar":"")+(state.page==="home"?"":" › "+state.page);
+ const url="/"+(state.lang==="ar"?"ar/":"")+(state.page==="home"?"":state.page+"/");
+ const tl=[...st].length,dl=[...sd].length,h1=($("main h1")||{}).textContent||"";
+ const ok=b=>`<span class="st${b?"":" warn"}">${b?I.check:"!"}</span>`;
+ dlg.setAttribute("dir",t.dir);dlg.setAttribute("lang",state.lang);
+ dlg.innerHTML=`<div class="seo-in">
+  <div class="seo-head"><div><p class="eyebrow"><span>${u.eyebrow}</span></p><h2 id="seo-title">${u.title}</h2><p class="seo-sub">${u.sub}</p></div><button type="button" class="icon-btn" data-close-seo aria-label="${t.ui.close}">${I.close}</button></div>
+  <div class="serp"><div class="serp-site"><span class="serp-fav">${LOGO}</span><span><span class="serp-name">${t.ui.brand}</span><span class="serp-url" dir="ltr">https://${DOMAIN}${path}</span></span></div><p class="serp-t">${st}</p><p class="serp-d">${sd}</p></div>
+  <ul class="seo-checks">
+   <li><span>${u.t}</span><span class="val">${bdi(tl+" / 60")} ${u.chars}</span>${ok(tl<=60)}</li>
+   <li><span>${u.d}</span><span class="val">${bdi(dl+" / 160")} ${u.chars}</span>${ok(dl<=160&&dl>=70)}</li>
+   <li><span>${u.h1}</span><span class="val">${esc(h1)}</span>${ok(!!h1)}</li>
+   <li><span>${u.url}</span><span class="val">${bdi(url)}</span>${ok(true)}</li>
+   <li><span>${u.hreflang}</span><span class="val">${bdi("it ⇄ ar")}</span>${ok(true)}</li>
+   <li><span>${u.schema}</span><span class="val">${bdi("ProfessionalService")}</span>${ok(true)}</li>
+  </ul>
+  <p class="kw-l">${u.kw}</p><div class="chips">${kw.map(k=>`<span class="chip">${k}</span>`).join("")}</div>
+  <p class="seo-note">${u.note}</p>
+ </div>`;
+ if(dlg.showModal){try{dlg.showModal()}catch(e){dlg.setAttribute("open","")}}else dlg.setAttribute("open","");
+}
+function closeSeo(){const d=$("#seo");if(d.close)d.close();else d.removeAttribute("open")}
+
+function bindForm(){
+ const form=$("#cform");if(!form)return;
+ const c=S[state.lang].contact;let files=[];
+ const fmt=b=>b<1024*1024?Math.max(1,Math.round(b/1024))+" KB":(b/1048576).toFixed(1)+" MB";
+ const list=$("#flist"),inp=$("#f-file"),drop=$("#drop");
+ const draw=()=>{list.innerHTML=files.map((x,i)=>`<li>${I.file}<span class="fn">${esc(x.name)}</span><span class="fs">${bdi(fmt(x.size))}</span><button type="button" data-rm="${i}" aria-label="${c.remove}">${I.close}</button></li>`).join("")};
+ inp.addEventListener("change",()=>{files=files.concat([...inp.files]);inp.value="";draw()});
+ ["dragenter","dragover"].forEach(ev=>drop.addEventListener(ev,()=>drop.classList.add("drag")));
+ ["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,()=>drop.classList.remove("drag")));
+ list.addEventListener("click",e=>{const b=e.target.closest("[data-rm]");if(b){files.splice(+b.dataset.rm,1);draw()}});
+ const setMode=m=>{$$("[data-tab]").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===m)));$$("[data-quote]").forEach(el=>el.hidden=m!=="quote")};
+ $$("[data-tab]").forEach(b=>b.addEventListener("click",()=>setMode(b.dataset.tab)));
+ const setErr=(el,msg)=>{el.setAttribute("aria-invalid",msg?"true":"false");const e=$("#e-"+el.id);if(e)e.textContent=msg};
+ form.addEventListener("input",e=>{if(e.target.getAttribute("aria-invalid")==="true")setErr(e.target,"")});
+ form.addEventListener("change",e=>{if(e.target.id==="f-consent"&&e.target.checked)setErr(e.target,"")});
+ form.addEventListener("submit",e=>{
+  e.preventDefault();let first=null;
+  const chk=(id,okFn,msg)=>{const el=$("#"+id),ok=okFn(el);setErr(el,ok?"":msg);if(!ok&&!first)first=el};
+  chk("f-name",el=>el.value.trim().length>1,c.errReq);
+  chk("f-email",el=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(el.value.trim()),c.errEmail);
+  chk("f-msg",el=>el.value.trim().length>2,c.errReq);
+  chk("f-consent",el=>el.checked,c.errConsent);
+  if(first){first.focus();return}
+  form.hidden=true;$(".tabs").hidden=true;$("#csuccess").hidden=false;$("#csuccess").scrollIntoView({block:"center"});
+ });
+ $("[data-again]").addEventListener("click",()=>{form.reset();files=[];draw();setMode("quote");form.hidden=false;$(".tabs").hidden=false;$("#csuccess").hidden=true});
+}
+
+function closeDd(){$$(".dd.open").forEach(d=>{d.classList.remove("open");$(".dd-btn",d).setAttribute("aria-expanded","false")})}
+function toggleMenu(open){
+ const m=$("#mnav"),b=$("[data-menu]");if(!m||!b)return;
+ if(open===undefined)open=m.hidden;
+ if(open){m.style.setProperty("--mnav-top",$("#hdr").getBoundingClientRect().bottom+"px")}
+ m.hidden=!open;b.setAttribute("aria-expanded",String(open));
+ b.innerHTML=(open?I.close:I.menu)+`<span class="sr">${open?S[state.lang].ui.close:S[state.lang].ui.menu}</span>`;
+ document.documentElement.classList.toggle("lock",open);
+}
+
+function render(){
+ const t=S[state.lang],root=document.documentElement;
+ root.lang=state.lang;root.dir=t.dir;root.classList.remove("lock");
+ $("#top").innerHTML=header(t);
+ const main=$("#main");
+ main.innerHTML=(VIEWS[state.page]||vService)(t,state.page);
+ $("#bottom").innerHTML=footer(t);
+ document.title=t.seo[state.page][0];
+ main.classList.remove("enter");void main.offsetWidth;main.classList.add("enter");
+ if(state.page==="contatti")bindForm();
+}
+function go(page,lang){
+ lang=lang||state.lang;
+ const keep=page===state.page&&lang!==state.lang,y=window.scrollY;
+ state={lang,page};
+ try{localStorage.setItem("mk-lang",lang)}catch(e){}
+ try{history.pushState(null,"","#"+lang+"-"+page)}catch(e){}
+ render();
+ window.scrollTo(0,keep?y:0);
+}
+function parseHash(){const m=(location.hash||"").match(/^#(it|ar)-([a-z-]+)$/);return m&&PAGES.includes(m[2])?{lang:m[1],page:m[2]}:null}
+
+document.addEventListener("click",e=>{
+ const a=e.target.closest('a[href^="#it-"],a[href^="#ar-"]');
+ if(a){const m=a.getAttribute("href").match(/^#(it|ar)-(.+)$/);if(m&&PAGES.includes(m[2])){e.preventDefault();closeDd();toggleMenu(false);go(m[2],m[1]);return}}
+ const dd=e.target.closest("[data-dd]");
+ if(dd){const w=dd.parentElement,o=!w.classList.contains("open");closeDd();if(o){w.classList.add("open");dd.setAttribute("aria-expanded","true")}return}
+ if(!e.target.closest(".dd"))closeDd();
+ if(e.target.closest("[data-menu]")){toggleMenu();return}
+ if(e.target.closest("[data-seo]")){openSeo();return}
+ if(e.target.closest("[data-close-seo]")||e.target.id==="seo"){closeSeo();return}
+ const cp=e.target.closest("[data-copy]");
+ if(cp){
+  const lab=$("span",cp),orig=lab.textContent,done=()=>{lab.textContent=S[state.lang].ui.copied;setTimeout(()=>{lab.textContent=orig},1600)};
+  const sel=()=>{const v=$(".v",cp.closest(".ccard"));const r=document.createRange();r.selectNodeContents(v);const s=getSelection();s.removeAllRanges();s.addRange(r)};
+  try{navigator.clipboard.writeText(cp.dataset.copy).then(done,sel)}catch(err){sel()}
+ }
+});
+document.addEventListener("focusout",e=>{const dd=e.target.closest&&e.target.closest(".dd");if(dd&&!dd.contains(e.relatedTarget))closeDd()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeDd();toggleMenu(false)}});
+window.addEventListener("popstate",()=>{const r=parseHash();if(r){state=r;render()}});
+window.addEventListener("hashchange",()=>{const r=parseHash();if(r&&(r.lang!==state.lang||r.page!==state.page)){state=r;render();window.scrollTo(0,0)}});
+window.addEventListener("resize",()=>{if(window.innerWidth>=1180)toggleMenu(false)});
+
+(function init(){
+ let lang="it";try{lang=localStorage.getItem("mk-lang")==="ar"?"ar":"it"}catch(e){}
+ state=parseHash()||{lang,page:"home"};
+ render();
+})();
+</script>
+
+</body></html>

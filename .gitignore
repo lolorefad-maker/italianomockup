@@ -1,0 +1,6 @@
+# secrets and local-only files
+wordpress/.env
+wordpress/LOCAL-LOGIN.md
+mockup/app.bundle.js
+.DS_Store
+Thumbs.db

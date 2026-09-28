@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Concept della home page: traduttore e interprete arabo – italiano.">
+<meta property="og:title" content="Traduttore e interprete arabo – italiano · concept">
+<meta property="og:description" content="Home page in italiano e arabo · scegli il colore">
+<meta name="theme-color" content="#0B0F17">
+<title>Traduttore Home Maiolica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=IBM+Plex+Sans+Arabic:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  color-scheme:light;
+  --night:#0B0F17;--night-2:#111724;--night-3:#1A2130;
+  --ivory:#F4EFE6;--stone:#EBE4D6;--paper:#FAF7F1;
+  --ink:#0E131E;--ink-2:#3C4150;--ink-3:#5C606D;
+  --gold:#C6AE84;--gold-deep:#7A613A;--gold-soft:#E3D2AE;
+  --line:#DDD4C3;--line-d:rgba(227,210,174,.2);
+  --it-g:#009246;--it-w:#F1F2F1;--it-r:#CE2B37;--wa:#2FBF68;
+  --f-display:"Bodoni Moda","Amiri",Georgia,serif;
+  --f-body:"IBM Plex Sans","IBM Plex Sans Arabic","Segoe UI",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);--dir:1;--track:.22em;
+}
+html[lang="ar"]{--f-display:"Amiri","Bodoni Moda",serif;--dir:-1;--track:0}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 17px/1.75 var(--f-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html[lang="ar"] body{font-size:18px;line-height:1.95}
+[hidden]{display:none!important}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--f-display);font-weight:400;letter-spacing:-.012em;color:inherit;text-wrap:balance}
+html[lang="ar"] :is(h1,h2,h3){letter-spacing:0;line-height:1.5}
+.ic{width:18px;height:18px;flex:none;display:block}
+[dir="rtl"] .flip{transform:scaleX(-1)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,5vw,64px)}
+.label{display:flex;align-items:center;gap:14px;font:500 11.5px/1.4 var(--f-body);letter-spacing:var(--track);text-transform:uppercase;color:var(--gold-deep)}
+html[lang="ar"] .label{font-size:14px}
+.label .n{font:italic 400 15px/1 "Bodoni Moda",serif;letter-spacing:0;text-transform:none}
+html[lang="ar"] .label .n{font:400 17px/1 "Amiri",serif}
+.label::after{content:"";width:40px;height:1px;background:currentColor;opacity:.5}
+h2{font-size:clamp(2.2rem,1.4rem + 2.3vw,3.5rem);line-height:1.08;margin-top:22px}
+html[lang="ar"] h2{font-size:clamp(2rem,1.3rem + 2vw,3.1rem)}
+.lead{font-size:1.06em;color:var(--ink-2);max-width:52ch}
+.sec{padding-block:clamp(96px,11vw,168px)}
+.ornament{display:flex;align-items:center;justify-content:center;gap:18px;color:var(--gold);padding-top:clamp(64px,7vw,96px)}
+.ornament i{width:80px;height:1px;background:currentColor;opacity:.6}
+.ornament svg{width:18px;height:18px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 30px;border-radius:999px;font:500 14.5px/1.2 var(--f-body);letter-spacing:.04em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease);white-space:nowrap}
+html[lang="ar"] .btn{font-size:16px;letter-spacing:0}
+.btn-gold{background:var(--gold);color:var(--night)}
+.btn-gold:hover{background:var(--gold-soft)}
+.btn-ink{background:var(--night);color:var(--ivory)}
+.btn-ink:hover{background:var(--night-3)}
+.btn .flip{transition:translate .5s var(--ease)}
+.btn:hover .flip,.tlink:hover .flip,.row:hover .arr .flip{translate:calc(3px * var(--dir)) 0}
+.tlink{display:inline-flex;align-items:center;gap:10px;padding-bottom:5px;border-bottom:1px solid var(--line-d);text-decoration:none;font-size:15px;transition:border-color .5s var(--ease)}
+.tlink:hover{border-color:var(--gold)}
+.tlink .wa{color:var(--wa)}
+
+/* header */
+.note{background:#07090F;color:#9B968B;font-size:12.5px}
+.note .wrap{display:flex;justify-content:center;align-items:center;gap:10px;min-height:34px;text-align:center}
+.note i{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;transition:background-color .6s var(--ease),border-color .6s var(--ease);border-bottom:1px solid transparent}
+.hdr .wrap{display:flex;align-items:center;gap:26px;height:84px}
+.hdr.solid{background:color-mix(in srgb,var(--ivory) 90%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-inline-end:auto;min-width:0;color:var(--ink)}
+.brand .mark{width:28px;height:34px;flex:none;color:var(--gold-deep)}
+.brand-name{display:block;font:400 21px/1.1 "Bodoni Moda","Amiri",serif;white-space:nowrap}
+html[lang="ar"] .brand-name{font:700 22px/1.3 "Amiri",serif}
+.brand-tag{display:block;font:500 10.5px/1.3 var(--f-body);letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3);margin-top:4px;white-space:nowrap}
+html[lang="ar"] .brand-tag{font-size:12.5px;margin-top:0}
+.nav{display:flex;gap:28px}
+.nav a{font:400 14.5px var(--f-body);letter-spacing:.02em;color:var(--ink-2);text-decoration:none;padding-block:8px;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .6s var(--ease),color .4s}
+[dir="rtl"] .nav a{background-position:100% 100%}
+.nav a:hover{background-size:100% 1px;color:var(--ink)}
+.lang{display:inline-flex;align-items:center;gap:2px}
+.lang button{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 10px;border:0;background:none;font:500 13px var(--f-body);letter-spacing:.08em;color:var(--ink-3);cursor:pointer;border-radius:999px}
+.lang button[lang="ar"]{font:500 15px "IBM Plex Sans Arabic",sans-serif;letter-spacing:0}
+.lang button[aria-pressed="true"]{color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.lang .sep{width:1px;height:16px;background:var(--line)}
+.flag-it{display:inline-block;flex:none;width:15px;height:10px;border-radius:1.5px;background:linear-gradient(to right,var(--it-g) 0 33.34%,var(--it-w) 33.34% 66.67%,var(--it-r) 66.67%);box-shadow:inset 0 0 0 .5px rgba(0,0,0,.2)}
+.hdr-cta{min-height:44px;padding:0 22px;font-size:13.5px}
+.hdr.dark .brand,.hdr.dark .brand-name{color:var(--ivory)}
+.hdr.dark .brand .mark{color:var(--gold-soft)}
+.hdr.dark .brand-tag{color:#8E897F}
+.hdr.dark .nav a{color:#CFC9BD}.hdr.dark .nav a:hover{color:#fff}
+.hdr.dark .lang button{color:#8E897F}.hdr.dark .lang button[aria-pressed="true"]{color:var(--ivory);box-shadow:inset 0 0 0 1px var(--line-d)}
+.hdr.dark .lang .sep{background:var(--line-d)}
+.hdr.dark .hdr-cta{background:transparent;color:var(--ivory);border-color:rgba(227,210,174,.5)}
+.hdr.dark .hdr-cta:hover{background:var(--gold);color:var(--night);border-color:var(--gold)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;isolation:isolate;margin-top:-84px;padding:calc(84px + clamp(56px,7vw,112px)) 0 clamp(88px,9vw,140px);background:var(--night);color:var(--ivory)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(55% 65% at 78% 32%,rgba(198,174,132,.13),transparent 70%),radial-gradient(70% 60% at 10% 100%,rgba(23,35,86,.9),transparent 70%)}
+[dir="rtl"] .hero::before{background:radial-gradient(55% 65% at 22% 32%,rgba(198,174,132,.13),transparent 70%),radial-gradient(70% 60% at 90% 100%,rgba(23,35,86,.9),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(40px,6vw,110px);align-items:center}
+.hero .label{color:var(--gold-soft)}
+.hero-t{font-size:clamp(2.7rem,1.2rem + 4vw,5.4rem);line-height:1.02;margin:30px 0 32px}
+html[lang="ar"] .hero-t{font-size:clamp(2.6rem,1.3rem + 4vw,5.1rem);line-height:1.42}
+.ar-w{font-family:"Amiri",serif;font-weight:400;color:var(--gold);font-size:1.02em;letter-spacing:0}
+.it-w{font-family:"Bodoni Moda",serif;font-style:italic;color:var(--gold)}
+.hero .lead{color:#B7B1A5;font-size:18px;max-width:48ch}
+html[lang="ar"] .hero .lead{font-size:19px}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px;margin-top:44px}
+.hero .tlink{color:#E4DFD4}
+.facts{display:flex;flex-wrap:wrap;gap:10px 0;margin-top:64px;padding-top:26px;border-top:1px solid var(--line-d);font:500 11.5px/1.5 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:#8E897F;max-width:560px}
+html[lang="ar"] .facts{font-size:14px;letter-spacing:0}
+.facts span+span::before{content:"";display:inline-block;width:4px;height:4px;margin-inline:16px;vertical-align:middle;background:var(--gold);transform:rotate(45deg)}
+
+/* the window */
+.window{position:relative;justify-self:center;width:100%;max-width:410px;aspect-ratio:4/5.25}
+.w-frame{position:absolute;inset:0;border-radius:999px 999px 6px 6px;border:1px solid rgba(227,210,174,.55)}
+.w-frame::after{content:"";position:absolute;inset:9px;border-radius:999px 999px 3px 3px;border:1px solid rgba(227,210,174,.28)}
+.w-arch{position:absolute;inset:20px;border-radius:999px 999px 2px 2px;overflow:hidden;background:var(--night-2)}
+.w-arch svg{display:block;width:100%;height:100%;opacity:.42}
+.w-panel{position:absolute;inset:62px 46px 46px;border-radius:999px 999px 1px 1px;background:var(--ivory);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:30% 8% 10%;text-align:center;color:var(--ink)}
+.w-lab{font:500 10.5px/1 var(--f-body);letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3)}
+html[lang="ar"] .w-lab{font-size:12.5px;letter-spacing:0}
+.w-word{display:block;transition:opacity 1.1s var(--ease)}
+.w-word.out{opacity:0}
+.w-it{font:italic 400 clamp(2.1rem,1.4rem + 2.2vw,3.2rem)/1.12 "Bodoni Moda",serif}
+.w-ar{font:400 clamp(2.5rem,1.6rem + 2.6vw,3.7rem)/1.45 "Amiri",serif;color:var(--gold-deep)}
+.w-rule{display:flex;align-items:center;gap:12px;color:var(--gold)}
+.w-rule i{width:38px;height:1px;background:currentColor}
+.w-rule svg{width:9px;height:9px}
+.seal{position:absolute;top:-16px;left:-30px;z-index:3;width:96px;height:96px}
+[dir="rtl"] .seal{left:auto;right:-30px}
+.seal-bg{fill:var(--ivory);stroke:var(--gold);stroke-width:1}
+.seal-in{fill:none;stroke:rgba(198,174,132,.55);stroke-width:.7}
+.seal-t{font:500 7.2px "IBM Plex Sans",sans-serif;letter-spacing:1.6px;fill:var(--ink-2)}
+
+/* proof */
+.split{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(48px,8vw,130px);align-items:start}
+.split .lead{margin-top:26px}
+.nums{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.nums div{padding:30px 0;border-bottom:1px solid var(--line)}
+.nums div:nth-child(odd){padding-inline-end:30px;border-inline-end:1px solid var(--line)}
+.nums div:nth-child(even){padding-inline-start:30px}
+.nums b{display:block;font:400 clamp(3rem,2rem + 2.6vw,4.4rem)/1 "Bodoni Moda",serif;color:var(--gold-deep);font-variant-numeric:lining-nums}
+.nums span{display:block;margin-top:14px;font-size:15px;color:var(--ink-2);max-width:24ch;line-height:1.55}
+.credline{margin-top:34px;font-size:14.5px;color:var(--ink-3);line-height:1.8}
+.credline strong{font-weight:500;letter-spacing:var(--track);text-transform:uppercase;font-size:11.5px;color:var(--gold-deep);margin-inline-end:10px}
+html[lang="ar"] .credline strong{font-size:14px}
+
+/* services list */
+.svc{background:var(--stone)}
+.svc-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(48px,8vw,130px);align-items:start}
+.svc-side{position:sticky;top:120px}
+.svc-side .lead{margin-top:26px}
+.svc-side .doc{margin-top:52px;max-width:330px}
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:48px minmax(0,1fr) 46px;gap:6px 22px;align-items:center;padding:32px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);transition:padding .7s var(--ease)}
+.row:hover{padding-inline-start:14px}
+.row .n{align-self:start;padding-top:10px;font:italic 400 17px/1 "Bodoni Moda",serif;color:var(--gold-deep)}
+html[lang="ar"] .row .n{font:400 20px/1 "Amiri",serif;font-style:normal}
+.row h3{font-size:clamp(1.65rem,1.25rem + 1.1vw,2.3rem);line-height:1.15}
+.row .most{font:500 10.5px/1 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-inline-start:14px;vertical-align:.45em;white-space:nowrap}
+html[lang="ar"] .row .most{font-size:13px;letter-spacing:0;vertical-align:.3em}
+.row p{grid-column:2;color:var(--ink-2);font-size:16px;max-width:54ch;line-height:1.65}
+.row .arr{grid-column:3;grid-row:1 / span 2;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--ink);transition:background-color .6s var(--ease),border-color .6s var(--ease),color .6s var(--ease)}
+.row:hover .arr{background:var(--night);border-color:var(--night);color:var(--gold-soft)}
+.d-p2{fill:#E3DBC9;stroke:#CBBFA5}.d-p1{fill:#FBF8F1;stroke:#CBBFA5;filter:drop-shadow(0 22px 26px rgba(11,20,51,.13))}
+.d-ln{fill:#D2C9B5}.d-emb{fill:none;stroke:#C4B89D;stroke-width:1}
+.d-h{font:500 8.5px "IBM Plex Sans",sans-serif;letter-spacing:1.8px;fill:#5F6780}.d-rule{fill:#CBBFA5}
+.d-sig{fill:none;stroke:#3D4560;stroke-width:1.4;stroke-linecap:round}.d-small{font:400 8px "IBM Plex Sans",sans-serif;fill:#8B8FA0}
+.d-bollo{fill:#EFE5CC;stroke:#86692F;stroke-width:1;stroke-dasharray:2.2 2.2}.d-bollo-in{fill:none;stroke:#86692F;stroke-opacity:.4}
+.d-bt{font:500 6px "IBM Plex Sans",sans-serif;letter-spacing:.8px;fill:#86692F}.d-bv{font:500 12px "Bodoni Moda",serif;fill:#86692F}
+.d-stamp{opacity:.85}.s-o{fill:none;stroke:#86692F;stroke-width:1.6}.s-i{fill:none;stroke:#86692F;stroke-width:.8}
+.s-t{font:500 7px "IBM Plex Sans",sans-serif;letter-spacing:1.3px;fill:#86692F}.s-c{font:500 13px "Bodoni Moda",serif;letter-spacing:1px;fill:#86692F}.s-c2{font:500 6.5px "IBM Plex Sans",sans-serif;letter-spacing:1px;fill:#86692F}
+.docsvg{width:100%;height:auto;display:block;overflow:visible}
+
+/* about (night) */
+.about-sec{background:var(--night);color:var(--ivory)}
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(48px,8vw,130px);align-items:center}
+.pwrap{position:relative;width:100%;max-width:400px;justify-self:center;padding:12px;border:1px solid rgba(227,210,174,.45);border-radius:999px 999px 8px 8px}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:999px 999px 3px 3px;overflow:hidden;background:linear-gradient(180deg,var(--night-3),var(--night-2))}
+.portrait svg.pat{position:absolute;inset:0;width:100%;height:100%;opacity:.25}
+.portrait .sil{position:absolute;inset:0;width:100%;height:100%;fill:rgba(245,240,230,.06)}
+.p-cap{position:absolute;bottom:26px;inset-inline:0;margin-inline:auto;width:max-content;max-width:calc(100% - 40px);font:500 11px/1 var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:#9B968B}
+html[lang="ar"] .p-cap{font-size:13px;letter-spacing:0}
+.about-sec .label{color:var(--gold-soft)}
+.bigq{margin:30px 0 0;font:italic 400 clamp(1.9rem,1.2rem + 2.1vw,3.1rem)/1.24 "Bodoni Moda",serif;letter-spacing:-.01em}
+html[lang="ar"] .bigq{font:400 clamp(1.8rem,1.2rem + 1.8vw,2.8rem)/1.7 "Amiri",serif;letter-spacing:0}
+.bigq-2{margin-top:22px;font:400 clamp(1.15rem,1rem + .5vw,1.45rem)/1.8 "Amiri",serif;color:var(--gold)}
+.bigq-2[lang="it"]{font:italic 400 clamp(1.1rem,1rem + .5vw,1.35rem)/1.6 "Bodoni Moda",serif}
+.about-sec .lead{color:#B7B1A5;margin-top:30px}
+.sign{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin-top:40px;padding-top:26px;border-top:1px solid var(--line-d)}
+.sign strong{font:italic 400 1.9rem/1.2 "Bodoni Moda",serif;color:var(--gold-soft)}
+html[lang="ar"] .sign strong{font:400 1.9rem/1.4 "Amiri",serif}
+.sign span{font:500 11px var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:#8E897F}
+html[lang="ar"] .sign span{font-size:13px;letter-spacing:0}
+
+/* method */
+.steps{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,64px);border-top:1px solid var(--line)}
+.step{padding-top:36px}
+.step .n{display:block;font:italic 400 3rem/1 "Bodoni Moda",serif;color:var(--gold)}
+.step h3{font-size:1.55rem;line-height:1.25;margin-top:22px}
+.step p{margin-top:10px;color:var(--ink-2);font-size:16px}
+
+/* testimonial */
+.testi-sec{background:var(--stone)}
+.testi{max-width:880px;margin-inline:auto;text-align:center}
+.testi .label{justify-content:center}
+.testi .label::before{content:"";width:40px;height:1px;background:currentColor;opacity:.5}
+.qm{display:block;font:italic 400 5.5rem/.6 "Bodoni Moda",serif;color:var(--gold);margin-top:44px}
+.testi blockquote{margin:22px 0 0;font:italic 400 clamp(1.6rem,1.1rem + 1.5vw,2.45rem)/1.4 "Bodoni Moda",serif}
+html[lang="ar"] .testi blockquote{font:400 clamp(1.5rem,1.1rem + 1.2vw,2.2rem)/1.8 "Amiri",serif}
+.testi cite{display:block;margin-top:34px;font:500 11.5px var(--f-body);font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+html[lang="ar"] .testi cite{font-size:13.5px;letter-spacing:0}
+.sample{display:inline-block;margin-top:18px;font-size:12px;color:var(--ink-3);border:1px dashed var(--line);border-radius:999px;padding:2px 12px}
+
+/* faq */
+.faq{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(48px,8vw,130px);align-items:start}
+.faq .lead{margin-top:26px}
+.faq .tlink{margin-top:34px}
+.acc details{border-bottom:1px solid var(--line)}
+.acc details:first-child{border-top:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:28px;padding:26px 0;font:400 1.3rem/1.4 var(--f-display)}
+html[lang="ar"] .acc summary{font-size:1.35rem;line-height:1.7}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"";width:14px;height:14px;flex:none;color:var(--gold-deep);background:linear-gradient(currentColor,currentColor) center/14px 1px no-repeat,linear-gradient(currentColor,currentColor) center/1px 14px no-repeat;transition:transform .6s var(--ease)}
+.acc details[open] summary::after{transform:rotate(45deg)}
+.acc details p{padding:0 0 28px;color:var(--ink-2);max-width:60ch}
+
+/* final */
+.final{position:relative;overflow:hidden;background:var(--night);color:var(--ivory);text-align:center;padding-top:clamp(110px,12vw,180px)}
+.final::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 60% at 50% 100%,rgba(198,174,132,.14),transparent 70%)}
+.final .wrap{position:relative;display:flex;flex-direction:column;align-items:center}
+.final .label{color:var(--gold-soft)}
+.final .label::before{content:"";width:40px;height:1px;background:currentColor;opacity:.5}
+.final h2{font-size:clamp(2.5rem,1.4rem + 3.3vw,4.6rem);line-height:1.05;max-width:15ch}
+html[lang="ar"] .final h2{font-size:clamp(2.2rem,1.3rem + 2.7vw,3.9rem);line-height:1.45}
+.final h2 em{font-style:italic;color:var(--gold)}
+html[lang="ar"] .final h2 em{font-style:normal}
+.final p{margin-top:22px;color:#B7B1A5;font-size:18px}
+.final .actions{justify-content:center}
+.final .tlink{color:#E4DFD4}
+.skyline{position:relative;display:block;width:100%;height:auto;margin-top:clamp(56px,8vw,110px)}
+.skyline *{vector-effect:non-scaling-stroke}
+
+/* footer */
+.foot{background:#080B12;color:#9B968B;padding-block:70px 34px;border-top:1px solid var(--line-d)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.2fr;gap:44px}
+.foot .brand,.foot .brand-name{color:var(--ivory)}.foot .brand .mark{color:var(--gold-soft)}.foot .brand-tag{color:#6F6B63}
+.foot p{margin-top:20px;max-width:38ch;font-size:15px}
+.foot-h{font:500 11px/1.4 var(--f-body)!important;letter-spacing:var(--track);text-transform:uppercase;color:var(--gold-soft)!important;margin:0 0 18px!important}
+html[lang="ar"] .foot-h{font-size:13px!important}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:11px;font-size:15px}
+.foot li{display:flex;gap:10px;align-items:center}
+.foot li .ic{color:var(--gold)}
+.foot-bottom{margin-top:56px;padding-top:24px;border-top:1px solid var(--line-d);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:#6F6B63}
+.based{display:inline-flex;align-items:center;gap:9px}
+
+/* whatsapp */
+.fab{position:fixed;z-index:55;bottom:calc(26px + env(safe-area-inset-bottom,0px));inset-inline-end:26px;display:inline-flex;align-items:center;gap:10px;height:52px;padding-inline:16px 20px;border-radius:999px;background:var(--night);color:var(--ivory);border:1px solid rgba(227,210,174,.45);text-decoration:none;font:500 14px var(--f-body);letter-spacing:.03em;box-shadow:0 20px 40px -18px rgba(6,12,34,.7);transition:border-color .5s var(--ease)}
+.fab:hover{border-color:var(--gold)}
+.fab .ic{width:22px;height:22px;color:var(--wa)}
+.mbar{display:none;position:fixed;z-index:55;inset-inline:0;bottom:0;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--ivory) 94%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.mbar .btn{min-height:50px;padding:0 12px}
+.mbar .btn .wa{color:var(--wa)}
+
+/* gentle motion */
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy>*,.window{animation:fade 1.4s var(--ease) both}
+  .hero-copy>:nth-child(2){animation-delay:.12s}.hero-copy>:nth-child(3){animation-delay:.24s}.hero-copy>:nth-child(4){animation-delay:.36s}.hero-copy>:nth-child(5){animation-delay:.48s}
+  .window{animation-delay:.3s}
+}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes rv{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
+  .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 5% entry 45%}
+}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* responsive */
+@media (max-width:1100px){.nav{display:none}}
+@media (max-width:960px){
+  .hero-grid,.split,.svc-grid,.about,.faq{grid-template-columns:minmax(0,1fr)}
+  .window{max-width:360px;margin-top:24px}
+  .seal{left:-10px;width:84px;height:84px}[dir="rtl"] .seal{left:auto;right:-10px}
+  .svc-side{position:static}
+  .svc-side .doc{max-width:340px;margin:44px auto 12px}
+  .steps{grid-template-columns:minmax(0,1fr);gap:0}
+  .step{display:grid;grid-template-columns:64px 1fr;gap:0 20px;padding-block:28px;border-bottom:1px solid var(--line)}
+  .step h3{margin-top:0}.step p{grid-column:2}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .fab{display:none}.mbar{display:grid}.foot{padding-bottom:110px}
+  .hdr-cta{display:none}
+}
+@media (max-width:600px){
+  .brand-tag{display:none}
+  .nums{grid-template-columns:minmax(0,1fr)}
+  .nums div:nth-child(odd){padding-inline-end:0;border-inline-end:0}
+  .nums div:nth-child(even){padding-inline-start:0}
+  .row{grid-template-columns:34px minmax(0,1fr) 40px;gap:6px 14px}
+  .row .arr{width:40px;height:40px}
+  .row .most{display:block;margin:8px 0 0}
+  .window{max-width:310px}
+  .w-panel{inset:54px 36px 36px}
+  .foot-grid{grid-template-columns:minmax(0,1fr)}
+  .facts span+span::before{margin-inline:10px}
+}
+@media (max-width:400px){.btn{white-space:normal}}
+
+/* ===== v5.1 · Nero Notte & champagne ===== */
+.hero{background:#0B0F17;border-bottom:1px solid rgba(227,210,174,.14)}
+.hero::before,[dir="rtl"] .hero::before{background:
+  radial-gradient(55% 60% at 80% 22%,rgba(227,210,174,.15),transparent 62%),
+  radial-gradient(85% 75% at 92% 0%,rgba(42,52,74,.55),transparent 70%),
+  radial-gradient(75% 85% at 0% 100%,rgba(0,0,0,.6),transparent 70%),
+  linear-gradient(180deg,#0E131E 0%,#0B0F17 58%,#080B12 100%)}
+[dir="rtl"] .hero::before{background:
+  radial-gradient(55% 60% at 20% 22%,rgba(227,210,174,.15),transparent 62%),
+  radial-gradient(85% 75% at 8% 0%,rgba(42,52,74,.55),transparent 70%),
+  radial-gradient(75% 85% at 100% 100%,rgba(0,0,0,.6),transparent 70%),
+  linear-gradient(180deg,#0E131E 0%,#0B0F17 58%,#080B12 100%)}
+.hero-t{color:#F4EFE6}
+.ar-w,.it-w,.final h2 em{background:linear-gradient(180deg,#F4E9CF 0%,#D6C095 46%,#A98E60 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.12em}
+.btn-gold{background:linear-gradient(180deg,#EBDDBC 0%,#C9B087 100%);color:#0B0F17;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 16px 32px -18px rgba(198,174,132,.7)}
+.btn-gold:hover{background:linear-gradient(180deg,#F3E8CF 0%,#D5BE95 100%)}
+.hdr.dark .hdr-cta{border-color:rgba(227,210,174,.45)}
+.hdr.dark .hdr-cta:hover{background:linear-gradient(180deg,#EBDDBC,#C9B087);color:#0B0F17;border-color:transparent}
+.window::before{content:"";position:absolute;inset:-18%;z-index:-1;background:radial-gradient(closest-side,rgba(227,210,174,.12),transparent);pointer-events:none}
+.w-arch{background:#0F1522}
+.w-panel{background:#F4EFE6;box-shadow:inset 0 0 0 1px rgba(198,174,132,.55),inset 0 0 0 7px #F4EFE6,inset 0 0 0 8px rgba(198,174,132,.3)}
+.w-it{color:#121826}.w-ar{color:#86693C}
+.seal-bg{fill:#F4EFE6}
+.facts{color:#9B968B}
+.fab{background:#0B0F17}
+
+/* ===== v5.2 · four luxury palettes + refined header ===== */
+:root{--hero-top:#0E131E;--hero-bot:#080B12;--depth:rgba(42,52,74,.55);--glow:rgba(227,210,174,.15);--arch-in:#0F1522;--foot:#080B12}
+html[data-palette="smeraldo"]{--night:#07241D;--night-2:#0B2D25;--night-3:#12392F;--hero-top:#0A2C24;--hero-bot:#041812;--depth:rgba(26,84,66,.5);--glow:rgba(232,210,162,.16);--arch-in:#0A2A22;--foot:#041812;--gold:#CBB07C;--gold-soft:#E6D3A8}
+html[data-palette="bordeaux"]{--night:#230A10;--night-2:#2D0F17;--night-3:#3A1520;--hero-top:#2B0C14;--hero-bot:#15050A;--depth:rgba(96,26,42,.5);--glow:rgba(236,206,160,.15);--arch-in:#290D14;--foot:#15050A;--gold:#D0B07A;--gold-soft:#EAD6AE}
+html[data-palette="lapis"]{--night:#0A1838;--night-2:#0F2148;--night-3:#172B5A;--hero-top:#0E1F48;--hero-bot:#060F26;--depth:rgba(44,74,146,.45);--glow:rgba(232,210,160,.15);--arch-in:#0D1C42;--foot:#060F26;--gold:#CFB27C;--gold-soft:#E8D5AC}
+.hero{background:var(--night)}
+.hero::before{background:radial-gradient(55% 60% at 80% 22%,var(--glow),transparent 62%),radial-gradient(85% 75% at 92% 0%,var(--depth),transparent 70%),radial-gradient(75% 85% at 0% 100%,rgba(0,0,0,.55),transparent 70%),linear-gradient(180deg,var(--hero-top) 0%,var(--night) 58%,var(--hero-bot) 100%)}
+[dir="rtl"] .hero::before{background:radial-gradient(55% 60% at 20% 22%,var(--glow),transparent 62%),radial-gradient(85% 75% at 8% 0%,var(--depth),transparent 70%),radial-gradient(75% 85% at 100% 100%,rgba(0,0,0,.55),transparent 70%),linear-gradient(180deg,var(--hero-top) 0%,var(--night) 58%,var(--hero-bot) 100%)}
+.w-arch{background:var(--arch-in)}.fab{background:var(--night)}.foot{background:var(--foot)}
+/* header: small letter-spaced capitals, champagne hairline */
+.hdr .wrap{height:88px}
+.hdr.dark{border-bottom-color:rgba(227,210,174,.14)}
+.brand .mark{width:30px;height:37px}
+.nav{gap:34px}
+.nav a{font:500 11.5px/1 var(--f-body);letter-spacing:.2em;text-transform:uppercase}
+html[lang="ar"] .nav a{font:500 15px/1 var(--f-body);letter-spacing:0;text-transform:none}
+.hdr-cta{font:500 11.5px/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;min-height:44px;padding:0 22px}
+html[lang="ar"] .hdr-cta{font-size:14px;letter-spacing:0;text-transform:none}
+.hero{margin-top:-88px;padding-top:calc(88px + clamp(56px,7vw,112px))}
+/* palette picker (presentation tool) */
+.palette{position:fixed;z-index:56;bottom:calc(26px + env(safe-area-inset-bottom,0px));inset-inline-start:26px;display:flex;align-items:center;gap:10px;padding:8px 10px;padding-inline-start:16px;border-radius:999px;background:rgba(244,239,230,.94);border:1px solid var(--line);box-shadow:0 18px 40px -20px rgba(8,11,18,.6);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.palette>span{font:500 10.5px var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+html[lang="ar"] .palette>span{font-size:13px;letter-spacing:0}
+.palette button{width:30px;height:30px;border-radius:50%;border:0;padding:0;cursor:pointer;background:radial-gradient(circle,var(--sw) 0 54%,transparent 56%),conic-gradient(#EBDDBC,#C9B087,#F3E8CF,#B89A68,#EBDDBC);box-shadow:0 0 0 1px rgba(0,0,0,.08);transition:transform .4s var(--ease)}
+.palette button:hover{transform:scale(1.08)}
+.palette button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ivory),0 0 0 3.5px var(--ink)}
+.foot-note{flex-basis:100%;font-size:12px;color:#6F6B63}
+@media (max-width:760px){.palette{bottom:calc(84px + env(safe-area-inset-bottom,0px));inset-inline-start:16px}}
+/* v5.2b: words always fit the panel; picker sits bottom-center */
+.w-panel{container-type:inline-size}
+.w-it{font-size:min(3.2rem,17cqi);white-space:nowrap}
+.w-ar{font-size:min(3.7rem,21cqi);white-space:nowrap}
+.palette{top:calc(env(safe-area-inset-top,0px) + 102px);bottom:auto;left:auto;right:28px;transform:none}
+[dir="rtl"] .palette{right:auto;left:28px}
+
+
+/* ===== v5.3 · picker for the client ===== */
+.palette .pal-name{font:italic 400 15px/1 "Bodoni Moda",serif;color:var(--ink);letter-spacing:0;text-transform:none;min-width:8.5em}
+html[lang="ar"] .palette .pal-name{font:400 16px/1 "Amiri",serif;min-width:6.5em}
+@media (max-width:760px){
+  .palette,[dir="rtl"] .palette{top:calc(env(safe-area-inset-top,0px) + 94px);bottom:auto;left:50%;right:auto;transform:translateX(-50%);gap:8px;padding:6px 8px;padding-inline-start:14px}
+  .palette .pal-name{display:none}
+  .palette button{width:28px;height:28px}
+}
+
+/* ===== v5.4 · phone ===== */
+.only-m{display:none}
+.pal-m{display:none}
+.palette.inline{position:static;transform:none;box-shadow:none;background:rgba(244,239,230,.05);border:1px solid rgba(227,210,174,.22);padding:5px 6px;padding-inline-start:14px;gap:8px;-webkit-backdrop-filter:none;backdrop-filter:none}
+.palette.inline>span{color:#CFC9BD;white-space:nowrap;font-size:9.5px;letter-spacing:.2em}
+html[lang="ar"] .palette.inline>span{font-size:12.5px;letter-spacing:0}
+.palette.inline .pal-name{display:none}
+.palette.inline button{width:26px;height:26px}
+.palette.inline button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--night),0 0 0 3.5px var(--gold-soft)}
+/* menu */
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:none;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink);flex:none}
+.menu-btn i{display:block;width:16px;height:1px;background:currentColor;transition:transform .5s var(--ease)}
+.hdr.dark .menu-btn{color:var(--ivory);border-color:rgba(227,210,174,.3)}
+.menu-open .menu-btn i:first-child{transform:translateY(3.5px) rotate(45deg)}
+.menu-open .menu-btn i:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:58;background:var(--night);color:var(--ivory);padding:calc(env(safe-area-inset-top,0px) + 104px) clamp(24px,7vw,48px) 44px;overflow-y:auto;opacity:0;transition:opacity .5s var(--ease)}
+.mmenu::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(70% 50% at 80% 10%,var(--glow),transparent 70%)}
+.mmenu.open{opacity:1}
+.mmenu nav{position:relative;display:flex;flex-direction:column;border-top:1px solid rgba(227,210,174,.18)}
+.mmenu nav a{display:flex;align-items:baseline;gap:18px;padding:20px 0;border-bottom:1px solid rgba(227,210,174,.18);text-decoration:none;font:400 2rem/1.15 var(--f-display);color:var(--ivory)}
+.mmenu nav a span{font:italic 400 15px/1 "Bodoni Moda",serif;color:var(--gold);min-width:1.6em}
+html[lang="ar"] .mmenu nav a span{font:400 18px/1 "Amiri",serif}
+.mmenu .btn{position:relative;width:100%;margin-top:38px}
+.mmenu .tlink{position:relative;margin-top:24px;color:#E4DFD4}
+.mm-c{position:relative;margin-top:30px;color:#9B968B;font-size:14px}
+@media (max-width:1100px){.menu-btn{display:inline-flex}}
+
+@media (max-width:760px){
+  .only-d{display:none!important}.only-m{display:block}
+  body{font-size:16px}
+  html[lang="ar"] body{font-size:17px}
+  .hdr .wrap{height:68px;gap:12px}
+  .brand{gap:10px}.brand .mark{width:24px;height:30px}.brand-name{font-size:18px}
+  html[lang="ar"] .brand-name{font-size:19px}
+  .lang button{min-height:40px;padding:0 8px}
+  .palette:not(.inline){display:none}
+  .pal-m{display:flex;justify-content:center;order:-2;margin-bottom:30px}
+  .hero{margin-top:-68px;padding:calc(68px + 22px) 0 72px}
+  .hero-grid{gap:0;text-align:center}
+  .window{order:-1;width:64vw;max-width:250px;margin:0 auto 42px}
+  .w-frame::after{inset:7px}
+  .w-arch{inset:15px}
+  .w-panel{inset:46px 30px 30px;padding:28% 6% 8%;gap:6px}
+  .w-lab{font-size:9px;letter-spacing:.26em}
+  html[lang="ar"] .w-lab{font-size:11px;letter-spacing:0}
+  .seal,[dir="rtl"] .seal{width:64px;height:64px;top:-6px}
+  .seal{left:-16px}[dir="rtl"] .seal{left:auto;right:-16px}
+  .hero .label{justify-content:center;flex-wrap:wrap;font-size:10px;letter-spacing:.2em;line-height:1.7}
+  html[lang="ar"] .hero .label{font-size:13px;letter-spacing:0}
+  .hero .label::after{display:none}
+  .hero-t{font-size:clamp(2.3rem,10vw,2.9rem);line-height:1.06;margin:16px 0 20px}
+  html[lang="ar"] .hero-t{font-size:clamp(2.2rem,9.4vw,2.8rem);line-height:1.45}
+  .hero .lead{font-size:16px;line-height:1.7;max-width:32ch;margin-inline:auto}
+  html[lang="ar"] .hero .lead{font-size:17px}
+  .actions{flex-direction:column;align-items:stretch;gap:18px;margin-top:32px}
+  .actions .btn{width:100%}
+  .actions .tlink{align-self:center}
+  .facts{justify-content:center;margin:40px auto 0;padding-top:20px;font-size:9.5px;letter-spacing:.16em}
+  html[lang="ar"] .facts{font-size:12.5px;letter-spacing:0}
+  .facts span+span::before{margin-inline:10px}
+  .ornament{padding-top:56px}.ornament i{width:52px}
+  .sec{padding-block:84px}
+  h2{font-size:clamp(1.95rem,8.2vw,2.4rem);margin-top:16px}
+  html[lang="ar"] h2{font-size:clamp(1.8rem,7.6vw,2.2rem)}
+  .label{font-size:10.5px}
+  .lead{font-size:16px}
+  .split{gap:40px}
+  .nums{grid-template-columns:1fr 1fr}
+  .nums div{padding:22px 0}
+  .nums div:nth-child(odd){padding-inline-end:16px;border-inline-end:1px solid var(--line)}
+  .nums div:nth-child(even){padding-inline-start:16px}
+  .nums b{font-size:2.5rem}
+  .nums span{font-size:13px;margin-top:10px}
+  .credline{font-size:13px;margin-top:26px}
+  .svc-grid{gap:36px}
+  .svc-side .doc{max-width:290px;margin:40px auto 6px}
+  .row{grid-template-columns:30px minmax(0,1fr) 38px;gap:4px 12px;padding:24px 0}
+  .row:hover{padding-inline-start:0}
+  .row h3{font-size:1.42rem}
+  .row p{font-size:14.5px;line-height:1.6}
+  .row .arr{width:38px;height:38px}
+  .row .most{display:block;margin:8px 0 2px;font-size:9.5px}
+  .about{text-align:center;gap:44px}
+  .about-sec .label{justify-content:center}.about-sec .label::after{display:none}
+  .pwrap{max-width:236px;padding:9px}
+  .bigq{font-size:1.62rem;margin-top:22px}
+  html[lang="ar"] .bigq{font-size:1.55rem}
+  .bigq-2{font-size:1.08rem}
+  .about-sec .lead{margin-inline:auto;font-size:15.5px}
+  .sign{justify-content:center;margin-top:30px}
+  .sign strong{font-size:1.6rem}
+  .steps{margin-top:36px}
+  .step{grid-template-columns:52px 1fr;padding-block:24px}
+  .step .n{font-size:2.4rem}
+  .step h3{font-size:1.3rem}
+  .step p{font-size:15px}
+  .qm{font-size:4.2rem;margin-top:34px}
+  .testi blockquote{font-size:1.38rem}
+  html[lang="ar"] .testi blockquote{font-size:1.35rem}
+  .faq{gap:36px}
+  .acc summary{font-size:1.14rem;padding:20px 0;gap:18px}
+  html[lang="ar"] .acc summary{font-size:1.2rem}
+  .acc details p{font-size:15px}
+  .final{padding-top:96px}
+  .final h2{font-size:clamp(2.1rem,9vw,2.6rem)}
+  html[lang="ar"] .final h2{font-size:clamp(2rem,8.4vw,2.4rem)}
+  .final p{font-size:16px}
+  .final .actions{width:100%}
+  .skyline{margin-top:48px}
+  .foot{text-align:center;padding-top:56px}
+  .foot .brand{justify-content:center;display:inline-flex}
+  .foot p{margin-inline:auto}
+  .foot li{justify-content:center}
+  .foot-bottom{justify-content:center;text-align:center}
+  /* dark action bar, shown once the hero button has scrolled away */
+  .mbar{background:color-mix(in srgb,var(--night) 90%,transparent);border-top:1px solid rgba(227,210,174,.22);transform:translateY(115%);transition:transform .6s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar .btn-ink{background:transparent;color:var(--ivory);border-color:rgba(227,210,174,.4)}
+  .menu-open .mbar{transform:translateY(115%)}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const DATA=
+{"S":{"it":{"dir":"ltr","other":"ar","ui":{"mock":"Mockup","mockNote":"Anteprima di design · testi e immagini provvisori","seoBtn":"Anteprima Google","brand":"Nome Cognome","brandTag":"Traduttore · Interprete","cta":"Richiedi preventivo","ctaLong":"Richiedi un preventivo gratuito","wa":"WhatsApp","waLong":"Scrivimi su WhatsApp","waText":"Buongiorno, vorrei un preventivo per una traduzione.","micro":"Risposta entro 24 ore · Preventivo senza impegno","discover":"Scopri il servizio","menu":"Apri il menu","close":"Chiudi","home":"Home","services":"Servizi","faq":"Domande frequenti","faqLead":"Non trovi la risposta? Scrivimi: rispondo di persona.","other":"Altri servizi","brief":"In breve","how":"Come funziona","portrait":"La tua foto professionale","pairWord":"Arabo ⇄ Italiano","floatT":"Traduzione asseverata","floatS":"Pronta per Tribunale e Prefettura","sample":"Testi di esempio","ctaT":"Hai un documento da tradurre?","ctaS":"Mandamelo in foto: ricevi il preventivo entro 24 ore.","footTag":"Traduzioni, interpretariato e mediazione linguistico-culturale tra arabo e italiano. Lezioni di italiano per arabofoni.","footSvc":"Servizi","footStudio":"Lo studio","footContact":"Contatti","hours":"Lun–Ven · 9:00–18:00","area":"Studio a [Città] · online in tutta Italia","legal":"© 2026 Nome Cognome · P.IVA 00000000000","privacy":"Privacy policy","cookie":"Cookie policy","mockFoot":"Mockup di design v1 · non ancora pubblicato","copy":"Copia","copied":"Copiato","lang":"Lingua"},"nav":{"home":"Home","chi-sono":"Chi sono","services":"Servizi","lezioni":"Lezioni di italiano","contatti":"Contatti"},"eb":{"svc":["Servizi","خدمات"],"why":["Perché scegliermi","لماذا أنا"],"docs":["Documenti","وثائق"],"how":["Come funziona","كيف نعمل"],"quotes":["Dicono di me","آراء"],"faq":["Domande","أسئلة"],"detail":["Nel dettaglio","بالتفصيل"],"other":["Servizi","خدمات"]},"steps":[["Invia il documento","Una foto leggibile o un PDF, dal modulo o su WhatsApp."],["Ricevi il preventivo","Prezzo e tempi chiari entro 24 ore, senza impegno."],["Ritira la traduzione","Via email o di persona. Asseverata, se ti serve per uso legale."]],"home":{"eyebrow":"Traduttore e interprete · arabo ⇄ italiano","h1":"La parola giusta tra <em class=\"hl\">arabo</em> e <em class=\"hl\">italiano</em>.","lead":"Sono Nome Cognome, traduttore e interprete di madrelingua araba, iscritto all'albo dei periti del Tribunale. Traduco e assevero documenti, affianco persone ed enti come mediatore culturale e insegno l'italiano a chi parla arabo.","trustL":"Lavoro con","trust":["Tribunali","Prefetture e Questure","Ospedali","Scuole","Studi legali","Aziende"],"svcT":"Cosa posso fare per te","svcL":"Cinque servizi, una sola persona di riferimento. Ogni pagina spiega tempi, documenti richiesti e costi.","whyT":"Precisione, riservatezza e due culture che conosco dall'interno","whyL":"Traduco personalmente ogni documento e seguo ogni pratica dall'inizio alla fine. Nessuna agenzia, nessuna traduzione automatica.","stats":[["12+","anni di esperienza come traduttore e interprete"],["3.500","documenti tradotti e asseverati"],["24 h","per ricevere un preventivo dettagliato"],["0","traduzioni automatiche: ogni testo è tradotto a mano"]],"docsT":"Documenti per permesso di soggiorno, cittadinanza e titoli di studio","docsL":"Sono le traduzioni che mi chiedono più spesso. Se non sai quale tipo di traduzione ti serve, te lo dico prima di iniziare.","docs":["Certificato di nascita","Certificato di matrimonio","Stato di famiglia","Diplomi e lauree","Pagelle e piani di studio","Patente di guida","Casellario giudiziale","Sentenze e atti notarili","Referti medici","Contratti"],"docsLink":"Come funziona l'asseverazione","howT":"Tre passaggi, senza complicazioni","howL":"Puoi iniziare anche da una foto fatta con il telefono.","quotesT":"La fiducia si costruisce un documento alla volta","quotes":[["Traduzione precisa e consegnata prima del previsto. Ha seguito anche l'asseverazione in Tribunale: io non ho dovuto fare nulla.","Cliente privato","Traduzione per la cittadinanza"],["Un mediatore attento e discreto. Con le famiglie arabofone della nostra scuola la comunicazione è cambiata completamente.","Dirigente scolastico","Mediazione culturale"],["Lezioni chiare, con spiegazioni in arabo quando servono. Ho superato l'esame B1 al primo tentativo.","Studente","Lezioni di italiano"]],"faq":[["Quanto costa una traduzione?","Dipende dalla lunghezza, dal tipo di documento e dall'urgenza. Inviami una foto o un PDF: ricevi un preventivo gratuito e preciso entro 24 ore."],["Che differenza c'è tra traduzione certificata e asseverata?","La traduzione certificata è accompagnata da una mia dichiarazione di conformità. Quella asseverata viene giurata in Tribunale e ha valore legale in Italia: è quella richiesta per cittadinanza, permesso di soggiorno e riconoscimento dei titoli."],["Posso inviare i documenti su WhatsApp?","Sì. Basta una foto ben leggibile di ogni pagina. Per l'asseverazione servirà poi l'originale."],["Lavori anche a distanza?","Sì. Traduzioni e lezioni si possono fare interamente online; l'interpretariato anche in videochiamata."]]},"svc":{"traduzioni":{"name":"Traduzioni","pair":"ترجمة","short":"Documenti personali, legali, medici","tile":"Documenti personali, legali, medici e commerciali, dall'arabo all'italiano e viceversa.","ex":"Certificati · Contratti · Referti","h1":"Traduzioni arabo–italiano e italiano–arabo","lead":"Documenti personali, legali, medici e commerciali tradotti da un madrelingua arabo, con la terminologia corretta e il formato richiesto dagli uffici italiani.","facts":[["Tempi","2–5 giorni lavorativi, urgenze in 24 h"],["Formati","PDF, Word, foto o cartaceo"],["Combinazioni","Arabo → italiano, italiano → arabo"],["Preventivo","Gratuito, entro 24 ore"]],"whatT":"Cosa traduco","items":[["Documenti personali","Certificati di nascita e matrimonio, stato di famiglia, patenti, passaporti."],["Legali e giudiziari","Sentenze, procure, atti notarili, contratti, documenti per il Tribunale."],["Titoli di studio","Diplomi, lauree, pagelle e piani di studio per il riconoscimento in Italia."],["Medici","Referti, cartelle cliniche, certificati per invalidità e ricongiungimento."],["Commerciali","Contratti, visure, cataloghi, corrispondenza con clienti e fornitori."],["Siti web e marketing","Testi adattati al pubblico arabofono, non solo tradotti."]],"note":["Semplice, certificata o asseverata?","Dipende da dove devi presentare il documento. Se non lo sai, chiedimelo: te lo dico prima di preparare il preventivo.","asseverazioni","Scopri l'asseverazione"],"stepsT":"Come funziona","steps":null,"faq":[["Le traduzioni sono fatte da te personalmente?","Sì. Non uso agenzie né traduzione automatica: ogni documento è tradotto e controllato da me."],["Traduci anche i timbri e le note a mano?","Sì. Timbri, firme e annotazioni vengono riportati e descritti tra parentesi quadre, come richiesto dagli uffici."]]},"asseverazioni":{"name":"Asseverazioni","pair":"ترجمة محلَّفة","short":"Traduzioni giurate con valore legale","tile":"Traduzioni giurate in Tribunale per cittadinanza, permesso di soggiorno e titoli di studio.","ex":"Cittadinanza · Permesso · Patente","h1":"Traduzioni asseverate (giurate) dall'arabo","lead":"La traduzione asseverata è giurata davanti al Tribunale e ha valore legale in Italia. Serve per cittadinanza, permesso di soggiorno, riconoscimento dei titoli di studio e conversione della patente.","facts":[["Tempi","3–7 giorni lavorativi"],["Valore","Legale in Italia"],["Dove","Tribunale o Giudice di Pace"],["Preventivo","Gratuito, marche da bollo già calcolate"]],"whatT":"Quando serve","items":[["Cittadinanza italiana","Atto di nascita e certificato penale del Paese d'origine."],["Permesso di soggiorno","Documenti per ricongiungimento familiare e rinnovi."],["Riconoscimento titoli","Diplomi e lauree per università, concorsi e ordini professionali."],["Conversione patente","Patente di guida e relativa certificazione."],["Matrimonio in Italia","Nulla osta e certificati di stato civile."],["Procedimenti legali","Sentenze, atti e documenti da depositare in giudizio."]],"note":["Legalizzazione e Apostille","Molti documenti rilasciati nei Paesi arabi vanno legalizzati prima della traduzione. Controllo il tuo documento gratuitamente e ti dico cosa fare.",null,null],"stepsT":"Come funziona l'asseverazione","steps":[["Documento originale","Se necessario, legalizzato dal consolato o con Apostille. Ti dico io se serve."],["Traduzione","Traduco il documento e preparo il fascicolo con originale e traduzione."],["Giuramento","Giuro la traduzione davanti al funzionario del Tribunale."],["Consegna","Ritiri il fascicolo asseverato, pronto da presentare."]],"faq":[["Devo venire di persona?","No. Puoi inviarmi l'originale per posta o consegnarlo in studio. Il giuramento lo faccio io."],["Quanto costano le marche da bollo?","Il Tribunale richiede marche da bollo in base al numero di pagine. Le trovi già calcolate nel preventivo."],["La traduzione asseverata vale anche all'estero?","Per l'uso all'estero può servire anche la legalizzazione della firma in Procura. Ti spiego i passaggi nel preventivo."]]},"interpretariato":{"name":"Interpretariato","pair":"ترجمة فورية","short":"In presenza e da remoto","tile":"Consecutiva e di trattativa in tribunale, in ospedale, in azienda o in videochiamata.","ex":"Tribunale · Ospedale · Aziende","h1":"Interprete arabo–italiano","lead":"In tribunale, in ospedale, in Questura o a un tavolo d'affari: traduco la conversazione in tempo reale, con precisione e discrezione. Anche da remoto.","facts":[["Modalità","Consecutiva, di trattativa, chuchotage"],["Dove","In presenza o in videochiamata"],["Prenotazione","Meglio con 48 ore di anticipo"],["Tariffa","A ora o a giornata"]],"whatT":"Dove lavoro","items":[["Tribunali e Procure","Udienze, interrogatori, incontri con l'avvocato."],["Questure e Prefetture","Pratiche di permesso di soggiorno, audizioni, colloqui."],["Ospedali e ASL","Visite, consenso informato, colloqui con i familiari."],["Aziende","Trattative, fiere, visite di delegazioni, formazione."],["Notai","Rogiti e atti con parti che non parlano italiano."],["Da remoto","Videochiamate e riunioni online con la stessa qualità."]],"note":["Arabo standard e dialetti","Una conversazione reale non è un testo scritto. Capisco e parlo i principali dialetti arabi, così non si perde nulla.",null,null],"stepsT":"Come si organizza un incontro","steps":[["Prenota","Indica data, luogo, durata e tipo di incontro."],["Preparazione","Se possibile, inviami documenti e nomi in anticipo: arrivo preparato sul tema."],["L'incontro","Interpreto in presenza o online, con la massima riservatezza."]],"faq":[["Che differenza c'è tra consecutiva e chuchotage?","Nella consecutiva parlo dopo di te, a brevi blocchi. Nello chuchotage traduco sottovoce mentre l'altra persona parla: è ideale per una o due persone."],["Posso prenotare con poco preavviso?","Sì, se sono disponibile. Per le urgenze scrivimi su WhatsApp."]]},"mediazione":{"name":"Mediazione linguistico-culturale","pair":"وساطة ثقافية","short":"Scuole, sanità, servizi sociali","tile":"Supporto a scuole, sanità e servizi sociali nel dialogo con persone e famiglie arabofone.","ex":"Scuola · Sanità · Accoglienza","h1":"Mediazione linguistico-culturale","lead":"Quando una famiglia arabofona incontra una scuola, un ospedale o i servizi sociali, le parole non bastano. Aiuto le due parti a capirsi davvero, tenendo conto di cultura, religione e abitudini.","facts":[["Per chi","Enti pubblici, scuole, sanità, cooperative"],["Formato","Interventi singoli o progetti continuativi"],["Lingue","Arabo standard e dialetti"],["Anche","Formazione interculturale per operatori"]],"whatT":"Ambiti di intervento","items":[["Scuola","Colloqui con le famiglie, inserimento degli alunni, comunicazioni scuola-casa."],["Sanità","Accompagnamento a visite, parto e percorsi di cura."],["Servizi sociali","Colloqui, progetti di sostegno, tutela dei minori."],["Accoglienza","Centri di accoglienza e progetti per richiedenti asilo."],["Giustizia","Carceri, uffici di esecuzione penale esterna, tutela legale."],["Formazione","Corsi per insegnanti e operatori sulla cultura araba e islamica."]],"note":["Non solo traduzione","Il mediatore spiega anche ciò che non viene detto: gesti, silenzi, ruoli in famiglia. Spesso è questo a sbloccare una situazione.",null,null],"stepsT":null,"steps":null,"faq":[["Lavori con enti pubblici tramite convenzione?","Sì. Posso lavorare con incarico diretto, convenzione o tramite cooperative."],["Fai anche formazione per il personale?","Sì. Organizzo incontri su misura per scuole, ospedali e servizi sociali."]]},"lezioni":{"name":"Lezioni di italiano","pair":"دروس الإيطالية","short":"Per arabofoni, dalla A1 alla C1","tile":"Corsi per arabofoni dalla A1 alla C1, con preparazione agli esami A2 e B1.","ex":"A2 · B1 · Online","h1":"Lezioni di italiano per arabofoni","lead":"Imparare l'italiano partendo dall'arabo è più semplice: spiego grammatica e pronuncia confrontando le due lingue. Lezioni individuali o in piccoli gruppi, in presenza o online.","facts":[["Livelli","Da A1 a C1"],["Formato","Individuali o piccoli gruppi"],["Dove","In presenza o online"],["Prima lezione","Gratuita, 30 minuti"]],"whatT":"Percorsi","items":[["Italiano per la vita quotidiana","Parlare con medici, uffici, la scuola dei figli e i colleghi di lavoro."],["Esame A2","Per il permesso di soggiorno UE per soggiornanti di lungo periodo."],["Esame B1","Per la domanda di cittadinanza. Preparazione a CILS, CELI e PLIDA."],["Italiano per il lavoro","Lessico professionale, colloqui, email e telefonate."],["Bambini e ragazzi","Supporto scolastico per studenti arrivati da poco in Italia."],["Scrittura e grammatica","Per chi parla bene ma vuole scrivere senza errori."]],"note":["Lezione di prova gratuita","30 minuti per conoscerci, capire il tuo livello e scegliere il percorso giusto.",null,null],"vocabT":["Italiano","Arabo"],"vocab":[["Buongiorno","صباح الخير"],["Grazie mille","شكرًا جزيلًا"],["Il permesso di soggiorno","تصريح الإقامة"],["Dove si trova la Questura?","أين تقع الكويستورا؟"]],"stepsT":"Come iniziamo","steps":[["Lezione di prova","30 minuti gratuiti per capire il tuo livello e i tuoi obiettivi."],["Piano su misura","Scegliamo insieme frequenza, orari e materiali."],["Lezioni e verifiche","Esercizi tra una lezione e l'altra e simulazioni d'esame."]],"faq":[["Serve sapere già un po' di italiano?","No. Si può partire da zero: all'inizio spiego in arabo, poi sempre più in italiano."],["Rilasci un attestato?","Sì, a fine corso ricevi un attestato di frequenza. Per l'esame ufficiale ti preparo e ti aiuto con l'iscrizione."]]}},"about":{"eb":["Chi sono","من أنا"],"h1":"Vivo tra due lingue da sempre. Oggi sono il mio lavoro.","bio":["Sono nato in [Paese] e vivo in Italia dal 2010. Ho studiato Lingue e Letterature Straniere all'Università di [Città] e mi sono specializzato in traduzione giuridica.","Dal 2016 sono iscritto all'albo dei Consulenti Tecnici d'Ufficio del Tribunale di [Città] per la lingua araba. Lavoro con tribunali, prefetture, ospedali e scuole, e con le persone che devono affrontare la burocrazia italiana in una lingua che non è la loro.","Conosco l'arabo standard e i principali dialetti. Fa la differenza quando si interpreta una conversazione reale, non un testo scritto."],"tlEb":["Percorso","المسيرة"],"tlT":"Formazione ed esperienza","tlL":"Formazione universitaria, specializzazione giuridica e anni di lavoro con enti pubblici e privati.","tl":[["2012","Laurea in Lingue e Letterature Straniere","Università di [Città]"],["2014","Master in traduzione giuridica","Arabo ⇄ italiano"],["2016","Iscrizione all'albo CTU","Tribunale di [Città]"],["2018","Qualifica di mediatore linguistico-culturale","Regione [Nome]"],["2020","Certificazione DITALS","Insegnamento dell'italiano a stranieri"]],"valEb":["Come lavoro","أسلوبي"],"valT":"Tre cose su cui non faccio compromessi","values":[["Precisione","Nomi, date e timbri trascritti esattamente come nell'originale. Un errore su un documento ufficiale costa settimane."],["Riservatezza","I tuoi documenti restano tra me e te. Trattamento dei dati conforme al GDPR."],["Rispetto culturale","Tradurre significa anche spiegare il contesto: religione, famiglia, modi di comunicare."]],"langEb":["Lingue","اللغات"],"langT":"Le lingue con cui lavoro","langs":[["العربية","ar","Arabo","Madrelingua · arabo standard e dialetti levantino, egiziano, del Golfo"],["Italiano","it","Italiano","Livello C2 · vivo e lavoro in Italia dal 2010"],["English","en","Inglese","Livello B2 · per corrispondenza e documenti"]]},"contact":{"eb":["Contatti","تواصل"],"h1":"Richiedi un preventivo o scrivimi","lead":"Rispondo entro 24 ore nei giorni lavorativi. Per le urgenze, WhatsApp è il modo più veloce.","tabs":["Preventivo","Informazioni"],"name":"Nome e cognome","namePh":"Es. Mario Rossi","email":"Email","emailPh":"nome@email.it","phone":"Telefono / WhatsApp","optional":"facoltativo","service":"Servizio","services":["Traduzione","Traduzione asseverata","Interpretariato","Mediazione culturale","Lezioni di italiano","Altro"],"dirL":"Combinazione linguistica","dirO":["Arabo → italiano","Italiano → arabo"],"date":"Entro quando ti serve?","fileL":"Documento da tradurre","fileMain":"Trascina qui il documento o <u>sfoglia</u>","fileHint":"PDF, JPG, PNG o Word · max 10 MB","remove":"Rimuovi","msg":"Messaggio","msgPh":"Descrivi brevemente di cosa hai bisogno…","consent":"Ho letto l'<u>informativa privacy</u> e acconsento al trattamento dei miei dati per ricevere una risposta.","submit":"Invia la richiesta","secure":"Dati protetti · GDPR","errReq":"Campo obbligatorio","errEmail":"Inserisci un indirizzo email valido","errConsent":"Serve il consenso per poterti rispondere","okT":"Grazie!","okS":"Questa è un'anteprima: nel sito finale la richiesta arriverà via email con gli allegati e riceverai una conferma automatica.","again":"Compila di nuovo","waK":"Il modo più veloce","waBtn":"Apri la chat","phoneK":"Telefono","emailK":"Email","studioK":"Studio","studioV":"[Indirizzo], [Città]","studioS":"Solo su appuntamento","hoursK":"Orari","hoursV":"Lun–Ven · 9:00–18:00","hoursS":"Sabato su richiesta","privacy":"I dati inviati con il modulo sono usati solo per risponderti."},"seoUi":{"eyebrow":"SEO di base","title":"Anteprima su Google","sub":"Così apparirà questa pagina nei risultati di ricerca.","t":"Title","d":"Meta description","h1":"Titolo H1","url":"URL","hreflang":"Versione in arabo (hreflang)","schema":"Dati strutturati","chars":"caratteri","kw":"Parole chiave principali","note":"In WordPress title e description si modificano con Rank Math, pagina per pagina e per ciascuna lingua."},"seo":{"home":["Traduttore e interprete arabo italiano | Nome Cognome","Traduzioni e asseverazioni arabo–italiano, interpretariato, mediazione culturale e lezioni di italiano per arabofoni. Preventivo gratuito in 24 ore.",["traduttore arabo italiano","traduzioni asseverate arabo","interprete arabo"]],"chi-sono":["Chi sono – Traduttore arabo madrelingua | Nome Cognome","Traduttore e interprete di madrelingua araba, iscritto all'albo CTU del Tribunale. Formazione, esperienza e metodo di lavoro.",["traduttore arabo madrelingua","CTU arabo Tribunale"]],"traduzioni":["Traduzioni arabo italiano | Nome Cognome","Traduzioni arabo–italiano di documenti personali, legali, medici e commerciali. Traduttore madrelingua, preventivo gratuito in 24 ore.",["traduzioni arabo italiano","traduttore arabo","traduzione documenti arabo"]],"asseverazioni":["Traduzione asseverata arabo italiano | Nome Cognome","Traduzioni giurate dall'arabo per cittadinanza, permesso di soggiorno, titoli di studio e patente. Asseverazione in Tribunale, preventivo in 24 ore.",["traduzione asseverata arabo","traduzione giurata arabo italiano","traduzione documenti cittadinanza"]],"interpretariato":["Interprete arabo italiano | Nome Cognome","Interprete arabo–italiano per tribunali, questure, ospedali e aziende. Consecutiva, trattativa e chuchotage, in presenza o da remoto.",["interprete arabo italiano","interprete arabo tribunale","interprete arabo online"]],"mediazione":["Mediatore culturale arabo italiano | Nome Cognome","Mediazione linguistico-culturale arabo–italiano per scuole, ospedali, servizi sociali e accoglienza. Interventi e formazione per operatori.",["mediatore culturale arabo","mediazione linguistico culturale","mediatore arabo scuola"]],"lezioni":["Lezioni di italiano per arabofoni | Nome Cognome","Corsi di italiano per chi parla arabo: livelli A1–C1 e preparazione agli esami A2 e B1 per permesso di soggiorno e cittadinanza. In presenza o online.",["corso italiano per arabi","lezioni italiano arabofoni","esame B1 cittadinanza"]],"contatti":["Contatti e preventivo gratuito | Nome Cognome","Richiedi un preventivo gratuito per traduzioni, asseverazioni o interpretariato arabo–italiano. Risposta entro 24 ore, anche su WhatsApp.",["preventivo traduzione arabo","contatti traduttore arabo"]]}},"ar":{"dir":"rtl","other":"it","ui":{"mock":"نموذج أولي","mockNote":"معاينة تصميم · النصوص والصور مؤقتة","seoBtn":"معاينة جوجل","brand":"الاسم واللقب","brandTag":"مترجم · مترجم فوري","cta":"اطلب عرض سعر","ctaLong":"اطلب عرض سعر مجاني","wa":"واتساب","waLong":"راسلني على واتساب","waText":"مرحبًا، أريد عرض سعر لترجمة وثيقة.","micro":"رد خلال 24 ساعة · عرض سعر مجاني دون أي التزام","discover":"تفاصيل الخدمة","menu":"افتح القائمة","close":"إغلاق","home":"الرئيسية","services":"الخدمات","faq":"أسئلة شائعة","faqLead":"لم تجد الإجابة؟ راسلني وسأرد عليك بنفسي.","other":"خدمات أخرى","brief":"باختصار","how":"كيف نعمل","portrait":"صورتك الشخصية الاحترافية","pairWord":"العربية ⇄ الإيطالية","floatT":"ترجمة محلَّفة","floatS":"جاهزة للمحكمة والبريفتورا","sample":"نصوص تجريبية","ctaT":"لديك وثيقة تحتاج إلى ترجمة؟","ctaS":"أرسل لي صورتها واحصل على عرض السعر خلال 24 ساعة.","footTag":"ترجمة وترجمة فورية ووساطة لغوية وثقافية بين العربية والإيطالية، ودروس في اللغة الإيطالية للناطقين بالعربية.","footSvc":"الخدمات","footStudio":"عنّي","footContact":"التواصل","hours":"الاثنين–الجمعة · 9:00–18:00","area":"المكتب في [المدينة] · خدمات عن بُعد في كل إيطاليا","legal":"© 2026 الاسم واللقب · الرقم الضريبي P.IVA 00000000000","privacy":"سياسة الخصوصية","cookie":"سياسة ملفات الارتباط","mockFoot":"نموذج تصميم أولي v1 · غير منشور بعد","copy":"نسخ","copied":"تم النسخ","lang":"اللغة"},"nav":{"home":"الرئيسية","chi-sono":"من أنا","services":"الخدمات","lezioni":"دروس اللغة الإيطالية","contatti":"تواصل معي"},"eb":{"svc":["الخدمات","Servizi"],"why":["لماذا أنا","Perché scegliermi"],"docs":["الوثائق","Documenti"],"how":["كيف نعمل","Come funziona"],"quotes":["آراء العملاء","Dicono di me"],"faq":["أسئلة","Domande"],"detail":["بالتفصيل","Nel dettaglio"],"other":["الخدمات","Servizi"]},"steps":[["أرسل الوثيقة","صورة واضحة أو ملف PDF، عبر النموذج أو على واتساب."],["استلم عرض السعر","السعر والمدة بوضوح خلال 24 ساعة، دون أي التزام."],["استلم الترجمة","بالبريد الإلكتروني أو شخصيًا، ومحلَّفة إذا كنت تحتاجها لاستخدام رسمي."]],"home":{"eyebrow":"مترجم ومترجم فوري · عربي ⇄ إيطالي","h1":"الكلمة الصحيحة بين <em class=\"hl\">العربية</em> و<em class=\"hl\">الإيطالية</em>.","lead":"أنا الاسم واللقب، مترجم ومترجم فوري لغتي الأم العربية، ومسجَّل في سجلّ الخبراء لدى المحكمة. أترجم الوثائق وأصادق عليها رسميًا، وأرافق الأفراد والمؤسسات وسيطًا ثقافيًا، وأعلّم اللغة الإيطالية للناطقين بالعربية.","trustL":"أعمل مع","trust":["المحاكم","البريفتورا والكويستورا","المستشفيات","المدارس","مكاتب المحاماة","الشركات"],"svcT":"كيف يمكنني مساعدتك","svcL":"خمس خدمات وشخص واحد تتعامل معه. في كل صفحة تجد المدة المطلوبة والوثائق اللازمة والتكلفة.","whyT":"دقة، وسرية تامة، وثقافتان أعرفهما من الداخل","whyL":"أترجم كل وثيقة بنفسي وأتابع كل معاملة من البداية حتى النهاية. لا وكالات ولا ترجمة آلية.","stats":[["12+","سنة من الخبرة في الترجمة والترجمة الفورية"],["3500","وثيقة مترجمة ومحلَّفة"],["24","ساعة للحصول على عرض سعر مفصّل"],["0","ترجمة آلية: كل نص أترجمه بنفسي"]],"docsT":"وثائق الإقامة والجنسية ومعادلة الشهادات","docsL":"هذه أكثر الترجمات التي تُطلب مني. وإذا لم تكن متأكدًا من نوع الترجمة المطلوبة، أوضّح لك ذلك قبل أن نبدأ.","docs":["شهادة الميلاد","عقد الزواج","البيان العائلي","الشهادات الثانوية والجامعية","كشوف العلامات والمناهج","رخصة القيادة","شهادة عدم المحكومية","الأحكام والعقود الموثّقة","التقارير الطبية","العقود"],"docsLink":"كيف تتم الترجمة المحلَّفة","howT":"ثلاث خطوات بسيطة","howL":"يمكنك البدء حتى بصورة التقطتها بهاتفك.","quotesT":"الثقة تُبنى وثيقةً بعد وثيقة","quotes":[["ترجمة دقيقة وصلت قبل الموعد. وتابع أيضًا إجراءات التحليف في المحكمة دون أن أضطر للقيام بأي شيء.","عميل","ترجمة لملف الجنسية"],["وسيط دقيق ومتفهّم. تغيّر التواصل مع العائلات الناطقة بالعربية في مدرستنا بشكل كامل.","مدير مدرسة","وساطة ثقافية"],["دروس واضحة، مع شرح بالعربية عند الحاجة. نجحت في امتحان B1 من المحاولة الأولى.","طالب","دروس اللغة الإيطالية"]],"faq":[["كم تكلّف الترجمة؟","يعتمد ذلك على طول الوثيقة ونوعها ومدى الاستعجال. أرسل لي صورة أو ملف PDF وستحصل على عرض سعر مجاني ودقيق خلال 24 ساعة."],["ما الفرق بين الترجمة المصدَّقة والترجمة المحلَّفة؟","الترجمة المصدَّقة يُرفق بها إقرار مني بمطابقتها للأصل. أما الترجمة المحلَّفة (Asseverata) فيُحلف عليها أمام المحكمة ولها قيمة قانونية في إيطاليا، وهي المطلوبة للجنسية والإقامة ومعادلة الشهادات."],["هل يمكنني إرسال الوثائق عبر واتساب؟","نعم، تكفي صورة واضحة لكل صفحة. أما للترجمة المحلَّفة فسنحتاج لاحقًا إلى الأصل."],["هل تعمل عن بُعد؟","نعم. يمكن إنجاز الترجمة والدروس بالكامل عبر الإنترنت، والترجمة الفورية أيضًا عبر مكالمة فيديو."]]},"svc":{"traduzioni":{"name":"الترجمة","pair":"Traduzioni","short":"وثائق شخصية وقانونية وطبية","tile":"وثائق شخصية وقانونية وطبية وتجارية، من العربية إلى الإيطالية وبالعكس.","ex":"شهادات · عقود · تقارير طبية","h1":"ترجمة من العربية إلى الإيطالية ومن الإيطالية إلى العربية","lead":"وثائق شخصية وقانونية وطبية وتجارية يترجمها مترجم لغته الأم العربية، بالمصطلحات الصحيحة وبالصيغة التي تطلبها الدوائر الإيطالية.","facts":[["المدة","2–5 أيام عمل، والحالات المستعجلة خلال 24 ساعة"],["الصيغ","PDF أو Word أو صور أو ورق"],["اتجاه الترجمة","عربي ← إيطالي، إيطالي ← عربي"],["عرض السعر","مجاني، خلال 24 ساعة"]],"whatT":"ما الذي أترجمه","items":[["الوثائق الشخصية","شهادات الميلاد والزواج، البيان العائلي، رخص القيادة، جوازات السفر."],["الوثائق القانونية والقضائية","الأحكام، والوكالات، والعقود الموثّقة، ووثائق المحكمة."],["الشهادات الدراسية","الشهادات الثانوية والجامعية وكشوف العلامات لمعادلتها في إيطاليا."],["الوثائق الطبية","التقارير الطبية والملفات السريرية وشهادات العجز ولمّ الشمل."],["الوثائق التجارية","العقود، وسجلات الشركات، والكتالوجات، والمراسلات مع العملاء والموردين."],["المواقع الإلكترونية والتسويق","نصوص مكيّفة للجمهور العربي، لا مجرد ترجمة حرفية."]],"note":["ترجمة عادية أم مصدَّقة أم محلَّفة؟","يعتمد ذلك على الجهة التي ستقدّم لها الوثيقة. إذا لم تكن متأكدًا، اسألني وسأوضح لك قبل إعداد عرض السعر.","asseverazioni","تعرّف على الترجمة المحلَّفة"],"stepsT":"كيف نعمل","steps":null,"faq":[["هل تترجم الوثائق بنفسك؟","نعم. لا أستعين بوكالات ولا بالترجمة الآلية؛ كل وثيقة أترجمها وأراجعها بنفسي."],["هل تترجم الأختام والملاحظات المكتوبة بخط اليد؟","نعم. تُنقل الأختام والتواقيع والملاحظات وتوصف بين قوسين معقوفين كما تطلب الدوائر الرسمية."]]},"asseverazioni":{"name":"الترجمة المحلَّفة","pair":"Asseverazioni","short":"ترجمات محلَّفة لها قيمة قانونية","tile":"ترجمات محلَّفة أمام المحكمة للجنسية وتصريح الإقامة والشهادات الدراسية.","ex":"الجنسية · الإقامة · رخصة القيادة","h1":"ترجمة محلَّفة (Asseverata) من العربية","lead":"الترجمة المحلَّفة يُحلف عليها أمام المحكمة، ولها قيمة قانونية في إيطاليا. وهي مطلوبة للجنسية وتصريح الإقامة ومعادلة الشهادات وتبديل رخصة القيادة.","facts":[["المدة","3–7 أيام عمل"],["القيمة","قانونية في إيطاليا"],["المكان","المحكمة أو قاضي الصلح"],["عرض السعر","مجاني، والطوابع محسوبة مسبقًا"]],"whatT":"متى تحتاجها","items":[["الجنسية الإيطالية","شهادة الميلاد وشهادة عدم المحكومية من بلدك الأصلي."],["تصريح الإقامة","وثائق لمّ الشمل العائلي والتجديد."],["معادلة الشهادات","الشهادات الثانوية والجامعية للجامعات والمسابقات والنقابات المهنية."],["تبديل رخصة القيادة","رخصة القيادة والشهادة المرفقة بها."],["الزواج في إيطاليا","وثيقة عدم الممانعة (Nulla osta) وشهادات الأحوال المدنية."],["القضايا القانونية","الأحكام والوثائق المطلوب تقديمها إلى المحكمة."]],"note":["التصديق القنصلي والأبوستيل","كثير من الوثائق الصادرة في الدول العربية تحتاج إلى تصديق قبل ترجمتها. أراجع وثيقتك مجانًا وأخبرك بما يجب فعله.",null,null],"stepsT":"كيف تتم الترجمة المحلَّفة","steps":[["الوثيقة الأصلية","مصدَّقة من القنصلية أو بختم الأبوستيل إذا لزم الأمر، وسأخبرك إن كان ذلك ضروريًا."],["الترجمة","أترجم الوثيقة وأجهّز الملف مع الأصل والترجمة."],["الحلف","أؤدي اليمين على الترجمة أمام موظف المحكمة."],["الاستلام","تستلم الملف المحلَّف جاهزًا للتقديم."]],"faq":[["هل يجب أن أحضر شخصيًا؟","لا. يمكنك إرسال الأصل بالبريد أو تسليمه في المكتب، وأنا أتولى الحلف أمام المحكمة."],["كم تكلّف الطوابع؟","تطلب المحكمة طوابع (Marca da bollo) حسب عدد الصفحات، وستجدها محسوبة مسبقًا في عرض السعر."],["هل تصلح الترجمة المحلَّفة خارج إيطاليا؟","لاستخدامها في الخارج قد يلزم أيضًا تصديق التوقيع لدى النيابة العامة (Procura). أشرح لك الخطوات في عرض السعر."]]},"interpretariato":{"name":"الترجمة الفورية","pair":"Interpretariato","short":"حضوريًا وعن بُعد","tile":"ترجمة تتابعية وترجمة مفاوضات في المحكمة والمستشفى والشركات أو عبر الفيديو.","ex":"المحكمة · المستشفى · الشركات","h1":"مترجم فوري عربي–إيطالي","lead":"في المحكمة أو المستشفى أو الكويستورا أو في اجتماع عمل: أترجم الحديث مباشرة بدقة وتكتّم. وعن بُعد أيضًا.","facts":[["الأسلوب","تتابعية، ترجمة مفاوضات، ترجمة همسية"],["المكان","حضوريًا أو عبر مكالمة فيديو"],["الحجز","يفضَّل قبل 48 ساعة"],["الأجر","بالساعة أو باليوم"]],"whatT":"أين أعمل","items":[["المحاكم والنيابات","الجلسات، والاستجوابات، واللقاءات مع المحامي."],["الكويستورا والبريفتورا","معاملات تصريح الإقامة، والمقابلات، وجلسات الاستماع."],["المستشفيات والمراكز الصحية","الزيارات، والموافقة المستنيرة، واللقاءات مع أفراد العائلة."],["الشركات","المفاوضات، والمعارض، واستقبال الوفود، والتدريب."],["كتّاب العدل","عقود البيع والوثائق مع أطراف لا يتحدثون الإيطالية."],["عن بُعد","مكالمات فيديو واجتماعات عبر الإنترنت بالجودة نفسها."]],"note":["الفصحى واللهجات","الحديث الحقيقي ليس نصًا مكتوبًا. أفهم وأتحدث أهم اللهجات العربية، فلا يضيع أي معنى.",null,null],"stepsT":"كيف ننظّم اللقاء","steps":[["احجز","حدّد التاريخ والمكان والمدة ونوع اللقاء."],["التحضير","إن أمكن، أرسل لي الوثائق والأسماء مسبقًا لأحضر وأنا ملمّ بالموضوع."],["اللقاء","أترجم حضوريًا أو عبر الإنترنت، بسرية تامة."]],"faq":[["ما الفرق بين الترجمة التتابعية والهمسية؟","في التتابعية أتحدث بعدك على مقاطع قصيرة. وفي الهمسية أترجم بصوت منخفض أثناء حديث الطرف الآخر، وهي مناسبة لشخص أو شخصين."],["هل يمكنني الحجز في وقت قصير؟","نعم إذا كنت متاحًا. راسلني على واتساب في الحالات المستعجلة."]]},"mediazione":{"name":"الوساطة اللغوية والثقافية","pair":"Mediazione","short":"المدارس والصحة والخدمات الاجتماعية","tile":"دعم المدارس والقطاع الصحي والخدمات الاجتماعية في التواصل مع العائلات الناطقة بالعربية.","ex":"المدرسة · الصحة · الاستقبال","h1":"الوساطة اللغوية والثقافية","lead":"عندما تتعامل عائلة ناطقة بالعربية مع مدرسة أو مستشفى أو الخدمات الاجتماعية، لا تكفي الكلمات وحدها. أساعد الطرفين على التفاهم الحقيقي، مع مراعاة الثقافة والدين والعادات.","facts":[["لمن","المؤسسات العامة والمدارس والقطاع الصحي والتعاونيات"],["الشكل","تدخلات فردية أو مشاريع مستمرة"],["اللغات","الفصحى واللهجات"],["وأيضًا","تدريب ثقافي للعاملين"]],"whatT":"مجالات العمل","items":[["المدرسة","لقاءات مع العائلات، ودمج التلاميذ، والتواصل بين المدرسة والبيت."],["الصحة","مرافقة في الزيارات الطبية والولادة ومسارات العلاج."],["الخدمات الاجتماعية","المقابلات، ومشاريع الدعم، وحماية القاصرين."],["الاستقبال","مراكز الاستقبال ومشاريع طالبي اللجوء."],["العدالة","السجون ومكاتب تنفيذ العقوبات والحماية القانونية."],["التدريب","دورات للمعلمين والعاملين حول الثقافة العربية والإسلامية."]],"note":["أكثر من مجرد ترجمة","يشرح الوسيط أيضًا ما لا يُقال: الإيماءات، والصمت، والأدوار داخل العائلة. وغالبًا ما يكون ذلك مفتاح الحل.",null,null],"stepsT":null,"steps":null,"faq":[["هل تعمل مع المؤسسات العامة بموجب اتفاقيات؟","نعم. يمكنني العمل بتكليف مباشر أو باتفاقية أو عبر التعاونيات."],["هل تقدّم تدريبًا للموظفين؟","نعم. أنظّم لقاءات مصمَّمة خصيصًا للمدارس والمستشفيات والخدمات الاجتماعية."]]},"lezioni":{"name":"دروس اللغة الإيطالية","pair":"Lezioni di italiano","short":"للناطقين بالعربية، من A1 إلى C1","tile":"دورات للناطقين بالعربية من A1 إلى C1، مع التحضير لامتحانَي A2 وB1.","ex":"A2 · B1 · عبر الإنترنت","h1":"دروس اللغة الإيطالية للناطقين بالعربية","lead":"تعلّم الإيطالية انطلاقًا من العربية أسهل: أشرح القواعد والنطق بالمقارنة بين اللغتين. دروس فردية أو في مجموعات صغيرة، حضوريًا أو عبر الإنترنت.","facts":[["المستويات","من A1 إلى C1"],["الشكل","فردي أو مجموعات صغيرة"],["المكان","حضوريًا أو عبر الإنترنت"],["الدرس الأول","مجاني، 30 دقيقة"]],"whatT":"المسارات","items":[["الإيطالية للحياة اليومية","التحدث مع الأطباء والدوائر الرسمية ومدرسة الأبناء وزملاء العمل."],["امتحان A2","لتصريح الإقامة الأوروبي طويل الأمد."],["امتحان B1","لطلب الجنسية الإيطالية، مع التحضير لامتحانات CILS وCELI وPLIDA."],["الإيطالية للعمل","مفردات مهنية، ومقابلات عمل، ورسائل بريد إلكتروني ومكالمات."],["الأطفال والشباب","دعم مدرسي للطلاب الذين وصلوا حديثًا إلى إيطاليا."],["الكتابة والقواعد","لمن يتحدث جيدًا ويريد أن يكتب دون أخطاء."]],"note":["درس تجريبي مجاني","30 دقيقة لنتعارف، ونحدد مستواك، ونختار المسار المناسب لك.",null,null],"vocabT":["الإيطالية","العربية"],"vocab":[["Buongiorno","صباح الخير"],["Grazie mille","شكرًا جزيلًا"],["Il permesso di soggiorno","تصريح الإقامة"],["Dove si trova la Questura?","أين تقع الكويستورا؟"]],"stepsT":"كيف نبدأ","steps":[["درس تجريبي","30 دقيقة مجانية لتحديد مستواك وأهدافك."],["خطة مناسبة لك","نختار معًا عدد الدروس والمواعيد والمواد."],["دروس وتقييم","تمارين بين الدروس ومحاكاة للامتحان."]],"faq":[["هل يجب أن أعرف بعض الإيطالية مسبقًا؟","لا. يمكن البدء من الصفر: في البداية أشرح بالعربية، ثم بالإيطالية أكثر فأكثر."],["هل أحصل على شهادة؟","نعم، تحصل في نهاية الدورة على شهادة حضور. أما الامتحان الرسمي فأحضّرك له وأساعدك في التسجيل."]]}},"about":{"eb":["من أنا","Chi sono"],"h1":"عشتُ بين لغتين طوال حياتي، واليوم أصبحتا مهنتي.","bio":["وُلدت في [البلد] وأعيش في إيطاليا منذ عام 2010. درست اللغات والآداب الأجنبية في جامعة [المدينة]، وتخصّصت في الترجمة القانونية.","منذ عام 2016 أنا مسجَّل في سجلّ الخبراء الفنيين (CTU) لدى محكمة [المدينة] للغة العربية. أعمل مع المحاكم والبريفتورا والمستشفيات والمدارس، ومع الأشخاص الذين يواجهون البيروقراطية الإيطالية بلغة ليست لغتهم.","أتقن العربية الفصحى وأهم اللهجات، وهذا يصنع الفرق عند الترجمة الفورية لحديث حقيقي، لا لنص مكتوب."],"tlEb":["المسيرة","Percorso"],"tlT":"التكوين والخبرة","tlL":"تكوين جامعي، وتخصص قانوني، وسنوات من العمل مع المؤسسات العامة والخاصة.","tl":[["2012","إجازة في اللغات والآداب الأجنبية","جامعة [المدينة]"],["2014","ماجستير في الترجمة القانونية","عربي ⇄ إيطالي"],["2016","التسجيل في سجلّ خبراء المحكمة (CTU)","محكمة [المدينة]"],["2018","مؤهل وسيط لغوي وثقافي","إقليم [الاسم]"],["2020","شهادة DITALS","تدريس الإيطالية لغير الناطقين بها"]],"valEb":["أسلوبي في العمل","Come lavoro"],"valT":"ثلاثة أمور لا أتنازل عنها","values":[["الدقة","الأسماء والتواريخ والأختام تُنقل تمامًا كما في الأصل. خطأ واحد في وثيقة رسمية قد يكلّف أسابيع."],["السرية","وثائقك تبقى بيني وبينك، مع معالجة البيانات وفق اللائحة الأوروبية لحماية البيانات (GDPR)."],["احترام الثقافة","الترجمة تعني أيضًا شرح السياق: الدين، والعائلة، وأساليب التواصل."]],"langEb":["اللغات","Lingue"],"langT":"اللغات التي أعمل بها","langs":[["العربية","ar","العربية","اللغة الأم · الفصحى واللهجات الشامية والمصرية والخليجية"],["Italiano","it","الإيطالية","مستوى C2 · أعيش وأعمل في إيطاليا منذ 2010"],["English","en","الإنجليزية","مستوى B2 · للمراسلات والوثائق"]]},"contact":{"eb":["تواصل معي","Contatti"],"h1":"اطلب عرض سعر أو راسلني","lead":"أرد خلال 24 ساعة في أيام العمل. وفي الحالات المستعجلة، واتساب هو الطريقة الأسرع.","tabs":["عرض سعر","استفسار"],"name":"الاسم الكامل","namePh":"مثال: أحمد خليل","email":"البريد الإلكتروني","emailPh":"name@email.com","phone":"الهاتف / واتساب","optional":"اختياري","service":"الخدمة","services":["ترجمة","ترجمة محلَّفة","ترجمة فورية","وساطة ثقافية","دروس اللغة الإيطالية","غير ذلك"],"dirL":"اتجاه الترجمة","dirO":["عربي ← إيطالي","إيطالي ← عربي"],"date":"متى تحتاجها؟","fileL":"الوثيقة المطلوب ترجمتها","fileMain":"اسحب الوثيقة إلى هنا أو <u>تصفّح</u>","fileHint":"PDF أو JPG أو PNG أو Word · حتى 10 ميغابايت","remove":"إزالة","msg":"الرسالة","msgPh":"صف باختصار ما تحتاجه…","consent":"قرأت <u>سياسة الخصوصية</u> وأوافق على معالجة بياناتي للحصول على رد.","submit":"أرسل الطلب","secure":"بياناتك محمية · GDPR","errReq":"هذا الحقل مطلوب","errEmail":"أدخل بريدًا إلكترونيًا صحيحًا","errConsent":"نحتاج موافقتك حتى نتمكن من الرد عليك","okT":"شكرًا لك!","okS":"هذه معاينة فقط: في الموقع النهائي سيصل الطلب مع المرفقات إلى البريد الإلكتروني، وستصلك رسالة تأكيد تلقائية.","again":"املأ النموذج من جديد","waK":"الطريقة الأسرع","waBtn":"افتح المحادثة","phoneK":"الهاتف","emailK":"البريد الإلكتروني","studioK":"المكتب","studioV":"[العنوان]، [المدينة]","studioS":"بموعد مسبق فقط","hoursK":"ساعات العمل","hoursV":"الاثنين–الجمعة · 9:00–18:00","hoursS":"السبت عند الطلب","privacy":"تُستخدم البيانات المرسلة عبر النموذج للرد عليك فقط."},"seoUi":{"eyebrow":"أساسيات SEO","title":"المعاينة على جوجل","sub":"هكذا ستظهر هذه الصفحة في نتائج البحث.","t":"العنوان (Title)","d":"الوصف (Meta description)","h1":"عنوان H1","url":"الرابط","hreflang":"النسخة الإيطالية (hreflang)","schema":"البيانات المنظّمة","chars":"حرفًا","kw":"الكلمات المفتاحية الرئيسية","note":"في ووردبريس يُعدَّل العنوان والوصف عبر Rank Math، لكل صفحة ولكل لغة."},"seo":{"home":["مترجم عربي إيطالي في إيطاليا | الاسم واللقب","ترجمة عادية ومحلَّفة من العربية إلى الإيطالية، وترجمة فورية، ووساطة ثقافية، ودروس إيطالية للناطقين بالعربية. عرض سعر مجاني خلال 24 ساعة.",["مترجم عربي إيطالي","ترجمة محلفة في إيطاليا","مترجم عربي في إيطاليا"]],"chi-sono":["من أنا – مترجم لغته الأم العربية | الاسم واللقب","مترجم ومترجم فوري لغته الأم العربية، مسجَّل خبيرًا لدى المحكمة في إيطاليا. التكوين والخبرة وأسلوب العمل.",["مترجم معتمد في إيطاليا","خبير لغة عربية لدى المحكمة"]],"traduzioni":["ترجمة عربي إيطالي وبالعكس | الاسم واللقب","ترجمة وثائق شخصية وقانونية وطبية وتجارية من العربية إلى الإيطالية وبالعكس. مترجم لغته الأم العربية، وعرض سعر مجاني خلال 24 ساعة.",["ترجمة عربي إيطالي","مترجم عربي في إيطاليا","ترجمة وثائق إلى الإيطالية"]],"asseverazioni":["ترجمة محلَّفة للجنسية والإقامة | الاسم واللقب","ترجمة محلَّفة من العربية للجنسية وتصريح الإقامة ومعادلة الشهادات ورخصة القيادة. الحلف أمام المحكمة، وعرض سعر خلال 24 ساعة.",["ترجمة محلفة إيطاليا","ترجمة وثائق الجنسية الإيطالية","Asseverazione عربي"]],"interpretariato":["مترجم فوري عربي إيطالي | الاسم واللقب","مترجم فوري عربي–إيطالي للمحاكم والكويستورا والمستشفيات والشركات، حضوريًا أو عن بُعد عبر مكالمة فيديو.",["مترجم فوري عربي إيطالي","مترجم في المحكمة إيطاليا","مترجم عربي أونلاين"]],"mediazione":["وسيط لغوي وثقافي عربي في إيطاليا | الاسم واللقب","وساطة لغوية وثقافية عربي–إيطالي للمدارس والمستشفيات والخدمات الاجتماعية ومراكز الاستقبال، مع تدريب للعاملين.",["وسيط ثقافي عربي إيطاليا","وساطة لغوية وثقافية","Mediatore culturale arabo"]],"lezioni":["دروس اللغة الإيطالية للعرب | الاسم واللقب","دورات إيطالية للناطقين بالعربية من A1 إلى C1، مع التحضير لامتحان A2 للإقامة وB1 للجنسية. حضوريًا أو عبر الإنترنت.",["دروس لغة إيطالية للعرب","امتحان B1 الجنسية الإيطالية","تعلم الإيطالية أونلاين"]],"contatti":["تواصل واطلب عرض سعر مجاني | الاسم واللقب","اطلب عرض سعر مجاني للترجمة العادية أو المحلَّفة أو الفورية بين العربية والإيطالية. رد خلال 24 ساعة، وعبر واتساب أيضًا.",["عرض سعر ترجمة","مترجم عربي واتساب"]]}}},"DOC_SVG":"<svg class=\"docsvg\" viewBox=\"0 0 420 360\" role=\"img\" aria-label=\"Traduzione asseverata con timbro del Tribunale e marca da bollo\" style=\"direction:ltr\">\n<defs><path id=\"stampPath\" d=\"M-38,0a38,38 0 1,1 76,0a38,38 0 1,1 -76,0\"/></defs>\n<g transform=\"rotate(-6 150 190)\"><rect class=\"d-p2\" x=\"46\" y=\"46\" width=\"206\" height=\"272\" rx=\"3\"/><circle class=\"d-emb\" cx=\"149\" cy=\"78\" r=\"11\"/><circle class=\"d-emb\" cx=\"149\" cy=\"78\" r=\"5\"/><rect class=\"d-ln\" x=\"82\" y=\"104\" width=\"150\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"60\" y=\"119\" width=\"172\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"104\" y=\"134\" width=\"128\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"66\" y=\"149\" width=\"166\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"90\" y=\"164\" width=\"142\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"62\" y=\"179\" width=\"170\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"120\" y=\"194\" width=\"112\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"74\" y=\"209\" width=\"158\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"96\" y=\"224\" width=\"136\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"136\" y=\"239\" width=\"96\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"82\" y=\"254\" width=\"150\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"112\" y=\"269\" width=\"120\" height=\"4.5\" rx=\"2.25\"/></g>\n<g transform=\"rotate(2.5 270 200)\"><rect class=\"d-p1\" x=\"150\" y=\"58\" width=\"214\" height=\"276\" rx=\"3\"/><text class=\"d-h\" x=\"172\" y=\"92\">TRADUZIONE GIURATA</text><rect class=\"d-rule\" x=\"172\" y=\"101\" width=\"74\" height=\"1.2\"/><rect class=\"d-ln\" x=\"172\" y=\"116\" width=\"168\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"131\" width=\"150\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"146\" width=\"172\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"161\" width=\"124\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"176\" width=\"160\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"191\" width=\"142\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"206\" width=\"170\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"221\" width=\"110\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"236\" width=\"158\" height=\"4.5\" rx=\"2.25\"/><rect class=\"d-ln\" x=\"172\" y=\"251\" width=\"132\" height=\"4.5\" rx=\"2.25\"/><path class=\"d-sig\" d=\"M176 292c8-14 14-18 16-8s-4 14 4 6 10-16 14-8-2 12 6 6 12-8 16-4 8 4 22-2\"/><text class=\"d-small\" x=\"172\" y=\"318\">Il traduttore</text></g>\n<g transform=\"translate(292 72) rotate(5)\"><rect class=\"d-bollo\" width=\"54\" height=\"64\" rx=\"1\"/><rect class=\"d-bollo-in\" x=\"5\" y=\"5\" width=\"44\" height=\"54\"/><text class=\"d-bt\" x=\"27\" y=\"22\" text-anchor=\"middle\">MARCA DA</text><text class=\"d-bt\" x=\"27\" y=\"30\" text-anchor=\"middle\">BOLLO</text><text class=\"d-bv\" x=\"27\" y=\"50\" text-anchor=\"middle\">€16,00</text></g>\n<g class=\"d-stamp\" transform=\"translate(306 262) rotate(-16)\"><circle r=\"48\" class=\"s-o\"/><circle r=\"29\" class=\"s-i\"/><text class=\"s-t\"><textPath href=\"#stampPath\">TRIBUNALE ORDINARIO · ASSEVERAZIONE ·</textPath></text><text class=\"s-c\" y=\"-1\" text-anchor=\"middle\">CTU</text><text class=\"s-c2\" y=\"12\" text-anchor=\"middle\">AR · IT</text></g>\n</svg>","LAT":"<svg class=\"lat\" aria-hidden=\"true\"><rect width=\"100%\" height=\"100%\" fill=\"url(#lat)\"/></svg>","ART":{"traduzioni":{"ar":"ترجمة","it":"traduzione"},"interpretariato":{"ar":"حوار","it":"dialogo"},"mediazione":{"ar":"تفاهم","it":"intesa"},"lezioni":{"ar":"تعلُّم","it":"imparare"}}};const ICONS=
+{"logo":"<svg class=\"mark\" viewBox=\"0 0 32 36\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M3 35V16a13 13 0 0 1 26 0v19\"/><path d=\"M9 35V19c0-5 3-8.5 7-11.5 4 3 7 6.5 7 11.5v16\"/><path d=\"M1 35h30\"/></svg>","doc":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6.5 3h7.5l4.5 4.5V21h-12z\"/><path d=\"M14 3v4.5h4.5\"/><path d=\"M9.5 12.5h6M9.5 16h4\"/></svg>","seal":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"9.5\" r=\"5.5\"/><circle cx=\"12\" cy=\"9.5\" r=\"2.4\"/><path d=\"M8.6 13.8 7.5 21l4.5-2.2 4.5 2.2-1.1-7.2\"/></svg>","headset":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.5 14v-2a7.5 7.5 0 0 1 15 0v2\"/><rect x=\"3.5\" y=\"13.5\" width=\"4\" height=\"6\" rx=\"1.6\"/><rect x=\"16.5\" y=\"13.5\" width=\"4\" height=\"6\" rx=\"1.6\"/><path d=\"M18.5 19.5c0 1.4-1.6 2-3.5 2h-1.5\"/></svg>","bubbles":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3.5 4.5h11v8h-6l-3.5 3v-3h-1.5z\"/><path d=\"M17.5 8.5h3v8h-1.5v3l-3.5-3h-6v-1.5\"/></svg>","book":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 6.5C9.5 5 6.5 4.6 3.5 5.3v13.2c3-.7 6-.3 8.5 1.2 2.5-1.5 5.5-1.9 8.5-1.2V5.3c-3-.7-6-.3-8.5 1.2z\"/><path d=\"M12 6.5v13.2\"/></svg>","arrow":"<svg class=\"ic flip\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4.5 12h15M13.5 6l6 6-6 6\"/></svg>","chev":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6.5 9.5 5.5 5.5 5.5-5.5\"/></svg>","chevR":"<svg class=\"ic flip\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9.5 6.5 5.5 5.5-5.5 5.5\"/></svg>","phone":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 3.5h3.5l1.5 4.5-2.2 1.4a11 11 0 0 0 6.8 6.8l1.4-2.2 4.5 1.5V19a1.5 1.5 0 0 1-1.5 1.5A16.5 16.5 0 0 1 3.5 5 1.5 1.5 0 0 1 5 3.5z\"/></svg>","mail":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"1.5\"/><path d=\"m3.5 6 8.5 7 8.5-7\"/></svg>","pin":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z\"/><circle cx=\"12\" cy=\"10\" r=\"2.3\"/></svg>","clock":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"8.5\"/><path d=\"M12 7.5V12l3 2\"/></svg>","copy":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"8.5\" y=\"8.5\" width=\"11\" height=\"11\" rx=\"1.5\"/><path d=\"M15.5 8.5v-3A1.5 1.5 0 0 0 14 4H6a1.5 1.5 0 0 0-1.5 1.5V14A1.5 1.5 0 0 0 6 15.5h2.5\"/></svg>","check":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12.5 4.5 4.5L19 7.5\"/></svg>","checkC":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m8 12.3 2.8 2.8L16.2 9.5\"/></svg>","menu":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 7.5h16M4 12h16M4 16.5h16\"/></svg>","close":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 6l12 12M18 6 6 18\"/></svg>","camera":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 8h3l1.5-2.5h7L17 8h3v11H4z\"/><circle cx=\"12\" cy=\"13\" r=\"3.5\"/></svg>","upload":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 15.5V4.5M7.5 9 12 4.5 16.5 9\"/><path d=\"M4.5 15v4.5h15V15\"/></svg>","search":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"6.5\"/><path d=\"m20 20-4.4-4.4\"/></svg>","plus":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg>","lock":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"10.5\" width=\"14\" height=\"10\" rx=\"1.5\"/><path d=\"M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5\"/></svg>","file":"<svg class=\"ic \" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 3h6.5L18 7.5V21H7z\"/><path d=\"M13.5 3v4.5H18\"/></svg>","quote":"<svg class=\"ic q flip\" viewBox=\"0 0 32 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M0 24V14C0 6.3 4.3 1.6 12 0l1.4 3C8.9 4.6 6.8 7.4 6.6 11H12v13zm18 0V14c0-7.7 4.3-12.4 12-14l1.4 3c-4.5 1.6-6.6 4.4-6.8 8H30v13z\"/></svg>","wa":"<svg class=\"ic wa\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.41z\"/></svg>"};
+/* ===== v5 · quiet luxury: night, ivory, muted gold ===== */
+const S = DATA.S, DOC = DATA.DOC_SVG, I = ICONS;
+const LOGO = '<svg class="mark" viewBox="0 0 32 38" fill="none" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><path stroke="currentColor" d="M3 33V16a13 13 0 0 1 26 0v17"/><path stroke="currentColor" d="M9 33V19c0-5 3-8.5 7-11.5 4 3 7 6.5 7 11.5v14"/><rect x="1" y="35.4" width="10" height="2" fill="#009246"/><rect x="11" y="35.4" width="10" height="2" fill="#F1F2F1" stroke="currentColor" stroke-opacity=".3" stroke-width=".4"/><rect x="21" y="35.4" width="10" height="2" fill="#CE2B37"/></svg>';
+const STAR = '<svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="4" y="4" width="10" height="10"/><rect x="4" y="4" width="10" height="10" transform="rotate(45 9 9)"/></svg>';
+const PHONE = "+39 333 000 0000", EMAIL = "info@nomecognome.it", WA = "393330000000";
+
+// Majolica tile reduced to fine gold lines (Arabic eight-point star inside Sicilian floral geometry).
+const corners = r => [[0, 0], [120, 0], [0, 120], [120, 120]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="${r}"/>`).join("");
+const petals = [0, 90, 180, 270].map(a => `<path d="M60 54C50 44 51 26 60 15C69 26 70 44 60 54Z" transform="rotate(${a} 60 60)"/>`).join("");
+const DEFS = `<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<pattern id="tileG" width="120" height="120" patternUnits="userSpaceOnUse"><g fill="none" stroke="#C6AE84" stroke-width=".9">${corners(34)}${corners(16)}${petals}<g transform="translate(60 60)"><rect x="-13" y="-13" width="26" height="26"/><rect x="-13" y="-13" width="26" height="26" transform="rotate(45)"/><circle r="9.5"/></g></g></pattern>
+</defs></svg>`;
+const pat = cls => `<svg class="${cls}" aria-hidden="true"><rect width="100%" height="100%" fill="url(#tileG)"/></svg>`;
+const SEAL = `<svg class="seal" viewBox="0 0 120 120" role="img" aria-label="Italia" style="direction:ltr"><defs><path id="sealRing" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><circle class="seal-bg" cx="60" cy="60" r="58"/><circle class="seal-in" cx="60" cy="60" r="37"/><text class="seal-t"><textPath href="#sealRing" textLength="286" lengthAdjust="spacing">TRADUTTORE · INTERPRETE · ARABO · ITALIANO ·</textPath></text><circle cx="60" cy="60" r="26" fill="#009246"/><circle cx="60" cy="60" r="17" fill="#F1F2F1"/><circle cx="60" cy="60" r="8" fill="#CE2B37"/></svg>`;
+
+// Palermo drawn in a single gold line: aqueduct, Arab-Norman domes, bell tower, palms, moon.
+function skyline() {
+  const arches = (x0, n, w, gap, y) => {
+    let d = `M${x0} 240V${y}h${n * (w + gap) + gap}V240`;
+    for (let i = 0; i < n; i++) { const x = x0 + gap + i * (w + gap); d += `M${x} 240V${y + 24 + w / 2}a${w / 2} ${w / 2} 0 0 1 ${w} 0V240`; }
+    return d;
+  };
+  const palm = (x, h, lean) => {
+    const tx = x + lean * 1.6, ty = 240 - h;
+    let s = `<path d="M${x} 240q${lean} -${h * .5} ${lean * 1.6} -${h}"/>`;
+    [[-150, 44], [-120, 52], [-60, 52], [-30, 44], [-175, 30], [-5, 30]].forEach(([a, l]) => {
+      const r = a * Math.PI / 180, ex = tx + Math.cos(r) * l, ey = ty + Math.sin(r) * l * .55 + 18;
+      s += `<path d="M${tx} ${ty}Q${tx + Math.cos(r) * l * .55} ${ty + Math.sin(r) * l * .5 - 8} ${ex.toFixed(1)} ${ey.toFixed(1)}"/>`;
+    });
+    return s;
+  };
+  return `<svg class="skyline" viewBox="0 0 1440 250" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Palermo" fill="none" stroke="#C6AE84" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 214Q180 178 360 200T720 194T1080 206T1440 188" opacity=".3"/>
+<path d="${arches(40, 8, 34, 14, 150)}" opacity=".5"/>
+<path d="M1110 240V102h54v138M1102 102l35-32 35 32M1128 150v-12a9 9 0 0 1 18 0v12ZM1128 196v-12a9 9 0 0 1 18 0v12Z" opacity=".55"/>
+<g opacity=".9"><path d="M540 240V206h50M590 240V168h100v72M690 240V140h120v100M810 240V180h80v60M890 206h70v34"/>
+<path d="M602 168a38 38 0 0 1 76 0M700 140a50 50 0 0 1 100 0M818 180a32 32 0 0 1 64 0" fill="rgba(198,174,132,.09)"/>
+<path d="M632 214v-12a8 8 0 0 1 16 0v12ZM732 186v-14a8 8 0 0 1 16 0v14ZM764 186v-14a8 8 0 0 1 16 0v14ZM842 218v-10a7 7 0 0 1 14 0v10Z"/></g>
+<g opacity=".7">${palm(500, 120, 8)}${palm(990, 96, -10)}</g>
+<circle cx="1250" cy="70" r="20" opacity=".8"/><circle cx="1250" cy="70" r="34" opacity=".18"/>
+<path d="M0 240H1440" opacity=".6"/></svg>`;
+}
+
+/* ---------- copy for this home ---------- */
+const N = {
+  it: {
+    note: "Concept home · v5 · testi e immagini provvisori", langLabel: "Lingua",
+    nav: [["Servizi", "servizi"], ["Chi sono", "chi-sono"], ["Metodo", "metodo"], ["Domande", "domande"], ["Contatti", "contatti"]],
+    label: "Traduttore e interprete · Arabo — Italiano",
+    h1: 'La parola giusta<br>tra <span class="ar-w" lang="ar" dir="rtl">العربية</span><br>e l’italiano.',
+    wa: "oppure scrivimi su WhatsApp",
+    leadShort: "Traduzioni, asseverazioni e interpretariato tra arabo e italiano. Madrelingua araba, CTU del Tribunale.",
+    facts: ["Risposta entro 24 ore", "CTU · Tribunale", "Madrelingua araba"],
+    wTop: "Italiano", wBot: "Arabo",
+    ch: ["Perché scegliermi", "Servizi", "Chi sono", "Metodo", "Dicono di me", "Domande"],
+    cred: "Credenziali", credline: "CTU presso il Tribunale di [Città] · Certificazione DITALS · Dati trattati secondo il GDPR",
+    most: "La più richiesta",
+    quote: "Tradurre non è sostituire parole. È accompagnare le persone da una lingua, e da una cultura, all’altra.",
+    quote2: "الترجمة ليست استبدال كلمات، بل مرافقة الناس من لغة إلى أخرى، ومن ثقافة إلى أخرى.", q2: "ar",
+    role: "Traduttore · Interprete · CTU",
+    final: 'Hai un documento <em>da tradurre?</em>',
+    based: "Con sede in Italia", fSvc: "Servizi", fCont: "Contatti"
+  },
+  ar: {
+    note: "تصميم الصفحة الرئيسية · النسخة 5 · النصوص والصور مؤقتة", langLabel: "اللغة",
+    nav: [["الخدمات", "servizi"], ["من أنا", "chi-sono"], ["طريقة العمل", "metodo"], ["أسئلة", "domande"], ["تواصل", "contatti"]],
+    label: "مترجم ومترجم فوري · العربية — الإيطالية",
+    h1: 'الكلمة الصحيحة<br>بين العربية<br>و<span class="it-w" lang="it" dir="ltr">l’italiano</span>',
+    wa: "أو راسلني على واتساب",
+    leadShort: "ترجمة عادية ومحلَّفة وترجمة فورية بين العربية والإيطالية. العربية لغتي الأم، وخبير لدى المحكمة.",
+    facts: ["رد خلال 24 ساعة", "خبير لدى المحكمة", "العربية لغتي الأم"],
+    wTop: "العربية", wBot: "الإيطالية",
+    ch: ["لماذا أنا", "الخدمات", "من أنا", "طريقة العمل", "آراء العملاء", "أسئلة"],
+    cred: "الاعتمادات", credline: "خبير لدى محكمة [المدينة] (CTU) · شهادة DITALS · معالجة البيانات وفق اللائحة الأوروبية GDPR",
+    most: "الأكثر طلبًا",
+    quote: "الترجمة ليست استبدال كلمات، بل مرافقة الناس من لغة إلى أخرى، ومن ثقافة إلى أخرى.",
+    quote2: "Tradurre non è sostituire parole. È accompagnare le persone da una lingua, e da una cultura, all’altra.", q2: "it",
+    role: "مترجم · مترجم فوري · خبير لدى المحكمة",
+    final: 'لديك وثيقة <em>تحتاج إلى ترجمة؟</em>',
+    based: "مقيم في إيطاليا", fSvc: "الخدمات", fCont: "التواصل"
+  }
+};
+const PAIRS = [["Parola", "كلمة"], ["Fiducia", "ثقة"], ["Documento", "وثيقة"], ["Famiglia", "عائلة"], ["Futuro", "مستقبل"], ["Casa", "بيت"]];
+const NUM = { it: ["I", "II", "III", "IV", "V", "VI"], ar: ["١", "٢", "٣", "٤", "٥", "٦"] };
+const ORDER = ["asseverazioni", "traduzioni", "interpretariato", "mediazione", "lezioni"];
+
+/* ---------- palettes (presentation tool) ---------- */
+const PALETTES = [
+  ["nero", "#0B0F17", "Nero e champagne", "أسود وشمبانيا"],
+  ["smeraldo", "#07241D", "Smeraldo e oro", "زمردي وذهبي"],
+  ["bordeaux", "#230A10", "Bordeaux e oro", "عنّابي وذهبي"],
+  ["lapis", "#0A1838", "Lapislazzuli e oro", "لازوردي وذهبي"]
+];
+let palette = "nero";
+function paletteUI(inline) {
+  const lab = lang === "ar" ? "اختر اللون" : "Scegli il colore";
+  const cur = PALETTES.find(p => p[0] === palette) || PALETTES[0];
+  return `<div class="palette${inline ? " inline" : ""}" role="group" aria-label="${lab}"><span>${lab}</span><em class="pal-name">${lang === "ar" ? cur[3] : cur[2]}</em>${PALETTES.map(([id, sw, it, ar]) => `<button type="button" data-pal="${id}" style="--sw:${sw}" aria-pressed="${palette === id}" aria-label="${lang === "ar" ? ar : it}" title="${lang === "ar" ? ar : it}"></button>`).join("")}</div>`;
+}
+function applyPalette(id) {
+  palette = PALETTES.some(p => p[0] === id) ? id : "nero";
+  if (palette === "nero") document.documentElement.removeAttribute("data-palette");
+  else document.documentElement.setAttribute("data-palette", palette);
+  document.querySelectorAll("[data-pal]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.pal === palette)));
+  const cur = PALETTES.find(p => p[0] === palette);
+  if (cur) document.querySelectorAll(".pal-name").forEach(nm => { nm.textContent = lang === "ar" ? cur[3] : cur[2]; });
+  try { localStorage.setItem("v5-palette", palette); } catch (_) {}
+}
+
+/* ---------- render ---------- */
+let lang = "it", timer = null;
+const $ = s => document.querySelector(s);
+const bdi = s => `<bdi dir="ltr">${s}</bdi>`;
+const waUrl = t => `https://wa.me/${WA}?text=${encodeURIComponent(t.ui.waText)}`;
+const label = (k, extra = "") => `<p class="label"><span class="n" aria-hidden="true">${NUM[lang][k]}</span><span>${N[lang].ch[k]}</span>${extra}</p>`;
+
+function view() {
+  const t = S[lang], n = N[lang], h = t.home, sv = t.svc;
+  const top = lang === "ar" ? 1 : 0, bot = 1 - top;
+  const word = (i, k) => `<span class="w-word ${i ? "w-ar" : "w-it"}" data-i="${i}" ${i ? 'lang="ar" dir="rtl"' : 'lang="it"'}>${PAIRS[k][i]}</span>`;
+  const q = h.quotes[0];
+  return `
+<header class="hdr dark" id="hdr"><div class="wrap">
+  <a class="brand" href="#top">${LOGO}<span><span class="brand-name">${t.ui.brand}</span><span class="brand-tag">${t.ui.brandTag}</span></span></a>
+  <nav class="nav" aria-label="Menu">${n.nav.map(([l, id]) => `<a href="#${id}">${l}</a>`).join("")}</nav>
+  <div class="lang" role="group" aria-label="${n.langLabel}"><button type="button" lang="it" data-lang="it" aria-pressed="${lang === "it"}"><span class="flag-it" aria-hidden="true"></span>IT</button><span class="sep" aria-hidden="true"></span><button type="button" lang="ar" data-lang="ar" aria-pressed="${lang === "ar"}">عربي</button></div>
+  <a class="btn btn-ink hdr-cta" href="#contatti">${t.ui.cta}</a>
+  <button type="button" class="menu-btn" data-menu aria-expanded="false" aria-controls="mmenu" aria-label="${lang === "ar" ? "القائمة" : "Menu"}"><i></i><i></i></button>
+</div></header>
+<div class="mmenu" id="mmenu" hidden><nav aria-label="Menu">${n.nav.map(([l, id], i) => `<a href="#${id}" data-close><span>${NUM[lang][i]}</span>${l}</a>`).join("")}</nav><a class="btn btn-gold" href="#contatti" data-close>${t.ui.ctaLong}${I.arrow}</a><a class="tlink" href="${waUrl(t)}" target="_blank" rel="noopener">${I.wa}${n.wa}</a><p class="mm-c">${bdi(PHONE)} · ${bdi(EMAIL)}</p></div>
+<main id="top">
+
+<section class="hero"><div class="wrap hero-grid">
+  <div class="pal-m">${paletteUI(true)}</div>
+  <div class="hero-copy">
+    <p class="label">${n.label}</p>
+    <h1 class="hero-t">${n.h1}</h1>
+    <p class="lead only-d">${h.lead}</p><p class="lead only-m">${n.leadShort}</p>
+    <div class="actions"><a class="btn btn-gold" href="#contatti">${t.ui.ctaLong}${I.arrow}</a><a class="tlink" href="${waUrl(t)}" target="_blank" rel="noopener">${I.wa}${n.wa}</a></div>
+    <p class="facts">${n.facts.map(f => `<span>${f}</span>`).join("")}</p>
+  </div>
+  <div class="window">
+    <div class="w-frame"></div>
+    <div class="w-arch">${pat("")}</div>
+    <div class="w-panel"><span class="w-lab">${n.wTop}</span>${word(top, 0)}<span class="w-rule" aria-hidden="true"><i></i>${STAR}<i></i></span>${word(bot, 0)}<span class="w-lab">${n.wBot}</span></div>
+    ${SEAL}
+  </div>
+</div></section>
+
+<div class="ornament" aria-hidden="true"><i></i>${STAR}<i></i></div>
+<section class="sec" style="padding-top:clamp(56px,6vw,88px)"><div class="wrap split">
+  <div class="rv">${label(0)}<h2>${h.whyT}</h2><p class="lead">${h.whyL}</p></div>
+  <div class="rv"><div class="nums">${h.stats.map(([a, b]) => `<div><b>${bdi(a)}</b><span>${b}</span></div>`).join("")}</div>
+  <p class="credline"><strong>${n.cred}</strong>${n.credline}</p></div>
+</div></section>
+
+<section class="sec svc" id="servizi"><div class="wrap svc-grid">
+  <div class="svc-side rv">${label(1)}<h2>${h.svcT}</h2><p class="lead">${h.svcL}</p><div class="doc">${DOC}</div></div>
+  <div class="rows rv">${ORDER.map((s, i) => `<a class="row" href="#contatti"><span class="n">${NUM[lang][i]}</span><h3>${sv[s].name}${i === 0 ? `<span class="most">${n.most}</span>` : ""}</h3><p>${sv[s].tile}</p><span class="arr">${I.arrow}</span></a>`).join("")}</div>
+</div></section>
+
+<section class="sec about-sec" id="chi-sono"><div class="wrap about">
+  <div class="pwrap rv"><div class="portrait">${pat("pat")}<svg class="sil" viewBox="0 0 400 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><circle cx="200" cy="232" r="64"/><path d="M62 500c8-112 70-172 138-172s130 60 138 172z"/></svg><span class="p-cap">${t.ui.portrait}</span></div></div>
+  <div class="rv">${label(2)}<blockquote class="bigq">${n.quote}</blockquote><p class="bigq-2" lang="${n.q2}" dir="${n.q2 === "ar" ? "rtl" : "ltr"}">${n.quote2}</p><p class="lead">${t.about.bio[1]}</p>
+  <div class="sign"><strong>${t.ui.brand}</strong><span>${n.role}</span></div></div>
+</div></section>
+
+<section class="sec" id="metodo"><div class="wrap">
+  <div class="rv">${label(3)}<h2>${h.howT}</h2></div>
+  <ol class="steps rv">${t.steps.map(([a, b], i) => `<li class="step"><span class="n">${i + 1}</span><h3>${a}</h3><p>${b}</p></li>`).join("")}</ol>
+</div></section>
+
+<section class="sec testi-sec"><div class="wrap testi rv">
+  ${label(4)}<span class="qm" aria-hidden="true">“</span><blockquote>${q[0]}</blockquote><cite>${q[1]} · ${q[2]}</cite><span class="sample">${t.ui.sample}</span>
+</div></section>
+
+<section class="sec" id="domande"><div class="wrap faq">
+  <div class="rv">${label(5)}<h2>${t.ui.faq}</h2><p class="lead">${t.ui.faqLead}</p><a class="tlink" href="${waUrl(t)}" target="_blank" rel="noopener">${I.wa}${n.wa}</a></div>
+  <div class="acc rv">${h.faq.map(([qq, a], i) => `<details${i === 0 ? " open" : ""}><summary>${qq}</summary><p>${a}</p></details>`).join("")}</div>
+</div></section>
+
+<section class="final" id="contatti"><div class="wrap rv">
+  <p class="label">${t.nav.contatti}</p><h2>${n.final}</h2><p>${t.ui.ctaS}</p>
+  <div class="actions"><a class="btn btn-gold" href="#contatti">${t.ui.ctaLong}${I.arrow}</a><a class="tlink" href="${waUrl(t)}" target="_blank" rel="noopener">${I.wa}${n.wa}</a></div>
+</div>${skyline()}</section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <div class="foot-grid">
+    <div><a class="brand" href="#top">${LOGO}<span><span class="brand-name">${t.ui.brand}</span><span class="brand-tag">${t.ui.brandTag}</span></span></a><p>${t.ui.footTag}</p></div>
+    <div><p class="foot-h">${n.fSvc}</p><ul>${ORDER.map(s => `<li>${sv[s].name}</li>`).join("")}</ul></div>
+    <div><p class="foot-h">${n.fCont}</p><ul><li>${I.wa}${bdi(PHONE)}</li><li>${I.mail}${bdi(EMAIL)}</li><li>${I.pin}${t.ui.area}</li><li>${I.clock}${t.ui.hours}</li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>${t.ui.legal}</span><span class="based"><span class="flag-it" aria-hidden="true"></span>${n.based}</span><span class="foot-note">${n.note}</span></div>
+</div></footer>
+<a class="fab" href="${waUrl(t)}" target="_blank" rel="noopener" aria-label="${t.ui.waLong}">${I.wa}<span>${t.ui.wa}</span></a>
+${paletteUI()}
+<div class="mbar"><a class="btn btn-ink" href="${waUrl(t)}" target="_blank" rel="noopener">${I.wa}${t.ui.wa}</a><a class="btn btn-gold" href="#contatti">${t.ui.cta}</a></div>`;
+}
+
+// The two words in the arch change slowly, with a plain fade.
+function startCycler() {
+  clearInterval(timer);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  let k = 0;
+  timer = setInterval(() => {
+    k = (k + 1) % PAIRS.length;
+    const words = document.querySelectorAll(".w-word");
+    words.forEach(w => w.classList.add("out"));
+    setTimeout(() => words.forEach(w => { w.textContent = PAIRS[k][+w.dataset.i]; w.classList.remove("out"); }), 1150);
+  }, 4800);
+}
+
+// Header follows the section underneath it: light text over night sections, solid ivory elsewhere.
+function syncHeader() {
+  const h = $("#hdr");
+  if (!h) return;
+  const probe = h.getBoundingClientRect().bottom + 2;
+  const dark = [...document.querySelectorAll(".hero, .about-sec, .final")].some(s => { const r = s.getBoundingClientRect(); return r.top <= probe && r.bottom > probe; });
+  const menu = document.documentElement.classList.contains("menu-open");
+  h.classList.toggle("dark", dark || menu);
+  h.classList.toggle("solid", !dark && !menu);
+  const act = $(".hero .actions"), bar = $(".mbar");
+  if (bar) bar.classList.toggle("show", !act || act.getBoundingClientRect().bottom < 0);
+}
+
+function render(keepScroll) {
+  const y = window.scrollY;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.documentElement.classList.remove("menu-open");
+  document.documentElement.style.overflow = "";
+  document.getElementById("app").innerHTML = view();
+  document.title = S[lang].seo.home[0];
+  startCycler();
+  if (keepScroll) window.scrollTo(0, y);
+  syncHeader();
+}
+
+function toggleMenu(open) {
+  const m = $("#mmenu"), b = $("[data-menu]");
+  if (!m || !b) return;
+  if (open === undefined) open = m.hidden;
+  m.hidden = !open;
+  document.documentElement.classList.toggle("menu-open", open);
+  document.documentElement.style.overflow = open ? "hidden" : "";
+  b.setAttribute("aria-expanded", String(open));
+  requestAnimationFrame(() => m.classList.toggle("open", open));
+  syncHeader();
+}
+document.addEventListener("keydown", e => { if (e.key === "Escape") toggleMenu(false); });
+
+document.addEventListener("click", e => {
+  if (e.target.closest("[data-menu]")) { toggleMenu(); return; }
+  if (e.target.closest("[data-close]")) toggleMenu(false);
+  const p = e.target.closest("[data-pal]");
+  if (p) { applyPalette(p.dataset.pal); return; }
+  const b = e.target.closest("[data-lang]");
+  if (b && b.dataset.lang !== lang) {
+    lang = b.dataset.lang;
+    try { localStorage.setItem("v5-lang", lang); } catch (_) {}
+    render(true);
+  }
+});
+window.addEventListener("scroll", syncHeader, { passive: true });
+
+document.body.insertAdjacentHTML("afterbegin", DEFS);
+try { const s = localStorage.getItem("v5-lang"); if (s === "ar" || s === "it") lang = s; } catch (_) {}
+try { const p = localStorage.getItem("v5-palette"); if (p) palette = p; } catch (_) {}
+const hp = ["nero", "smeraldo", "bordeaux", "lapis"].find(x => location.hash === "#" + x);
+if (hp) palette = hp;
+if (location.hash === "#ar") lang = "ar";
+if (location.hash === "#it") lang = "it";
+render(false);
+applyPalette(palette);
+
+</script>
+</body>
+</html>

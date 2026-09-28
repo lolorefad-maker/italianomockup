@@ -1,0 +1,14 @@
+/* Makes the block editor read like the site: same fonts, colors and key text styles. */
+body{font-family:"IBM Plex Sans","IBM Plex Sans Arabic","Segoe UI",sans-serif;color:#13201B;background:#F3F5F1;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:"Bodoni Moda","Amiri",Georgia,serif;font-weight:500;line-height:1.15;color:#13201B}
+h1 em,h2 em{color:#1E4636}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#1E4636}
+.eyebrow .pair{font-family:"Bodoni Moda","Amiri",serif;text-transform:none;letter-spacing:0;color:#64716A;font-weight:400}
+.lead{font-size:1.1em;color:#3F4D46}
+.num{font-family:"Bodoni Moda",serif;font-size:2.4rem}
+.wp-block-group.band,.wp-block-group.cta-band{background:#17362B;color:#E8EFEA;padding:24px}
+.wp-block-group.band h2,.wp-block-group.cta-band h2{color:#E8EFEA}
+.wp-block-group.sec.alt{background:#E8ECE5}
+.wp-block-button__link{background:#1E4636;color:#fff;border-radius:999px}
+.is-style-ghost .wp-block-button__link,.is-style-whatsapp .wp-block-button__link{background:transparent;color:#13201B;border:1px solid #BCC6BD}
+.arch-img img{border-radius:999px 999px 6px 6px;max-width:360px}
