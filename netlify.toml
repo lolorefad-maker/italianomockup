@@ -1,0 +1,23 @@
+# Netlify: the site is static (index.html at the root), no build step needed.
+[build]
+  publish = "."
+  command = ""
+
+# Only the design pages are public web pages; keep the WordPress sources out of the site.
+[[redirects]]
+  from = "/wordpress/*"
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/mockup/*"
+  to = "/"
+  status = 302
+  force = true
+
+# Concept with placeholder texts: keep it out of search engines.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
